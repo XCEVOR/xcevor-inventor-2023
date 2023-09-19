@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 
 import Price from '@/components/portfolio-comps/Price';
-import { singleProduct } from '@/data';
+import { singleProduct } from '@/data/dummyData';
 
 
 const PortfolioPost = () => {
