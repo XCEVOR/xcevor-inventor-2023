@@ -1,5 +1,6 @@
-import Link from 'next/link'
-import React from 'react'
+import React from 'react';
+import Link from 'next/link';
+import Menu from '@/components/Menu';
 
 const Navbar = () => {
 
@@ -33,12 +34,15 @@ const Navbar = () => {
   ]
 
   return (
-    <div>
+    <div className='h-12 text-[#ffbf00] p-4 flex items-center justify-between border-b-2 border-[#ffbf00] uppercase '>
       <Link href="/">Home</Link>
-      <div>
+      <div className='h-12 bg-gray-700 text-white px-4 flex items-center justify-center text-center text-lg md:text-base cursor-pointer'>
         {links.map((link) => (
           <Link key={link.id} href={link.url}>{link.title}</Link>
         ))}
+      </div>
+      <div>
+        <Menu />
       </div>
     </div>
   )
