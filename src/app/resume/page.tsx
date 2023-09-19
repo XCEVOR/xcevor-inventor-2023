@@ -1,8 +1,14 @@
 import React from 'react';
+
 import ResumeData from '@/data/resumeData';
+import { menu, pizzas } from '@/data/dummyData';
+import BackgroundImage from '@/components/BackgroundImage';
+
 
 const Resume = () => {
   return (
+    <>
+    <BackgroundImage />
     <div className='flex items-center justify-center'>
       <section id="resume" className="resume">
         <div className="container px-10 ">
@@ -63,6 +69,7 @@ const Resume = () => {
         </div>
       </section>
     </div>
+    </>
   )
 }
 
