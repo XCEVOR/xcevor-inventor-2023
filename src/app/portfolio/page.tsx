@@ -1,5 +1,5 @@
 import React from 'react';
-import { menu, pizzas } from '@/data';
+import { menu, pizzas } from '@/data/dummyData';
 import Link from 'next/link';
 import Image from 'next/image';
 

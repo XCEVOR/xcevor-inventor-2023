@@ -40,7 +40,7 @@ const Navbar = () => {
         <Link href="/">Home</Link>
       </div>
 
-      <div className='h-12 bg-gray-700 text-white px-4 flex items-center justify-center text-center text-lg md:text-base cursor-pointer'>
+      <div className='hidden md:flex gap-4'>
         {links.map((link) => (
           <Link key={link.id} href={link.url}>{link.title}</Link>
         ))}
