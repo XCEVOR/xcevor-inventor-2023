@@ -34,7 +34,7 @@ const Navbar = () => {
   ]
 
   return (
-    <div className='h-12 text-[#ffbf00] p-4 flex items-center justify-between border-b-2 border-[#ffbf00] uppercase md:h-24 lg:px-20 lx:px40'>
+    <div className='h-12 text-[#ffbf00] p-4 flex items-center justify-between border-b-2 border-[#ffbf00] uppercase md:h-24 lg:px-20 xl:px-40'>
 
       <div className='text-xl md:font-bold'>
         <Link href="/">Home</Link>
