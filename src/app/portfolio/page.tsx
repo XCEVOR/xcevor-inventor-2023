@@ -1,7 +1,9 @@
 import React from 'react';
-import { menu, pizzas } from '@/data/dummyData';
 import Link from 'next/link';
 import Image from 'next/image';
+
+import { menu, pizzas } from '@/data/dummyData';
+import BackgroundImage from '@/components/BackgroundImage';
 
 
 const Portfolio = () => {
@@ -9,6 +11,8 @@ const Portfolio = () => {
 
   return (
     <>
+    <BackgroundImage />
+
     {/* <div className='flex text-[#ffbf00]'>
       {pizzas.map((item) => (
         <Link className='' href={`/product/${item.id}`} key={item.id}>
