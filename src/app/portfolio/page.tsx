@@ -28,17 +28,19 @@ const Portfolio = () => {
 
     <div className="flex flex-wrap text-[#ffbf00]">
       {pizzas.map((item) => (
-        <Link className="w-full h-[60vh] border-r-2 border-b-2 border-[#ffbf00] sm:w-1/2 lg:w-1/3 p-4 flex flex-col justify-between group odd:bg-fuchsia-50" href={`/portfolio/${item.id}`} key={item.id}>
+
+        // REMOVED odd:bg-fuchsia-50
+        <Link className="w-full h-[60vh] border-r-2 border-b-2 border-[#ffbf00] sm:w-1/2 lg:w-1/3 p-4 flex flex-col justify-between group" href={`/portfolio/${item.id}`} key={item.id}> 
           {/* IMAGE CONTAINER */}
-          {/* {item.img && (
+          {item.img && (
             <div className="relative h-[80%]">
               <Image src={item.img} alt="" fill className="object-contain"/>
             </div>
-          )} */}
-          <div className="relative h-[80%]">
+          )}
+          {/* <div className="relative h-[80%]">
             <img src="https://picsum.photos/800" alt="" className="object-contain"/>
             
-          </div>
+          </div> */}
 
           {/* TEXT CONTAINER */}
           <div className="flex items-center justify-between font-bold">
