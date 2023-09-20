@@ -1,11 +1,10 @@
-import { PrismaClient } from "@prisma/client";
-import { NextResponse } from "next/server"
+import { NextResponse } from "next/server";
+import connPrisma from "@/utils/connect";
 
-const prisma = new PrismaClient();
 
 export const GET = async () => {
   try {
-    const categories = await prisma.category.findMany();
+    const categories = await connPrisma.category.findMany();
     return new NextResponse( JSON.stringify( categories ), { status: 200 } );  // ERROR   - err TypeError: categories.map is not a function <-- JSON.stringify(JSON.stringify( categories )),
   } catch (error) {
     console.log(error);
