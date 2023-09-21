@@ -3,13 +3,25 @@ import Image from 'next/image';
 
 import Price from '@/components/portfolio-comps/Price';
 import { singleProduct } from '@/data/dummyData';
-import { ProductType } from '@/types/types';
+import { ProductDescType, ProductType } from '@/types/types';
 
 
 
 const getData = async ( id: string ) => {
   console.log(" @@@@@@@@@@ const PortfolioPost = async ( {params}: {params: {id:string}} ) => ")
   const res = await fetch(`http://localhost:3000/api/products/${id}`,{
+    cache:"no-store"
+  });
+  console.log(res.json);
+
+  if (!res.ok) { throw new Error("Failed!"); }
+
+  return res.json();
+}
+
+const getDescData = async ( titleSlug: string ) => {
+  console.log(" @@@@@@@@@@ const getDescData = async ( titleSlug: string ) => ")
+  const res = await fetch(`http://localhost:3000/api/productDescs/app1`,{
     cache:"no-store"
   });
   console.log(res.json);
@@ -30,6 +42,9 @@ const PortfolioPost = async ( {params}: {params: {id:string}} ) => {
   console.log(singleProduct)
   console.log(params.id)
 
+  const singleDescProduct:ProductDescType[] = await getDescData( singleProduct.title );
+  console.log(singleDescProduct)
+
   return (
     <div className="p-4 lg:px-20 xl:px-40 h-screen flex flex-col justify-around text-[#ffbf00] md:flex-row md:gap-8 md:items-center">
       {/* IMAGE CONTAINER */}
@@ -43,6 +58,13 @@ const PortfolioPost = async ( {params}: {params: {id:string}} ) => {
           />
         </div>
       )}
+
+
+    
+        <h1>xxx  {singleDescProduct.map((desc) => (
+          <h1>{desc.desc}</h1>
+        ))}  xxx</h1>
+    
 
 
       {/* TEXT CONTAINER */}

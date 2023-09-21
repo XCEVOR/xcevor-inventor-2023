@@ -15,3 +15,8 @@ export type ProductType = {
   price: number;
   options?: { title: string; additionalPrice: number }[];
 };
+
+export type ProductDescType = {
+  id: string;
+  desc: string;
+}
