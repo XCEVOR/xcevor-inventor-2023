@@ -24,7 +24,7 @@ model Category {
 model Product {
   id String @id @default(cuid())
   createdAt DateTime @default(now())
-  title String
+  title String @unique
   desc String
   img String?
   price Decimal
@@ -32,4 +32,20 @@ model Product {
   options Json[]
   category Category @relation(fields: [catSlug], references: [slug])
   catSlug String
+  productImgs Productimage[]
+  productDescs Productdescription[]
+}
+
+model Productimage {
+  id String @id @default(cuid())
+  img String
+  product Product @relation(fields: [titleSlug], references: [title])
+  titleSlug String
+}
+
+model Productdescription {
+  id String @id @default(cuid())
+  desc String
+  product Product @relation(fields: [titleSlug], references: [title])
+  titleSlug String
 }
