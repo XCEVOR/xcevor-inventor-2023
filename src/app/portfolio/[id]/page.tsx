@@ -21,7 +21,7 @@ const getData = async ( id: string ) => {
 
 const getDescData = async ( titleSlug: string ) => {
   console.log(" @@@@@@@@@@ const getDescData = async ( titleSlug: string ) => ")
-  const res = await fetch(`http://localhost:3000/api/productDescs/app1`,{
+  const res = await fetch(`http://localhost:3000/api/productDescs/${titleSlug}`,{
     cache:"no-store"
   });
   console.log(res.json);
