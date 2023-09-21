@@ -49,7 +49,7 @@ const Portfolio = async () => {
           {/* IMAGE CONTAINER */}
           {item.img && (
             <div className="relative h-[80%]">
-              <Image src={item.img} alt="" fill className="object-contain"/>
+              <Image src={`${process.env.DEV_FILESERVER_URL}${item.img}`} alt="" fill className="object-contain"/>
             </div>
           )}
           {/* <div className="relative h-[80%]">

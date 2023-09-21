@@ -36,7 +36,7 @@ const PortfolioPost = async ( {params}: {params: {id:string}} ) => {
       {singleProduct.img && (
         <div className="relative w-full h-1/2 md:h-[70%]">
           <Image
-            src={singleProduct.img}
+            src={`${process.env.DEV_FILESERVER_URL}${singleProduct.img}`}
             alt=""
             className="object-contain"
             fill
@@ -44,6 +44,7 @@ const PortfolioPost = async ( {params}: {params: {id:string}} ) => {
           <h1>{singleProduct.title}</h1>
         </div>
       )}
+
 
       {/* TEXT CONTAINER */}
       <div className="h-1/2 flex flex-col gap-4 md:h-[70%] md:justify-center md:gap-6 xl:gap-8">
