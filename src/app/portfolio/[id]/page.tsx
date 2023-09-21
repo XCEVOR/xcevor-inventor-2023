@@ -61,9 +61,11 @@ const PortfolioPost = async ( {params}: {params: {id:string}} ) => {
 
 
     
-        <h1>xxx  {singleDescProduct.map((desc) => (
+        <h1>xxx  xxx</h1>
+        {singleDescProduct.map((desc) => (
           <h1>{desc.desc}</h1>
-        ))}  xxx</h1>
+        ))}
+        <h1>xxx  xxx</h1>
     
 
 

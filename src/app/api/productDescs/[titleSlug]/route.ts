@@ -8,10 +8,10 @@ export const GET = async ( req: NextRequest, { params }: {params: {titleSlug:str
   console.log("  ========> ", titleSlug)
 
   try {
-    // const productDescs = await connPrisma.productDescription.findMany({
-    //   where: {        titleSlug: titleSlug,      },
-    // });
-    const productDescs = await connPrisma.productdescription.findMany();
+    const productDescs = await connPrisma.productdescription.findMany({
+      where: {        titleSlug: titleSlug,      },
+    });
+    // const productDescs = await connPrisma.productdescription.findMany();
     
     console.log(JSON.stringify( productDescs ));
     return new NextResponse( JSON.stringify( productDescs ), { status: 200 } );
