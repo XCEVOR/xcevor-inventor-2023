@@ -1,6 +1,13 @@
+"use client";
+
 import React from 'react';
 import Link from 'next/link';
+import { usePathname } from "next/navigation";
+import { motion } from 'framer-motion';
+
 import Menu from '@/components/Menu';
+
+
 
 const Navbar = () => {
 
@@ -30,8 +37,10 @@ const Navbar = () => {
       title: "Home2", 
       url: "/", 
     },
-    
-  ]
+  ];
+
+  const path = usePathname();
+
 
   return (
     <div className='h-12 text-[#ffbf00] p-4 flex items-center justify-between border-b-2 border-[#ffbf00] uppercase md:h-24 lg:px-20 xl:px-40'>
@@ -42,7 +51,27 @@ const Navbar = () => {
 
       <div className='hidden md:flex gap-4'>
         {links.map((link) => (
-          <Link key={link.id} href={link.url}>{link.title}</Link>
+          <Link className="relative" key={link.id} href={link.url}>
+            {link.title}
+
+            {(
+              ("/" + link.title.toLowerCase()) === (path) 
+              && <motion.span
+                layoutId="underline"
+                className="absolute left-0 top-full block h-[3px] w-full bg-[#ffbf00]"
+              />
+            )}
+
+            {/* {(
+              <motion.span
+                layoutId="underline"
+                className="absolute left-0 top-full block h-[1px] w-full bg-[#ffbf00]"
+              />
+            )} */}
+            {/* <h1>{("/" + link.title.toLowerCase())} </h1> */}
+            {/* <h1>{path} </h1> */}
+            
+          </Link>
         ))}
       </div>
 
