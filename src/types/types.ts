@@ -7,3 +7,21 @@ export type CategoriesType = {
   color: string;
 }[];
 
+export type ProductType = {
+  id: string;
+  title: string;
+  desc?: string;
+  img?: string;
+  price: number;
+  options?: { title: string; additionalPrice: number }[];
+};
+
+export type ProductDescType = {
+  id: string;
+  desc: string;
+}
+
+export type ProductImgType = {
+  id: string;
+  img: string;
+}

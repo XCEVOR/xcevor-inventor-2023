@@ -2,12 +2,27 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-import { menu, pizzas } from '@/data/dummyData';
+// import { menu, pizzas } from '@/data/dummyData';
 import BackgroundImage from '@/components/BackgroundImage';
+import { ProductType } from '@/types/types';
 
 
-const Portfolio = () => {
 
+const getData = async () => {
+  console.log(" @@@@@@@@@@ const Portfolio = async () ")
+  const res = await fetch("http://localhost:3000/api/products",{
+    cache:"no-store"
+  });
+
+  if (!res.ok) { throw new Error("Failed!"); }
+
+  return res.json();
+}
+
+
+const Portfolio = async () => {
+
+  const featureProducts:ProductType[] = await getData();
 
   return (
     <>
@@ -27,14 +42,14 @@ const Portfolio = () => {
     
 
     <div className="flex flex-wrap text-[#ffbf00]">
-      {pizzas.map((item) => (
+      {featureProducts.map((item) => (
 
         // REMOVED odd:bg-fuchsia-50
         <Link className="w-full h-[60vh] border-r-2 border-b-2 border-[#ffbf00] sm:w-1/2 lg:w-1/3 p-4 flex flex-col justify-between group" href={`/portfolio/${item.id}`} key={item.id}> 
           {/* IMAGE CONTAINER */}
           {item.img && (
             <div className="relative h-[80%]">
-              <Image src={item.img} alt="" fill className="object-contain"/>
+              <Image src={`${process.env.DEV_FILESERVER_URL}${item.img}`} alt="" fill className="object-contain"/>
             </div>
           )}
           {/* <div className="relative h-[80%]">
@@ -53,7 +68,7 @@ const Portfolio = () => {
     </div>
 
 
-    <div className="p-4 lg:px-20 xl:px-40 h-[calc(100vh-6rem)] md:h-[calc(100vh-9rem)] flex flex-col md:flex-row items-center">
+    {/* <div className="p-4 lg:px-20 xl:px-40 h-[calc(100vh-6rem)] md:h-[calc(100vh-9rem)] flex flex-col md:flex-row items-center">
      {menu.map((category) => (
         <Link
           href={`/menu/${category.slug}`}
@@ -68,7 +83,7 @@ const Portfolio = () => {
           </div>
         </Link>
       ))}
-    </div>
+    </div> */}
 
     </>
   )
