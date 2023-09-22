@@ -75,35 +75,35 @@ const PortfolioPost = async ( {params}: {params: {id:string}} ) => {
           </div>
         )} */}
 
-
-        {/* {singleImgProduct.map((singleImg) => (
-          <div className="relative w-full h-1/2 md:h-[70%]">
-            <Image
-              src={`${process.env.DEV_FILESERVER_URL}${singleImg.img}`}
-              alt=""
-              className="object-contain"
-              fill
-            />
-          </div>
-        ))} */}
-        {singleImgProduct.map((singleImg, index) => (
-          index === 0 && <div className="relative w-full h-1/2 md:h-[70%]">
-            <Image
-              src={`${process.env.DEV_FILESERVER_URL}${singleImg.img}`}
-              alt=""
-              className="object-contain"
-              fill
-            />
-          </div>
-        ))}
-
+        <div className="md:w-2/3 h-1/2 flex flex-col gap-4 md:h-[70%] md:justify-center md:gap-6 xl:gap-8">
+          {/* {singleImgProduct.map((singleImg) => (
+            <div className="relative w-full h-1/2 md:h-[70%]">
+              <Image
+                src={`${process.env.DEV_FILESERVER_URL}${singleImg.img}`}
+                alt=""
+                className="object-contain"
+                fill
+              />
+            </div>
+          ))} */}
+          {singleImgProduct.map((singleImg, index) => (
+            index === 0 && <div className="relative w-full h-1/2 md:h-[70%]">
+              <Image
+                src={`${process.env.DEV_FILESERVER_URL}${singleImg.img}`}
+                alt=""
+                className="object-contain"
+                fill
+              />
+            </div>
+          ))}
+        </div>
       
 
       
 
 
         {/* TEXT CONTAINER */}
-        <div className="h-1/2 flex flex-col gap-4 md:h-[70%] md:justify-center md:gap-6 xl:gap-8">
+        <div className="md:w-1/3 h-1/2 flex flex-col gap-4 md:h-[70%] md:justify-center md:gap-6 xl:gap-8">
           <h1 className="text-3xl font-bold uppercase xl:text-5xl">{singleProduct.title}</h1>
           {/* <p>{singleProduct.desc}</p>
           <p>{singleProduct.desc}</p>
