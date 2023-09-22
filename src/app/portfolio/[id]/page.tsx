@@ -105,7 +105,8 @@ const PortfolioPost = async ( {params}: {params: {id:string}} ) => {
 
         {/* <Price price={singleProduct.price} id={singleProduct.id} options={singleProduct.options}/> */}
 
-        <PfolioImage />
+        {/* <PfolioImage /> */}
+        <PfolioImage params={{ id: params.id, titleSlug: singleProduct.title }} />
       </div>
     </div>
   )

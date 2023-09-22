@@ -17,8 +17,8 @@ const getImgData = async ( titleSlug: string ) => {
 
 
 
-// const PfolioImage = async ( {params}: {params: {id:string}} ) => {
-const PfolioImage = async (  ) => {
+const PfolioImage = async ( {params}: {params: {id:string, titleSlug:string}} ) => {
+// const PfolioImage = async (  ) => {
 
   // const singleProduct:ProductType = await getData( params.id );
   // console.log(singleProduct)
@@ -41,6 +41,8 @@ const PfolioImage = async (  ) => {
       ))} */}
 
       <h1>PfolioImage</h1>
+      <h1>{params.id}</h1>
+      <h1>{params.titleSlug}</h1>
     </div>
   )
 }
