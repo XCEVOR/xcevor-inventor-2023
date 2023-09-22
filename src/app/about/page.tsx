@@ -3,15 +3,19 @@ import BackgroundImage from '@/components/BackgroundImage';
 import Me from "@/components/about-comps/Me";
 import Skills from "@/components/about-comps/Skills";
 import Interests from "@/components/about-comps/Interests";
+import { PageWrapper } from '@/components/framer-motion/page-wrapper';
 
 
 const About = () => {
   return (
     <div>
       <BackgroundImage />
-      <Me />
-      <Skills />
-      <Interests />
+
+      <PageWrapper>
+        <Me />
+        <Skills />
+        <Interests />
+      </PageWrapper>
     </div>
   )
 }
