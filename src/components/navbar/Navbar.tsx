@@ -54,14 +54,23 @@ const Navbar = () => {
           <Link className="relative" key={link.id} href={link.url}>
             {link.title}
 
-            {(
+
+            {/* {(
               ("/" + link.title.toLowerCase()) === (path) 
+              && <motion.span
+                layoutId="underline"
+                className="absolute left-0 top-full block h-[3px] w-full bg-[#ffbf00]"
+              />
+            )} */}
+            {(
+              ( link.title.toLowerCase() ) === ( `${path.split("/", 2).slice(1)}` ) 
               && <motion.span
                 layoutId="underline"
                 className="absolute left-0 top-full block h-[3px] w-full bg-[#ffbf00]"
               />
             )}
 
+                      {/* TEST DISPLAY CODE */}
             {/* {(
               <motion.span
                 layoutId="underline"
@@ -70,7 +79,9 @@ const Navbar = () => {
             )} */}
             {/* <h1>{("/" + link.title.toLowerCase())} </h1> */}
             {/* <h1>{path} </h1> */}
-            
+            {/* <h1>{(link.title.toLowerCase())} </h1> */}
+            {/* <h1>{`${path.split("/", 2).slice(1)}`} </h1> */}
+
           </Link>
         ))}
       </div>
