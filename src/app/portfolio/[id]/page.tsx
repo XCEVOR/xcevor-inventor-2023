@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Price from '@/components/portfolio-comps/Price';
 import { singleProduct } from '@/data/dummyData';
 import { ProductDescType, ProductImgType, ProductType } from '@/types/types';
+import PfolioImage from '@/components/portfolio-comps/PfolioImage';
 
 
 
@@ -103,6 +104,8 @@ const PortfolioPost = async ( {params}: {params: {id:string}} ) => {
 
 
         {/* <Price price={singleProduct.price} id={singleProduct.id} options={singleProduct.options}/> */}
+
+        <PfolioImage />
       </div>
     </div>
   )
