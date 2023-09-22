@@ -24,11 +24,12 @@ const PfolioImage = async ( {params}: {params: {id:string, titleSlug:string}} ) 
   // console.log(singleProduct)
   // console.log(params.id)
 
-  // const singleImgProduct:ProductImgType[] = await getImgData( singleProduct.title );
+  const singleImgProduct:ProductImgType[] = await getImgData( params.titleSlug );
 
   return (
-    <div className="p-4 lg:px-20 xl:px-40 h-screen flex flex-col justify-around text-[#ffbf00] md:flex-row md:gap-8 md:items-center">
-{/* 
+    // <div className="p-4 lg:px-20 xl:px-40 h-screen flex flex-col justify-around text-[#ffbf00] md:flex-row md:gap-8 md:items-center">
+    <div>
+
       {singleImgProduct.map((singleImg) => (
         <div className="relative w-full h-1/2 md:h-[70%]">
           <Image
@@ -38,7 +39,7 @@ const PfolioImage = async ( {params}: {params: {id:string, titleSlug:string}} ) 
             fill
           />
         </div>
-      ))} */}
+      ))}
 
       <h1>PfolioImage</h1>
       <h1>{params.id}</h1>
