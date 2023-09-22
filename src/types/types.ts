@@ -20,3 +20,8 @@ export type ProductDescType = {
   id: string;
   desc: string;
 }
+
+export type ProductImgType = {
+  id: string;
+  img: string;
+}

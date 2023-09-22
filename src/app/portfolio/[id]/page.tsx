@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 import Price from '@/components/portfolio-comps/Price';
 import { singleProduct } from '@/data/dummyData';
-import { ProductDescType, ProductType } from '@/types/types';
+import { ProductDescType, ProductImgType, ProductType } from '@/types/types';
 
 
 
@@ -31,6 +31,18 @@ const getDescData = async ( titleSlug: string ) => {
   return res.json();
 }
 
+const getImgData = async ( titleSlug: string ) => {
+  console.log(" @@@@@@@@@@ const getImgData = async ( titleSlug: string ) => ")
+  const res = await fetch(`http://localhost:3000/api/products-img/${titleSlug}`,{
+    cache:"no-store"
+  });
+  console.log(res.json);
+
+  if (!res.ok) { throw new Error("Failed!"); }
+
+  return res.json();
+}
+
 // type Props = {
 //   params: {id: string}
 // }
@@ -45,10 +57,12 @@ const PortfolioPost = async ( {params}: {params: {id:string}} ) => {
   const singleDescProduct:ProductDescType[] = await getDescData( singleProduct.title );
   console.log(singleDescProduct)
 
+  const singleImgProduct:ProductImgType[] = await getImgData( singleProduct.title );
+
   return (
     <div className="p-4 lg:px-20 xl:px-40 h-screen flex flex-col justify-around text-[#ffbf00] md:flex-row md:gap-8 md:items-center">
       {/* IMAGE CONTAINER */}
-      {singleProduct.img && (
+      {/* {singleProduct.img && (
         <div className="relative w-full h-1/2 md:h-[70%]">
           <Image
             src={`${process.env.DEV_FILESERVER_URL}${singleProduct.img}`}
@@ -57,8 +71,18 @@ const PortfolioPost = async ( {params}: {params: {id:string}} ) => {
             fill
           />
         </div>
-      )}
+      )} */}
 
+      {singleImgProduct.map((singleImg) => (
+        <div className="relative w-full h-1/2 md:h-[70%]">
+          <Image
+            src={`${process.env.DEV_FILESERVER_URL}${singleImg.img}`}
+            alt=""
+            className="object-contain"
+            fill
+          />
+        </div>
+      ))}
 
     
         <h1>xxx  xxx</h1>
