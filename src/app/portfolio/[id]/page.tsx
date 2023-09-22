@@ -21,7 +21,7 @@ const getData = async ( id: string ) => {
 
 const getDescData = async ( titleSlug: string ) => {
   console.log(" @@@@@@@@@@ const getDescData = async ( titleSlug: string ) => ")
-  const res = await fetch(`http://localhost:3000/api/products-desc/${titleSlug}`,{
+  const res = await fetch(`http://localhost:3000/api/product-desc/${titleSlug}`,{
     cache:"no-store"
   });
   console.log(res.json);
@@ -33,7 +33,7 @@ const getDescData = async ( titleSlug: string ) => {
 
 const getImgData = async ( titleSlug: string ) => {
   console.log(" @@@@@@@@@@ const getImgData = async ( titleSlug: string ) => ")
-  const res = await fetch(`http://localhost:3000/api/products-img/${titleSlug}`,{
+  const res = await fetch(`http://localhost:3000/api/product-img/${titleSlug}`,{
     cache:"no-store"
   });
   console.log(res.json);
