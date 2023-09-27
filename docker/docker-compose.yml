@@ -1,11 +1,24 @@
+version: '3.1'
+
 services:
 
-  db:
-    image: postgres
-    restart: always
+  postgres:
+    image: postgres:latest
     environment:
+      POSTGRES_DB: mydb
       POSTGRES_USER: myuser
       POSTGRES_PASSWORD: mypassword
-      POSTGRES_DB: mydb
     ports:
-      - 5432:5432
+      - "5432:5432"
+    volumes:
+      - ./01-init.sql:/docker-entrypoint-initdb.d/01-init.sql
+      - ./02-_Category__202309221520.sql:/docker-entrypoint-initdb.d/02-_Category__202309221520.sql
+      - ./03-_Product__202309221520.sql:/docker-entrypoint-initdb.d/03-_Product__202309221520.sql
+      - ./04-_Productdescription__202309221520.sql:/docker-entrypoint-initdb.d/04-_Productdescription__202309221520.sql
+      - ./05-_Productimage__202309221520.sql:/docker-entrypoint-initdb.d/05-_Productimage__202309221520.sql
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8888:8080
