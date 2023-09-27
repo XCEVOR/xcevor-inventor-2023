@@ -43,15 +43,19 @@ const Portfolio = async () => {
         </div> */}
         
 
-        <div className="flex flex-wrap text-[#ffbf00]">
+        <div className="flex flex-wrap text-[#ffbf00] px-20">
           {featureProducts.map((item) => (
 
             // REMOVED odd:bg-fuchsia-50
             <Link className="w-full h-[60vh] border-r-2 border-b-2 border-[#ffbf00] sm:w-1/2 lg:w-1/3 p-4 flex flex-col justify-between group" href={`/portfolio/${item.id}`} key={item.id}> 
               {/* IMAGE CONTAINER */}
               {item.img && (
-                <div className="relative h-[80%]">
-                  <Image src={`${process.env.DEV_FILESERVER_URL}${item.img}`} alt="" fill className="object-contain"/>
+                <div className="relative flex items-center justify-center h-full">
+                  <div className="relative flex items-center justify-center h-[90%] aspect-square rounded-3xl overflow-hidden bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-60 border border-gray-200 border-opacity-10 transition-all duration-700 hover:scale-105">
+                    <div className="relative h-[86%] aspect-square rounded-2xl overflow-hidden">
+                      <Image src={`${process.env.DEV_FILESERVER_URL}${item.img}`} alt="" fill className="object-contain aspect-square"/>
+                    </div>
+                  </div>
                 </div>
               )}
               {/* <div className="relative h-[80%]">
@@ -63,7 +67,7 @@ const Portfolio = async () => {
               <div className="flex items-center justify-between font-bold">
                 <h1 className="text-2xl uppercase p-2">{item.title}</h1>
                 <h2 className="group-hover:hidden text-xl">${item.price}</h2>
-                <button className="hidden group-hover:block uppercase bg-[#ffbf00] text-white p-2 rounded-md">Add to Cart</button>
+                {/* <button className="hidden group-hover:block uppercase bg-[#ffbf00] text-white p-2 rounded-md">Add to Cart</button> */}
               </div>
             </Link>
           ))}
