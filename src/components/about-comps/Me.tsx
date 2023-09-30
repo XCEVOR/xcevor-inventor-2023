@@ -3,7 +3,7 @@ import React from 'react'
 
 const Me = () => {
   return (
-    <div className='flex flex-col h-[calc(60vh-3rem)] md:h-[calc(60vh-6rem)] p-4 lg:flex-row'>
+    <div className='flex flex-col h-[calc(60vh-3rem)] md:h-[calc(60vh-6rem)] p-4 lg:flex-row bg-[#000000]/80 backdrop-blur'>
 
       <div className='w-1/3 relative'>
         <Image src="/img/me.jpg" alt='' fill className='object-cover' />
@@ -14,7 +14,7 @@ const Me = () => {
           me
         </h1> */}
 
-        <div className="lg:col-span-8 pt-4 lg:pt-0 content animate-fade-left" data-aos="fade-left">
+        <div className="lg:col-span-8 pt-4 lg:pt-0">
           <h3 className="text-2xl font-bold">UI/UX &amp; Graphic Designer</h3>
           <p className="italic mt-4">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
