@@ -23,10 +23,10 @@ const ProgressBar: React.FC<ProgressBarProps> = ({ bgcolor, completed }) => {
 
   const containerStyles: React.CSSProperties = {
     height: 20,
-    width: '50%',
+    width: '100%',
     backgroundColor: "#e0e0de",
     borderRadius: 50,
-    margin: 50,
+    margin: 0,
   };
 
   const fillerStyles: React.CSSProperties = {

@@ -6,17 +6,31 @@ const Skills = () => {
     { bgcolor: "#6a1b9a", completed: 60 },
     { bgcolor: "#00695c", completed: 30 },
     { bgcolor: "#ef6c00", completed: 53 },
+    { bgcolor: "#dd0000", completed: 83 },
   ];
 
 
   return (
-    <div>
-      Skills
-      <div>
-        <h1>Skills</h1>
-        {testData.map((item, idx) => (
-        <ProgressBar key={idx} bgcolor={item.bgcolor} completed={item.completed} />
-      ))}
+    <div className='mt-20 '>
+      <h1>Skills</h1>
+      <div className='flex flex-col p-4 pb-8 lg:flex-row bg-[#000000]/80 backdrop-blur'>
+
+        {/* <h1>Skills</h1> */}
+        
+        <div className='px-4 lg:w-1/2'>
+          {testData.map((item, idx) => (
+            <div className='pt-4'>
+              <ProgressBar key={idx} bgcolor={item.bgcolor} completed={item.completed} />
+            </div>
+          ))}
+        </div>
+        <div className='px-4 lg:w-1/2'>
+          {testData.map((item, idx) => (
+            <div className='pt-4'>
+              <ProgressBar key={idx} bgcolor={item.bgcolor} completed={item.completed} />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   )
