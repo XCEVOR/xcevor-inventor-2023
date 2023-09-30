@@ -8,7 +8,7 @@ import { PageWrapper } from '@/components/framer-motion/page-wrapper';
 
 const About = () => {
   return (
-    <div>
+    <div className='px-40 py-20'>
       <BackgroundImage />
 
       <PageWrapper>
