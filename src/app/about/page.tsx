@@ -12,9 +12,11 @@ const About = () => {
       <BackgroundImage />
 
       <PageWrapper>
-        <Me />
-        <Skills />
-        <Interests />
+        <div className='flex flex-col items-center'>
+          <Me />
+          <Skills />
+          <Interests />
+        </div>
       </PageWrapper>
     </div>
   )
