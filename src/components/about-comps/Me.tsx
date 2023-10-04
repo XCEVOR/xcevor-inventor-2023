@@ -3,13 +3,13 @@ import React from 'react'
 
 const Me = () => {
   return (
-    <div className='flex flex-col w-[400px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px] h-[calc(80vh-3rem)] md:h-[calc(80vh-6rem)] p-4 lg:flex-row bg-[#000000]/80 backdrop-blur'>
+    <div className='flex flex-col md:flex-row w-[400px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px] h-fit lg:h-[calc(80vh-3rem)] md:h-[calc(80vh-6rem)] p-4 bg-[#000000]/80 backdrop-blur'>
 
-      <div className='w-1/3 relative'>
-        <Image src="/img/me.jpg" alt='' fill className='object-cover' />
+      <div className='relative md:w-1/3 '>
+        <Image src="/img/me.jpg" alt='' fill className='object-scale-down' />
       </div>
       
-      <div className='flex flex-col w-2/3 items-center justify-center gap-8 text-[111111] px-10 '>
+      <div className='relative flex flex-col md:w-2/3 items-center justify-center gap-8 text-[111111] px-10 '>
         {/* <h1 className='text-5xl text-center uppercase p-4 md:text-6xl xl:text-7xl'>
           me
         </h1> */}
