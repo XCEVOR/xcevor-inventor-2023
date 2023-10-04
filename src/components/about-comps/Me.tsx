@@ -3,7 +3,7 @@ import React from 'react'
 
 const Me = () => {
   return (
-    <div className='flex flex-col h-[calc(80vh-3rem)] md:h-[calc(80vh-6rem)] p-4 lg:flex-row bg-[#000000]/80 backdrop-blur'>
+    <div className='flex flex-col w-[400px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px] h-[calc(80vh-3rem)] md:h-[calc(80vh-6rem)] p-4 lg:flex-row bg-[#000000]/80 backdrop-blur'>
 
       <div className='w-1/3 relative'>
         <Image src="/img/me.jpg" alt='' fill className='object-cover' />
