@@ -8,15 +8,23 @@ const Interests = () => {
     { toolName: "#00695c", },
     { toolName: "#ef6c00", },
     { toolName: "#dd0000", },
+    { toolName: "#6a1b9a2", },
+    { toolName: "#00695c2", },
+    { toolName: "#ef6c002", },
+    { toolName: "#dd00002", },
+    { toolName: "#ef6c003", },
+    { toolName: "#dd00003", },
   ];
 
 
   return (
     <div className='mt-20'>
       <h1>Interests</h1>
-      <div className='flex flex-col p-4 pb-8 lg:flex-row '>
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 w-[400px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px]'>
         {interestData.map((d) => (
-          <SoftwareTool toolName={d.toolName} />
+          <div className='w-full'>
+            <SoftwareTool toolName={d.toolName} />
+          </div>
         ))}
       </div>
     </div>
