@@ -84,11 +84,26 @@ CREATE TABLE "ResumeData" (
     CONSTRAINT "ResumeData_pkey" PRIMARY KEY ("id")
 );
 
+-- CreateTable
+CREATE TABLE "ResumeDataDescription" (
+    "id" TEXT NOT NULL,
+    "data" TEXT,
+    "location" TEXT,
+    "thesis" BOOLEAN NOT NULL,
+    "desc" TEXT NOT NULL,
+    "titleSlug" TEXT NOT NULL,
+
+    CONSTRAINT "ResumeDataDescription_pkey" PRIMARY KEY ("id")
+);
+
 -- CreateIndex
 CREATE UNIQUE INDEX "Category_slug_key" ON "Category"("slug");
 
 -- CreateIndex
 CREATE UNIQUE INDEX "Product_title_key" ON "Product"("title");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "ResumeData_title_key" ON "ResumeData"("title");
 
 -- AddForeignKey
 ALTER TABLE "Product" ADD CONSTRAINT "Product_catSlug_fkey" FOREIGN KEY ("catSlug") REFERENCES "Category"("slug") ON DELETE RESTRICT ON UPDATE CASCADE;
@@ -98,3 +113,6 @@ ALTER TABLE "Productimage" ADD CONSTRAINT "Productimage_titleSlug_fkey" FOREIGN 
 
 -- AddForeignKey
 ALTER TABLE "Productdescription" ADD CONSTRAINT "Productdescription_titleSlug_fkey" FOREIGN KEY ("titleSlug") REFERENCES "Product"("title") ON DELETE RESTRICT ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "ResumeDataDescription" ADD CONSTRAINT "ResumeDataDescription_titleSlug_fkey" FOREIGN KEY ("titleSlug") REFERENCES "ResumeData"("title") ON DELETE RESTRICT ON UPDATE CASCADE;

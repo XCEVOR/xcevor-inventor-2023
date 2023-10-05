@@ -74,6 +74,17 @@ model AboutInterest {
 model ResumeData {
   id String @id @default(cuid())
   classification String
-  title String
+  title String @unique
   detail String?
+  resumeDataDescs ResumeDataDescription[]
+}
+
+model ResumeDataDescription {
+  id String @id @default(cuid())
+  data String?
+  location String?
+  thesis Boolean
+  desc String
+  resumeDataDescs ResumeData @relation(fields: [titleSlug], references: [title])
+  titleSlug String
 }
