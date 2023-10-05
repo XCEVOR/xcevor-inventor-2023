@@ -25,3 +25,11 @@ export type ProductImgType = {
   id: string;
   img: string;
 }
+
+
+export type aboutMeDataType = {
+  id: string;
+  classification: string;
+  title: string;
+  detail: string;
+}
