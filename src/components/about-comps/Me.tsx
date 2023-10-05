@@ -1,7 +1,16 @@
+import { aboutMeDataType } from '@/types/types';
 import Image from 'next/image'
 import React from 'react'
 
-const Me = () => {
+
+
+const getData =async () => {
+  const res = await fetch("http://localhost:3000/api/aboutme", {cache: "no-store"});
+  if (!res.ok) { throw new Error("Failed!"); };
+  return res.json();
+}
+
+const Me = async () => {
   const infoData = [
     {
       id: 1,
@@ -52,6 +61,7 @@ const Me = () => {
 
   const infoDataStyle = "flex items-center space-x-2 mt-6";
 
+  const aboutMeData:aboutMeDataType[] = await getData();
 
   return (
     <div className='flex flex-col md:flex-row w-[400px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px] h-fit lg:h-[calc(80vh-3rem)] md:h-[calc(80vh-6rem)] p-4 bg-[#000000]/80 backdrop-blur'>
@@ -99,9 +109,46 @@ const Me = () => {
                 </li>
                 ))}
 
+                
+
               </ul>
             </div>
           </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-4">
+            <div className='m-0 p-0'>
+              <ul>
+
+                {aboutMeData.slice( 0, Math.ceil(aboutMeData.length / 2) ).map((info, index) => (
+                <li className={infoDataStyle}>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                  <strong className="font-bold">{info.title}:</strong> <span>{info.detail}</span>
+                </li>
+                ))}
+
+              </ul>
+            </div>
+            <div className='m-0 p-0'>
+              <ul>
+
+                {aboutMeData.slice( Math.ceil(aboutMeData.length / 2) ).map((info, index) => (
+                <li className={infoDataStyle}>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                  <strong className="font-bold">{info.title}:</strong> <span>{info.detail}</span>
+                </li>
+                ))}
+
+                
+
+              </ul>
+            </div>
+          </div>
+
+
           <p className='mt-4'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
