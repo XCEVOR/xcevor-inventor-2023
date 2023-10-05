@@ -49,3 +49,31 @@ model Productdescription {
   product Product @relation(fields: [titleSlug], references: [title])
   titleSlug String
 }
+
+model AboutMe {
+  id String @id @default(cuid())
+  classification String
+  title String
+  detail String
+}
+
+model AboutSkill {
+  id String @id @default(cuid())
+  title String
+  bgcolor String?
+  completed Decimal
+}
+
+model AboutInterest {
+  id String @id @default(cuid())
+  priority Decimal
+  title String
+  logo String?
+}
+
+model ResumeData {
+  id String @id @default(cuid())
+  classification String
+  title String
+  detail String?
+}
