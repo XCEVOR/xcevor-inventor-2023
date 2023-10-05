@@ -33,3 +33,10 @@ export type aboutMeDataType = {
   title: string;
   detail: string;
 }
+
+export type aboutInterestDataType = {
+  id: string;
+  priority: number;
+  title: string;
+  logo: string;
+}
