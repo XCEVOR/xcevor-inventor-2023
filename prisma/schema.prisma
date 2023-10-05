@@ -76,15 +76,15 @@ model ResumeData {
   classification String
   title String @unique
   detail String?
-  resumeDataDescs ResumeDataDescription[]
+  resumeDataDesc ResumeDataDescription[]
 }
 
 model ResumeDataDescription {
   id String @id @default(cuid())
-  data String?
+  period String?
   location String?
   thesis Boolean
   desc String
-  resumeDataDescs ResumeData @relation(fields: [titleSlug], references: [title])
+  resumeData ResumeData @relation(fields: [titleSlug], references: [title])
   titleSlug String
 }

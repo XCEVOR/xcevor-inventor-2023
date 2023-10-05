@@ -87,7 +87,7 @@ CREATE TABLE "ResumeData" (
 -- CreateTable
 CREATE TABLE "ResumeDataDescription" (
     "id" TEXT NOT NULL,
-    "data" TEXT,
+    "period" TEXT,
     "location" TEXT,
     "thesis" BOOLEAN NOT NULL,
     "desc" TEXT NOT NULL,
