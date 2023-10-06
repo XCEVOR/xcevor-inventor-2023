@@ -64,7 +64,8 @@ const Me = async () => {
   const aboutMeData:aboutMeDataType[] = await getData();
 
   return (
-    <div className='flex flex-col md:flex-row w-[400px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px] h-fit lg:h-[calc(80vh-3rem)] md:h-[calc(80vh-6rem)] p-4 bg-[#000000]/80 backdrop-blur rounded-xl'>
+    // <div className='flex flex-col md:flex-row w-[400px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px] h-fit lg:h-[calc(80vh-3rem)] md:h-[calc(80vh-6rem)] p-4 bg-[#000000]/80 backdrop-blur rounded-xl'>
+    <div className='flex flex-col md:flex-row w-[400px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px] h-fit lg:h-[calc(80vh-3rem)] p-4 bg-[#000000]/80 backdrop-blur rounded-xl'>
 
       <div className='relative w-1/3 aspect-square'>
         <div className='w-full h-1/3'>
