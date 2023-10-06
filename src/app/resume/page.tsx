@@ -161,9 +161,9 @@ const Resume = async () => {
             <div className='flex flex-col lg:flex-row'>
               <div className='lg:order-first w-full'>
               {Object.keys(groupedData).map((classification, index) => (
-                index === 0 && <div className="flex flex-wrap m-4 p-4 bg-[#000000]/80 backdrop-blur rounded-xl" key={classification}>
+                index === 0 && <div className="flex flex-wrap mx-0 my-4 lg:m-4 p-4 bg-[#000000]/80 backdrop-blur rounded-xl" key={classification}>
                   <div className="w-full relative p-5">
-                    <h3 className="text-2xl font-bold mt-2 mb-4 text-white">{classification}</h3>
+                    <h3 className="text-2xl font-bold mt-0 mb-4 text-white">{classification}</h3>
                     {groupedData[classification].map((title) => (
                       <div key={title}>
                         <h4 className="text-lg font-semibold uppercase text-[#ffbf00] mt-6 mb-2">{title}</h4>
@@ -176,9 +176,9 @@ const Resume = async () => {
               </div>
               <div className='lg:order-last w-full'>
               {Object.keys(groupedData).map((classification, index) => (
-                index !== 0 && <div className="flex flex-wrap m-4 mb-8 p-4 bg-[#000000]/80 backdrop-blur rounded-xl" key={classification}>
+                index !== 0 && <div className="flex flex-wrap mx-0 mt-4 mb-8 lg:m-4 lg:mb-8 p-4 bg-[#000000]/80 backdrop-blur rounded-xl" key={classification}>
                   <div className="w-full relative p-5">
-                    <h3 className="text-2xl font-bold mt-2 mb-4 text-white">{classification}</h3>
+                    <h3 className="text-2xl font-bold mt-0 mb-4 text-white">{classification}</h3>
                     {groupedData[classification].map((title) => (
                       <div key={title}>
                         <h4 className="text-lg font-semibold uppercase text-[#ffbf00] mt-6 mb-2">{title}</h4>
