@@ -142,7 +142,7 @@ const Resume = async () => {
               ))} */}
 
 
-            {Object.keys(groupedData).map((classification) => (
+            {/* {Object.keys(groupedData).map((classification) => (
               <div className="flex flex-wrap" key={classification}>
                 <div className="w-full lg:w-1/2 relative p-5">
                   <h3 className="text-2xl font-bold mt-5 mb-5 text-white">{classification}</h3>
@@ -154,7 +154,44 @@ const Resume = async () => {
                   ))}
                 </div>
               </div>
-            ))}
+            ))} */}
+
+
+
+            <div className='flex flex-col lg:flex-row'>
+              <div className='lg:order-first w-full'>
+              {Object.keys(groupedData).map((classification, index) => (
+                index === 0 && <div className="flex flex-wrap" key={classification}>
+                  <div className="w-full relative p-5">
+                    <h3 className="text-2xl font-bold mt-5 mb-5 text-white">{classification}</h3>
+                    {groupedData[classification].map((title) => (
+                      <div key={title}>
+                        <h4 className="text-lg font-semibold uppercase text-[#ffbf00] mt-6 mb-2">{title}</h4>
+                        <ResumeDescription params={{ resumeTitle: title }} />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+              </div>
+              <div className='lg:order-last w-full'>
+              {Object.keys(groupedData).map((classification, index) => (
+                index !== 0 && <div className="flex flex-wrap" key={classification}>
+                  <div className="w-full relative p-5">
+                    <h3 className="text-2xl font-bold mt-5 mb-5 text-white">{classification}</h3>
+                    {groupedData[classification].map((title) => (
+                      <div key={title}>
+                        <h4 className="text-lg font-semibold uppercase text-[#ffbf00] mt-6 mb-2">{title}</h4>
+                        <ResumeDescription params={{ resumeTitle: title }} />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+              </div>
+            </div>
+
+
 
 
           </div>
