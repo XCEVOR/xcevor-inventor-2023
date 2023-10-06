@@ -20,8 +20,19 @@ const ResumeDescription = async ( {params}:{params: {resumeTitle:string}} ) => {
     <div>
       <h1>ResumeDescription</h1>
       <h1>{params.resumeTitle}</h1>
-      {bundleResumeDataDescription.map((rsDesc) => (
-        <h1>{rsDesc.desc}</h1>
+      {bundleResumeDataDescription.map((rsDesc, index) => (
+        <div>
+          {rsDesc.period !== null && <p className='px-2 py-1 w-fit bg-gray-800'>{rsDesc.period}</p>}
+          {rsDesc.thesis === false 
+            ? 
+            <ul className='pl-8 list-disc'>
+              <li>{rsDesc.desc}</li>
+            </ul>
+            : 
+            <p className='pl-4'>Thesis: {rsDesc.desc}</p>
+          }
+          
+        </div>
       ))}
     </div>
   )
