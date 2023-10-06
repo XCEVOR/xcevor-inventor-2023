@@ -161,7 +161,7 @@ const Resume = async () => {
             <div className='flex flex-col lg:flex-row'>
               <div className='lg:order-first w-full'>
               {Object.keys(groupedData).map((classification, index) => (
-                index === 0 && <div className="flex flex-wrap m-4 p-4 bg-[#000000]/80 backdrop-blur" key={classification}>
+                index === 0 && <div className="flex flex-wrap m-4 p-4 bg-[#000000]/80 backdrop-blur rounded-xl" key={classification}>
                   <div className="w-full relative p-5">
                     <h3 className="text-2xl font-bold mt-5 mb-5 text-white">{classification}</h3>
                     {groupedData[classification].map((title) => (
@@ -176,7 +176,7 @@ const Resume = async () => {
               </div>
               <div className='lg:order-last w-full'>
               {Object.keys(groupedData).map((classification, index) => (
-                index !== 0 && <div className="flex flex-wrap m-4 p-4 bg-[#000000]/80 backdrop-blur" key={classification}>
+                index !== 0 && <div className="flex flex-wrap m-4 p-4 bg-[#000000]/80 backdrop-blur rounded-xl" key={classification}>
                   <div className="w-full relative p-5">
                     <h3 className="text-2xl font-bold mt-5 mb-5 text-white">{classification}</h3>
                     {groupedData[classification].map((title) => (
