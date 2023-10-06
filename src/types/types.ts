@@ -48,3 +48,11 @@ export type ResumeDataType = {
   title: string
   detail: string
 }
+
+export type ResumeDataDescriptionType = {
+  id: string;
+  period?: string;
+  location?: string;
+  thesis: boolean;
+  desc: string;
+}
