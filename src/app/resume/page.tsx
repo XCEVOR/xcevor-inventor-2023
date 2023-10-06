@@ -5,6 +5,7 @@ import { menu, pizzas } from '@/data/dummyData';
 import BackgroundImage from '@/components/BackgroundImage';
 import { PageWrapper } from '@/components/framer-motion/page-wrapper';
 import { ResumeDataType } from '@/types/types';
+import ResumeDescription from '@/components/resume-comps/ResumeDescription';
 
 
 
@@ -109,6 +110,7 @@ const Resume = async () => {
                       <h4 className="text-lg font-semibold uppercase text-[#ffbf00] mb-2">{rsdata.title}</h4>
                       {/* <h1>{rsdata.title}</h1> */}
                       
+                      <ResumeDescription params={ {resumeTitle: rsdata.title} } />
                     </div>
 
                   </div>
