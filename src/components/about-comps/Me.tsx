@@ -67,13 +67,13 @@ const Me = async () => {
     // <div className='flex flex-col md:flex-row w-[400px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px] h-fit lg:h-[calc(80vh-3rem)] md:h-[calc(80vh-6rem)] p-4 bg-[#000000]/80 backdrop-blur rounded-xl'>
     <div className='flex flex-col md:flex-row w-[400px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px] h-fit lg:h-[calc(80vh-3rem)] p-4 bg-[#000000]/80 backdrop-blur rounded-xl'>
 
-      <div className='relative w-1/3 aspect-square'>
-        <div className='w-full h-1/3'>
+      <div className='relative m-auto md:m-0 w-full sm:w-2/3 md:h-1/2 md:w-1/3 lg:h-2/3 xl:h-full'>
+        <div className='aspect-[2/3]'>
           <Image src="/img/me.jpg" alt='' fill className='object-cover h-[calc(full/4)] w-full' />
         </div>
       </div>
       
-      <div className='relative flex flex-col w-2/3 items-center justify-center gap-8 text-[111111] px-10 '>
+      <div className='relative flex flex-col w-full md:w-2/3 items-center justify-center gap-8 text-[111111] px-10 '>
         {/* <h1 className='text-5xl text-center uppercase p-4 md:text-6xl xl:text-7xl'>
           me
         </h1> */}
