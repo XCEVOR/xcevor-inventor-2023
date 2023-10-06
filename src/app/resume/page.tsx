@@ -4,9 +4,35 @@ import ResumeData from '@/data/resumeData';
 import { menu, pizzas } from '@/data/dummyData';
 import BackgroundImage from '@/components/BackgroundImage';
 import { PageWrapper } from '@/components/framer-motion/page-wrapper';
+import { ResumeDataType } from '@/types/types';
 
 
-const Resume = () => {
+
+const getData = async () => {
+  console.log(" @@@@@@@@@@ const resumeData:ResumeDataType = await getData(); ")
+  const res = await fetch("http://localhost:3000/api/resume", {cache:"no-cache"});
+  // console.log("res", res.json);  // res [Function: json]
+  if (!res.ok) {throw new Error("Failed!");};
+  return res.json();
+}
+
+const getData2 = async () => {
+  console.log(" @@@@@@@@@@ const Portfolio = async () ")
+  const res = await fetch("http://localhost:3000/api/products",{
+    cache:"no-store"
+  });
+  console.log("res2", res.json);
+  if (!res.ok) { throw new Error("Failed!"); }
+
+  return res.json();
+}
+
+
+const Resume = async () => {
+
+  const resumeData:ResumeDataType[] = await getData();
+  await getData2();
+
   return (
     <>
     <BackgroundImage />
@@ -67,7 +93,37 @@ const Resume = () => {
                     
                   </div>
                 ))}
+
+
+                
+                <h3 className="text-2xl font-bold mt-5 mb-5 text-white">Education</h3>
+                {resumeData.map((edu, index) => (
+                  <div className="pb-0 pl-5 border-l-2 border-[#ffbf00]" key={index}>
+                    <div className="p-3 rounded-full absolute left-1 bg-[#ffbf00] "></div>
+                    <h4 className="text-lg font-semibold uppercase text-[#ffbf00] mb-2">{edu.title}</h4>
+                    <h5 className="bg-opacity-15 py-1 px-3 inline-block rounded-sm font-semibold mb-2 bg-[#222222]">{edu.title}</h5>
+                    <p>
+                      <em className="text-gray-300">{edu.title}</em>
+                    </p>
+                    <p className="text-gray-300">{edu.title}</p>
+                  </div>
+                ))}
+
+
+
               </div>
+
+              {resumeData.map((data) => (
+                <div>
+                  <h1>{data.classification}</h1>
+                  <div>
+                    <h1>{data.title}</h1>
+                    
+                  </div>
+                </div>
+              ))}
+
+
             </div>
           </div>
         </section>
