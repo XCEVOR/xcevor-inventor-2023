@@ -40,3 +40,19 @@ export type aboutInterestDataType = {
   title: string;
   logo: string;
 }
+
+
+export type ResumeDataType = {
+  id: string;
+  classification: string
+  title: string
+  detail: string
+}
+
+export type ResumeDataDescriptionType = {
+  id: string;
+  period?: string;
+  location?: string;
+  thesis: boolean;
+  desc: string;
+}

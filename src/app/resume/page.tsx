@@ -4,9 +4,36 @@ import ResumeData from '@/data/resumeData';
 import { menu, pizzas } from '@/data/dummyData';
 import BackgroundImage from '@/components/BackgroundImage';
 import { PageWrapper } from '@/components/framer-motion/page-wrapper';
+import { ResumeDataType } from '@/types/types';
+import ResumeDescription from '@/components/resume-comps/ResumeDescription';
 
 
-const Resume = () => {
+
+const getData = async () => {
+  console.log(" @@@@@@@@@@ const resumeData:ResumeDataType = await getData(); ")
+  const res = await fetch("http://localhost:3000/api/resume", {cache:"no-cache"});
+  // console.log("res", res.json);  // res [Function: json]
+  if (!res.ok) {throw new Error("Failed!");};
+  return res.json();
+}
+
+const getData2 = async () => {
+  console.log(" @@@@@@@@@@ const Portfolio = async () ")
+  const res = await fetch("http://localhost:3000/api/products",{
+    cache:"no-store"
+  });
+  console.log("res2", res.json);
+  if (!res.ok) { throw new Error("Failed!"); }
+
+  return res.json();
+}
+
+
+const Resume = async () => {
+
+  const resumeData:ResumeDataType[] = await getData();
+  await getData2();
+
   return (
     <>
     <BackgroundImage />
@@ -67,8 +94,30 @@ const Resume = () => {
                     
                   </div>
                 ))}
+
               </div>
+
             </div>
+
+
+              {resumeData.map((rsdata) => (
+                <div className="flex flex-wrap">
+                  <div className="w-full lg:w-1/2 relative p-5">
+                    <h3 className="text-2xl font-bold mt-5 mb-5 text-white">{rsdata.classification}</h3>
+                    {/* <h1>{rsdata.classification}</h1> */}
+
+                    <div>
+                      <h4 className="text-lg font-semibold uppercase text-[#ffbf00] mb-2">{rsdata.title}</h4>
+                      {/* <h1>{rsdata.title}</h1> */}
+                      
+                      <ResumeDescription params={ {resumeTitle: rsdata.title} } />
+                    </div>
+
+                  </div>
+                </div>
+              ))}
+
+
           </div>
         </section>
       </div>
