@@ -82,7 +82,7 @@ const Me = async () => {
           <p className="italic mt-4">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
           </p>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-4">
+          {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-4">
             <div className='m-0 p-0'>
               <ul>
 
@@ -108,12 +108,10 @@ const Me = async () => {
                   <strong className="font-bold">{info.title}:</strong> <span>{info.content}</span>
                 </li>
                 ))}
-
                 
-
               </ul>
             </div>
-          </div>
+          </div> */}
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-4">
             <div className='m-0 p-0'>
