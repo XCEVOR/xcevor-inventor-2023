@@ -9,6 +9,14 @@ import ResumeDescription from '@/components/resume-comps/ResumeDescription';
 
 
 
+
+
+// type ResumeData = {
+//   classification: string;
+//   title: string;
+// }[];
+
+
 const getData = async () => {
   console.log(" @@@@@@@@@@ const resumeData:ResumeDataType = await getData(); ")
   const res = await fetch("http://localhost:3000/api/resume", {cache:"no-cache"});
@@ -17,22 +25,22 @@ const getData = async () => {
   return res.json();
 }
 
-const getData2 = async () => {
-  console.log(" @@@@@@@@@@ const Portfolio = async () ")
-  const res = await fetch("http://localhost:3000/api/products",{
-    cache:"no-store"
-  });
-  console.log("res2", res.json);
-  if (!res.ok) { throw new Error("Failed!"); }
-
-  return res.json();
-}
-
 
 const Resume = async () => {
 
   const resumeData:ResumeDataType[] = await getData();
-  await getData2();
+
+  const groupedData = resumeData.reduce<{ [key: string]: string[] }>((accumulator, item) => {
+    if (!accumulator[item.classification]) {
+      accumulator[item.classification] = [];
+    }
+    accumulator[item.classification].push(item.title);
+    return accumulator;
+  }, {});
+  console.log("groupData", groupedData)
+
+  let prevClassification: string | null = null;
+
 
   return (
     <>
@@ -100,22 +108,90 @@ const Resume = async () => {
             </div>
 
 
-              {resumeData.map((rsdata) => (
+              {/* {resumeData.map((rsdata) => (
                 <div className="flex flex-wrap">
                   <div className="w-full lg:w-1/2 relative p-5">
                     <h3 className="text-2xl font-bold mt-5 mb-5 text-white">{rsdata.classification}</h3>
-                    {/* <h1>{rsdata.classification}</h1> */}
 
                     <div>
                       <h4 className="text-lg font-semibold uppercase text-[#ffbf00] mb-2">{rsdata.title}</h4>
-                      {/* <h1>{rsdata.title}</h1> */}
                       
                       <ResumeDescription params={ {resumeTitle: rsdata.title} } />
                     </div>
 
                   </div>
                 </div>
+              ))} */}
+
+              {/* {resumeData.map((rsdata) => (
+                <div className="flex flex-wrap" key={rsdata.id}>
+                  <div className="w-full lg:w-1/2 relative p-5">
+                    <div>
+                      {rsdata.classification !== prevClassification && (
+                        <h3 className="text-2xl font-bold mt-5 mb-5 text-white">{rsdata.classification}</h3>
+                      )}
+                      {prevClassification = rsdata.classification}
+                    </div>
+
+                    <div>
+                      <h4 className="text-lg font-semibold uppercase text-[#ffbf00] mb-2">{rsdata.title}</h4>
+                      <ResumeDescription params={{ resumeTitle: rsdata.title }} />
+                    </div>
+                  </div>
+                </div>
+              ))} */}
+
+
+            {/* {Object.keys(groupedData).map((classification) => (
+              <div className="flex flex-wrap" key={classification}>
+                <div className="w-full lg:w-1/2 relative p-5">
+                  <h3 className="text-2xl font-bold mt-5 mb-5 text-white">{classification}</h3>
+                  {groupedData[classification].map((title) => (
+                    <div key={title}>
+                      <h4 className="text-lg font-semibold uppercase text-[#ffbf00] mt-6 mb-2">{title}</h4>
+                      <ResumeDescription params={{ resumeTitle: title }} />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))} */}
+
+
+
+            <div className='flex flex-col lg:flex-row'>
+              <div className='lg:order-first w-full'>
+              {Object.keys(groupedData).map((classification, index) => (
+                index === 0 && <div className="flex flex-wrap m-4 p-4 bg-[#000000]/80 backdrop-blur rounded-xl" key={classification}>
+                  <div className="w-full relative p-5">
+                    <h3 className="text-2xl font-bold mt-2 mb-4 text-white">{classification}</h3>
+                    {groupedData[classification].map((title) => (
+                      <div key={title}>
+                        <h4 className="text-lg font-semibold uppercase text-[#ffbf00] mt-6 mb-2">{title}</h4>
+                        <ResumeDescription params={{ resumeTitle: title }} />
+                      </div>
+                    ))}
+                  </div>
+                </div>
               ))}
+              </div>
+              <div className='lg:order-last w-full'>
+              {Object.keys(groupedData).map((classification, index) => (
+                index !== 0 && <div className="flex flex-wrap m-4 mb-8 p-4 bg-[#000000]/80 backdrop-blur rounded-xl" key={classification}>
+                  <div className="w-full relative p-5">
+                    <h3 className="text-2xl font-bold mt-2 mb-4 text-white">{classification}</h3>
+                    {groupedData[classification].map((title) => (
+                      <div key={title}>
+                        <h4 className="text-lg font-semibold uppercase text-[#ffbf00] mt-6 mb-2">{title}</h4>
+                        <ResumeDescription params={{ resumeTitle: title }} />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+              </div>
+            </div>
+
+
 
 
           </div>
