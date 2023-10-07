@@ -19,9 +19,9 @@ const SkillFrontend = () => {
       <h1>Frontend Skills</h1>
       <div className='p-4 pb-8 lg:flex-row bg-[#000000]/80 backdrop-blur'>
 
-        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 '>
+      <div className="w-full flex flex-wrap mt-30 gap-30 justify-center">
           {skillData.map((d) => (
-            <div className='w-full'>
+            <div className="max-w-500 m-2 border border-purple-600 rounded-lg ">
               <div className="flex flex-row relative m-4 p-4 bg-[#000000]/80 backdrop-blur">
               <div className="">
                 <Image src="/img/interest/python.svg" width={40} height={40} alt="" />
