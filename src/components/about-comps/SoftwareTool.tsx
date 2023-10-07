@@ -28,7 +28,7 @@ console.log(toolLogo)
         //     <h1 className="flex items-center ml-2">{toolName}</h1>
         // </div>
 
-        <div className="flex flex-row relative m-4 p-4 bg-[#000000]/80 backdrop-blur">
+        <div className="flex flex-row relative m-4 p-4 bg-[#000000]/80 backdrop-blur rounded-xl">
             <div className="relative w-10 aspect-square">
                 <Image src={`${process.env.DEV_FILESERVER_URL}${toolLogo.toLowerCase()}`} fill alt="" />
             </div>
