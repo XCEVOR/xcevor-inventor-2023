@@ -1,6 +1,7 @@
 import React from 'react';
 import ProgressBar from '@/components/about-comps/ProgressBar';
 
+
 const Skills = () => {
   const testData = [
     { bgcolor: "#6a1b9a", completed: 60 },
@@ -17,7 +18,7 @@ const Skills = () => {
 
         {/* <h1>Skills</h1> */}
         
-        <div className='px-4 lg:w-1/2'>
+        {/* <div className='px-4 lg:w-1/2'>
           {testData.map((item, idx) => (
             <div className='pt-4'>
               <ProgressBar key={idx} bgcolor={item.bgcolor} completed={item.completed} />
@@ -30,7 +31,7 @@ const Skills = () => {
               <ProgressBar key={idx} bgcolor={item.bgcolor} completed={item.completed} />
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   )
