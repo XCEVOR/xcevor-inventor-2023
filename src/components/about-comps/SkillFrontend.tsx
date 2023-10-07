@@ -15,11 +15,11 @@ const SkillFrontend = () => {
 
 
   return (
-    <div className='mt-20 w-[400px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px]'>
+    <div className='mt-20 w-[200px] sm:w-[320px] md:w-[384px] lg:w-[512px] xl:w-[640px]'>
       <h1>Frontend Skills</h1>
-      <div className='flex flex-col p-4 pb-8 lg:flex-row bg-[#000000]/80 backdrop-blur'>
+      <div className='p-4 pb-8 lg:flex-row bg-[#000000]/80 backdrop-blur'>
 
-        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 w-[400px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px]'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 '>
           {skillData.map((d) => (
             <div className='w-full'>
               <div className="flex flex-row relative m-4 p-4 bg-[#000000]/80 backdrop-blur">
