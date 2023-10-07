@@ -1,6 +1,7 @@
 import React from 'react';
 import ProgressBar from '@/components/about-comps/ProgressBar';
 import SkillFrontend from './SkillFrontend';
+import SkillBackend from './SkillBackend';
 
 
 const Skills = () => {
@@ -18,6 +19,7 @@ const Skills = () => {
       <div className='flex flex-col p-4 pb-8 lg:flex-row bg-[#000000]/80 backdrop-blur'>
 
         <SkillFrontend />
+        <SkillBackend />
 
         {/* <h1>Skills</h1> */}
         
