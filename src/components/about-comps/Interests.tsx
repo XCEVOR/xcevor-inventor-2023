@@ -5,6 +5,12 @@ import { aboutInterestDataType } from '@/types/types';
 
 
 
+
+interface ToolProps {
+  toolName: string;
+  toolLogo: string;
+}
+
 const getData = async () => {
   const res = await fetch( "http://localhost:3000/api/aboutinterest" , { cache: "no-cache" } );
   if (!res.ok) { throw new Error("Failed!"); };
@@ -34,7 +40,7 @@ const Interests = async () => {
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 w-[400px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px]'>
         {interestData.map((d) => (
           <div className='w-full'>
-            <SoftwareTool toolName={d.toolName} />
+            {/* <SoftwareTool toolName={d.toolName} /> */}
           </div>
         ))}
       </div>
@@ -42,7 +48,7 @@ const Interests = async () => {
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 w-[400px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px]'>
         {aboutInterestData.map((data) => (
           <div className='w-full'>
-            <SoftwareTool toolName={data.title} />
+            <SoftwareTool toolName={data.title} toolLogo={data.logo} />
           </div>
         ))}
       </div>
