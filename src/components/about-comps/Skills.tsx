@@ -16,7 +16,7 @@ const Skills = () => {
   return (
     <div className='mt-20 w-[400px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px]'>
       <h1>Skills</h1>
-      <div className='flex flex-col p-4 pb-8 lg:flex-row bg-[#000000]/80 backdrop-blur'>
+      <div className='grid grid-cols-2 p-4 pb-8  bg-[#000000]/80 backdrop-blur'>
 
         <SkillFrontend />
         <SkillBackend />

@@ -16,7 +16,7 @@ const SkillFrontend = () => {
 
   return (
     <div className='mt-20 w-[400px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px]'>
-      <h1>Skills</h1>
+      <h1>Frontend Skills</h1>
       <div className='flex flex-col p-4 pb-8 lg:flex-row bg-[#000000]/80 backdrop-blur'>
 
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 w-[400px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px]'>
