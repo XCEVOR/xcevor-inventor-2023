@@ -15,23 +15,22 @@ const SkillFrontend = () => {
 
 
   return (
-    <div className='mt-20 w-[200px] sm:w-[320px] md:w-[384px] lg:w-[512px] xl:w-[640px]'>
-      <h1>Frontend Skills</h1>
-      <div className='p-4 pb-8 lg:flex-row bg-[#000000]/80 backdrop-blur'>
+    // <div className='m-2 w-[200px] sm:w-[320px] md:w-[384px] lg:w-[512px] xl:w-[640px]'>
+    <div className='w-full'>
+      <h1>Backend Skills</h1>
+      <div className='flex lg:flex-row p-8 bg-[#000000]/80 backdrop-blur rounded-xl'>
+        <div className="w-full flex flex-wrap gap-30 justify-center">
 
-      <div className="w-full flex flex-wrap mt-30 gap-30 justify-center">
-          {skillData.map((d) => (
-            <div className="max-w-500 m-2 border border-purple-600 rounded-lg ">
-              <div className="flex flex-row relative m-4 p-4 bg-[#000000]/80 backdrop-blur">
-              <div className="">
-                <Image src="/img/interest/python.svg" width={40} height={40} alt="" />
-              </div>
-              <h1 className="flex items-center ml-2">{d.toolName}</h1>
-              </div>
-            </div>
-          ))}
-        </div>
+            {skillData.map((d) => (
+              <div className="flex flex-row relative max-w-500 m-2 p-2 border border-purple-600 rounded-lg ">
 
+                  <Image src="/img/interest/python.svg" width={40} height={40} alt="" />
+
+                <h1 className="flex items-center ml-2">{d.toolName}</h1>
+              </div>
+            ))}
+            
+          </div>
       </div>
     </div>
   )
