@@ -17,7 +17,7 @@ const SkillOthers = () => {
   return (
     // <div className='m-2 w-[200px] sm:w-[320px] md:w-[384px] lg:w-[512px] xl:w-[640px]'>
     <div className='w-full'>
-      <h1>Others Skills</h1>
+      <h1 className='flex justify-center text-xl my-2'>Others Skills</h1>
       <div className='flex lg:flex-row p-8 bg-[#000000]/80 backdrop-blur rounded-xl'>
         <div className="w-full flex flex-wrap gap-30 justify-center">
 
