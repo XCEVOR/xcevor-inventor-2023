@@ -62,9 +62,9 @@ const PortfolioPost = async ( {params}: {params: {id:string}} ) => {
   const singleImgProduct:ProductImgType[] = await getImgData( singleProduct.title );
 
   return (
-    <div className='flex flex-col  p-4 lg:px-20 xl:px-40 '>
+    <div className='flex flex-col items-center'>
       <PageWrapper>
-        <div className="relative h-screen flex flex-col justify-around text-[#ffbf00] md:flex-row md:gap-8 md:items-center">
+        <div className="relative flex flex-col justify-around h-screen w-[80vw]  text-[#ffbf00] md:flex-row md:gap-8 md:items-center">
           {/* IMAGE CONTAINER */}
           {/* {singleProduct.img && (
             <div className="relative w-full h-1/2 md:h-[70%]">
@@ -131,8 +131,11 @@ const PortfolioPost = async ( {params}: {params: {id:string}} ) => {
 
       </PageWrapper>
 
+
+
+
       {/* <div className="p-4 lg:px-20 xl:px-40 h-screen flex flex-col justify-around text-[#ffbf00] md:flex-row md:gap-8 md:items-center"> */}
-      <div className="relative flex flex-col h-fit">
+      <div className="relative flex flex-col h-fit max-w-fit">
 
           {/* <img src="https://picsum.photos/1920/1080" alt="" className="object-contain max-w-4xl"/> */}
           <PfolioImage params={{ id: params.id, titleSlug: singleProduct.title }} />
