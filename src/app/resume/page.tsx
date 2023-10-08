@@ -56,7 +56,7 @@ const Resume = async () => {
             </div>
             <div className="flex flex-wrap">
               <div className="w-full lg:w-1/2 relative p-5">
-                <h3 className="text-2xl font-bold mt-5 mb-5 text-white">Developer Experience</h3>
+                <h3 className="text-2xl font-bold mt-5 mb-5 text-[#F8EFE4]">Developer Experience</h3>
                 <div className="pb-0 pl-5 border-l-2 border-[#FAD02C]">
                   <div className="p-3 rounded-full absolute left-1 bg-[#FAD02C] "></div>
                   <h4 className="text-lg font-semibold uppercase text-[#FAD02C] mb-2">{ResumeData.name}</h4>
@@ -71,7 +71,7 @@ const Resume = async () => {
                     </ul>
                   
                 </div>
-                <h3 className="text-2xl font-bold mt-5 mb-5 text-white">Education</h3>
+                <h3 className="text-2xl font-bold mt-5 mb-5 text-[#F8EFE4]">Education</h3>
                 {ResumeData.education.map((edu, index) => (
                   <div className="pb-0 pl-5 border-l-2 border-[#FAD02C]" key={index}>
                     <div className="p-3 rounded-full absolute left-1 bg-[#FAD02C] "></div>
@@ -111,7 +111,7 @@ const Resume = async () => {
               {/* {resumeData.map((rsdata) => (
                 <div className="flex flex-wrap">
                   <div className="w-full lg:w-1/2 relative p-5">
-                    <h3 className="text-2xl font-bold mt-5 mb-5 text-white">{rsdata.classification}</h3>
+                    <h3 className="text-2xl font-bold mt-5 mb-5 text-[#F8EFE4]">{rsdata.classification}</h3>
 
                     <div>
                       <h4 className="text-lg font-semibold uppercase text-[#FAD02C] mb-2">{rsdata.title}</h4>
@@ -128,7 +128,7 @@ const Resume = async () => {
                   <div className="w-full lg:w-1/2 relative p-5">
                     <div>
                       {rsdata.classification !== prevClassification && (
-                        <h3 className="text-2xl font-bold mt-5 mb-5 text-white">{rsdata.classification}</h3>
+                        <h3 className="text-2xl font-bold mt-5 mb-5 text-[#F8EFE4]">{rsdata.classification}</h3>
                       )}
                       {prevClassification = rsdata.classification}
                     </div>
@@ -145,7 +145,7 @@ const Resume = async () => {
             {/* {Object.keys(groupedData).map((classification) => (
               <div className="flex flex-wrap" key={classification}>
                 <div className="w-full lg:w-1/2 relative p-5">
-                  <h3 className="text-2xl font-bold mt-5 mb-5 text-white">{classification}</h3>
+                  <h3 className="text-2xl font-bold mt-5 mb-5 text-[#F8EFE4]">{classification}</h3>
                   {groupedData[classification].map((title) => (
                     <div key={title}>
                       <h4 className="text-lg font-semibold uppercase text-[#FAD02C] mt-6 mb-2">{title}</h4>
@@ -163,7 +163,7 @@ const Resume = async () => {
               {Object.keys(groupedData).map((classification, index) => (
                 index === 0 && <div className="flex flex-wrap mx-0 my-4 lg:m-4 p-4 bg-[#0A0A0A]/80 backdrop-blur rounded-xl" key={classification}>
                   <div className="w-full relative p-5">
-                    <h3 className="text-2xl font-bold mt-0 mb-4 text-white">{classification}</h3>
+                    <h3 className="text-2xl font-bold mt-0 mb-4 text-[#F8EFE4]">{classification}</h3>
                     {groupedData[classification].map((title) => (
                       <div key={title}>
                         <h4 className="text-lg font-semibold uppercase text-[#FAD02C] mt-6 mb-2">{title}</h4>
@@ -178,7 +178,7 @@ const Resume = async () => {
               {Object.keys(groupedData).map((classification, index) => (
                 index !== 0 && <div className="flex flex-wrap mx-0 mt-4 mb-8 lg:m-4 lg:mb-8 p-4 bg-[#0A0A0A]/80 backdrop-blur rounded-xl" key={classification}>
                   <div className="w-full relative p-5">
-                    <h3 className="text-2xl font-bold mt-0 mb-4 text-white">{classification}</h3>
+                    <h3 className="text-2xl font-bold mt-0 mb-4 text-[#F8EFE4]">{classification}</h3>
                     {groupedData[classification].map((title) => (
                       <div key={title}>
                         <h4 className="text-lg font-semibold uppercase text-[#FAD02C] mt-6 mb-2">{title}</h4>
