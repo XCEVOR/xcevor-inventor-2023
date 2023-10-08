@@ -38,7 +38,8 @@ export default function FixedNavbar() {
   return (
     <header className="z-[999] relative">
       <motion.div
-        className="fixed top-0 left-1/2 h-[4.5rem] w-full rounded-none border border-white border-opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.25rem] sm:w-[36rem] sm:rounded-full dark:bg-black dark:border-black/40 dark:bg-opacity-75"
+        // className="fixed top-0 left-1/2 h-[4.5rem] w-full rounded-none border border-white border-opacity-40 bg-white bg-opacity-80 shadow-[4px_4px_4px_4px_rgba(0,0,0,0.3)] shadow-[#F8EFE4]/[0.1] backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.25rem] sm:w-[36rem] sm:rounded-full dark:bg-[#0A0A0A] dark:border-[#0A0A0A]/40 dark:bg-opacity-75"
+        className="fixed top-0 left-1/2 h-[4.5rem] w-full rounded-none border border-white border-opacity-40 bg-white bg-opacity-80  backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.25rem] sm:w-[36rem] sm:rounded-full dark:bg-[#040404] dark:border-[#040404]/40 dark:bg-opacity-75"
         initial={{ y: -100, x: "-50%", opacity: 0 }}
         animate={{ y: 0, x: "-50%", opacity: 1 }}
       ></motion.div>
