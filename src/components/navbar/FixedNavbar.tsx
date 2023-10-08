@@ -61,9 +61,9 @@ export default function FixedNavbar() {
                 //   }
                 // )}
                 className={clsx(
-                  "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-[#ffbf00]",
+                  "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-[#FAD02C]",
                   {
-                    "text-gray-950 dark:!text-[#ffbf00]":
+                    "text-gray-950 dark:!text-[#FAD02C]":
                       ( (link.hash === "/" && path === "/") || link.hash === path.slice(1) ),
                   }
                 )}
