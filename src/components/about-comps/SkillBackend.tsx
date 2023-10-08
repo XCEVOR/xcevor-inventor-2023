@@ -18,7 +18,7 @@ const SkillBackend = () => {
     // <div className='m-2 w-[200px] sm:w-[320px] md:w-[384px] lg:w-[512px] xl:w-[640px]'>
     <div className='w-full'>
       <h1 className='flex justify-center text-xl my-2'>Backend Skills</h1>
-      <div className='flex lg:flex-row p-8 bg-[#000000]/80 backdrop-blur rounded-xl'>
+      <div className='flex lg:flex-row p-8 bg-[#0A0A0A]/80 backdrop-blur rounded-xl'>
         <div className="w-full flex flex-wrap gap-30 justify-center">
 
             {skillData.map((d) => (

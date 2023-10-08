@@ -109,7 +109,7 @@ const PortfolioPost = async ( {params}: {params: {id:string}} ) => {
 
 
             {/* TEXT CONTAINER */}
-            <div className="md:w-1/3 h-1/2 flex flex-col gap-4 md:h-[70%] md:justify-center md:gap-6 xl:gap-8  p-4 bg-[#000000]/80 backdrop-blur rounded-xl">
+            <div className="md:w-1/3 h-1/2 flex flex-col gap-4 md:h-[70%] md:justify-center md:gap-6 xl:gap-8  p-4 bg-[#0A0A0A]/80 backdrop-blur rounded-xl">
               <h1 className="text-3xl font-bold uppercase xl:text-5xl">{singleProduct.title}</h1>
               {/* <p>{singleProduct.desc}</p>
               <p>{singleProduct.desc}</p>
