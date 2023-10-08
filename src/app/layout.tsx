@@ -21,10 +21,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <FixedNavbar />
-        <Navbar />
-        {children}
-        <Footer />
+        <div className='text-[#F8EFE4]'>
+          <FixedNavbar />
+          <Navbar />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   )
