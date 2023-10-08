@@ -1,5 +1,10 @@
 import React from 'react';
 import ProgressBar from '@/components/about-comps/ProgressBar';
+import SkillFrontend from './SkillFrontend';
+import SkillBackend from './SkillBackend';
+import SkillDevops from './SkillDevops';
+import SkillOthers from './SkillOthers';
+
 
 const Skills = () => {
   const testData = [
@@ -13,11 +18,17 @@ const Skills = () => {
   return (
     <div className='mt-20 w-[400px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px]'>
       <h1>Skills</h1>
-      <div className='flex flex-col p-4 pb-8 lg:flex-row bg-[#000000]/80 backdrop-blur'>
+      {/* <div className='grid grid-cols-2 p-4 pb-8  bg-[#000000]/80 backdrop-blur'> */}
+      <div className='grid lg:grid-cols-2 gap-8 '>
+
+        <SkillFrontend />
+        <SkillBackend />
+        <SkillDevops />
+        <SkillOthers />
 
         {/* <h1>Skills</h1> */}
         
-        <div className='px-4 lg:w-1/2'>
+        {/* <div className='px-4 lg:w-1/2'>
           {testData.map((item, idx) => (
             <div className='pt-4'>
               <ProgressBar key={idx} bgcolor={item.bgcolor} completed={item.completed} />
@@ -30,7 +41,7 @@ const Skills = () => {
               <ProgressBar key={idx} bgcolor={item.bgcolor} completed={item.completed} />
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   )
