@@ -43,7 +43,7 @@ const Navbar = () => {
 
 
   return (
-    <div className='h-12 text-[#ffbf00] p-4 flex items-center justify-between border-b-2 border-[#ffbf00] uppercase md:h-24 lg:px-20 xl:px-40'>
+    <div className='h-12 text-[#FAD02C] p-4 flex items-center justify-between border-b-2 border-[#FAD02C] uppercase md:h-24 lg:px-20 xl:px-40'>
 
       <div className='text-xl md:font-bold'>
         <Link href="/">Home</Link>
@@ -59,14 +59,14 @@ const Navbar = () => {
               ("/" + link.title.toLowerCase()) === (path) 
               && <motion.span
                 layoutId="underline"
-                className="absolute left-0 top-full block h-[3px] w-full bg-[#ffbf00]"
+                className="absolute left-0 top-full block h-[3px] w-full bg-[#FAD02C]"
               />
             )} */}
             {(
               ( link.title.toLowerCase() ) === ( `${path.split("/", 2).slice(1)}` ) 
               && <motion.span
                 layoutId="underline"
-                className="absolute left-0 top-full block h-[3px] w-full bg-[#ffbf00]"
+                className="absolute left-0 top-full block h-[3px] w-full bg-[#FAD02C]"
               />
             )}
 
@@ -74,7 +74,7 @@ const Navbar = () => {
             {/* {(
               <motion.span
                 layoutId="underline"
-                className="absolute left-0 top-full block h-[1px] w-full bg-[#ffbf00]"
+                className="absolute left-0 top-full block h-[1px] w-full bg-[#FAD02C]"
               />
             )} */}
             {/* <h1>{("/" + link.title.toLowerCase())} </h1> */}
