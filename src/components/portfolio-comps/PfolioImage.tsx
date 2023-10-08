@@ -28,7 +28,7 @@ const PfolioImage = async ( {params}: {params: {id:string, titleSlug:string}} ) 
 
   return (
     // <div className="p-4 lg:px-20 xl:px-40 h-screen flex flex-col justify-around text-[#ffbf00] md:flex-row md:gap-8 md:items-center">
-    <div className='h-screen'>
+    <div className='flex flex-col gap-8 lg:gap-20  w-[80vw] xl:w-[76vw] pt-8'>
 
       {/* {singleImgProduct.map((singleImg) => (
         <div className="relative flex flex-col w-full h-2/3 gap-10">
@@ -41,11 +41,11 @@ const PfolioImage = async ( {params}: {params: {id:string, titleSlug:string}} ) 
         </div>
       ))} */}
       {singleImgProduct.slice(1).map((singleImg) => (
-        <div className="relative flex flex-col w-full h-2/3 gap-10">
+        <div className="relative aspect-[3/2]">
           <Image
             src={`${process.env.DEV_FILESERVER_URL}${singleImg.img}`}
             alt=""
-            className="object-contain"
+            className=" object-contain"
             fill
           />
         </div>
