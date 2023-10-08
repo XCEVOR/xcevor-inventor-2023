@@ -62,9 +62,9 @@ const PortfolioPost = async ( {params}: {params: {id:string}} ) => {
   const singleImgProduct:ProductImgType[] = await getImgData( singleProduct.title );
 
   return (
-    <div className='flex flex-col'>
+    <div className='flex flex-col  p-4 lg:px-20 xl:px-40 '>
       <PageWrapper>
-        <div className="relative p-4 lg:px-20 xl:px-40 h-screen flex flex-col justify-around text-[#ffbf00] md:flex-row md:gap-8 md:items-center">
+        <div className="relative h-screen flex flex-col justify-around text-[#ffbf00] md:flex-row md:gap-8 md:items-center">
           {/* IMAGE CONTAINER */}
           {/* {singleProduct.img && (
             <div className="relative w-full h-1/2 md:h-[70%]">
