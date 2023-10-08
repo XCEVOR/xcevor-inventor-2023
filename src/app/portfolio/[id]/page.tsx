@@ -62,9 +62,9 @@ const PortfolioPost = async ( {params}: {params: {id:string}} ) => {
   const singleImgProduct:ProductImgType[] = await getImgData( singleProduct.title );
 
   return (
-    <div>
+    <div className='flex flex-col'>
       <PageWrapper>
-        <div className="p-4 lg:px-20 xl:px-40 h-screen flex flex-col justify-around text-[#ffbf00] md:flex-row md:gap-8 md:items-center">
+        <div className="relative p-4 lg:px-20 xl:px-40 h-screen flex flex-col justify-around text-[#ffbf00] md:flex-row md:gap-8 md:items-center">
           {/* IMAGE CONTAINER */}
           {/* {singleProduct.img && (
             <div className="relative w-full h-1/2 md:h-[70%]">
@@ -89,7 +89,7 @@ const PortfolioPost = async ( {params}: {params: {id:string}} ) => {
               </div>
             ))} */}
             {singleImgProduct.map((singleImg, index) => (
-              index === 0 && <div className="relative w-full h-1/2 md:h-[70%]">
+              index === 0 && <div className="relative flex gap-4 w-full aspect-[2/3]">
                 <Image
                   src={`${process.env.DEV_FILESERVER_URL}${singleImg.img}`}
                   alt=""
@@ -128,12 +128,17 @@ const PortfolioPost = async ( {params}: {params: {id:string}} ) => {
           </div> */}
         </div>
 
-        <div className="p-4 lg:px-20 xl:px-40 h-screen flex flex-col justify-around text-[#ffbf00] md:flex-row md:gap-8 md:items-center">
-          <div className="h-full w-full flex flex-col gap-4 ">
-            <PfolioImage params={{ id: params.id, titleSlug: singleProduct.title }} />
-          </div>
-        </div>
+
       </PageWrapper>
+
+      {/* <div className="p-4 lg:px-20 xl:px-40 h-screen flex flex-col justify-around text-[#ffbf00] md:flex-row md:gap-8 md:items-center"> */}
+      <div className="relative flex flex-col h-fit">
+
+          {/* <img src="https://picsum.photos/1920/1080" alt="" className="object-contain max-w-4xl"/> */}
+          <PfolioImage params={{ id: params.id, titleSlug: singleProduct.title }} />
+
+      </div>
+
     </div>
   )
 }
