@@ -55,8 +55,10 @@ const Portfolio = async () => {
                     <div className="relative h-[86%] aspect-square rounded-2xl overflow-hidden">
                       <Image src={`${process.env.DEV_FILESERVER_URL}${item.img}`} alt="" fill className="object-contain aspect-square"/>
                       <div className="opacity-0 hover:opacity-100 duration-300 absolute inset-0 z-10 flex justify-center items-center bg-[#282120]/[90%] text-2xl text-[#F8EFE4] font-semibold">
-                        {item.title}
-                        {/* {item.catSlug} */}
+                        <div className='flex flex-col items-center justify-center'>
+                          <p>{item.title}</p>
+                          <p className='mt-2 text-[1rem]'>{item.catSlug.toUpperCase()}</p>
+                        </div>
                       </div>
                     </div>
                   </div>
