@@ -59,9 +59,12 @@ model AboutMe {
 
 model AboutSkill {
   id String @id @default(cuid())
+  classification String
+  priority Decimal?
   title String
-  bgcolor String?
-  completed Decimal
+  image String?
+  url String?
+  isDisplayed Boolean @default(true)
 }
 
 model AboutInterest {

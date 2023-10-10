@@ -57,9 +57,12 @@ CREATE TABLE "AboutMe" (
 -- CreateTable
 CREATE TABLE "AboutSkill" (
     "id" TEXT NOT NULL,
+    "classification" TEXT NOT NULL,
+    "priority" DECIMAL(65,30),
     "title" TEXT NOT NULL,
-    "bgcolor" TEXT,
-    "completed" DECIMAL(65,30) NOT NULL,
+    "image" TEXT,
+    "url" TEXT,
+    "isDisplayed" BOOLEAN NOT NULL DEFAULT true,
 
     CONSTRAINT "AboutSkill_pkey" PRIMARY KEY ("id")
 );
