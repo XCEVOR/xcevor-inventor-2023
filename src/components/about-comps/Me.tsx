@@ -68,7 +68,7 @@ const Me = async () => {
     <div className='flex flex-col md:flex-row w-[400px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px] h-fit lg:h-[calc(80vh-3rem)] p-4 bg-[#0A0A0A]/80 backdrop-blur rounded-xl'>
 
       <div className='relative m-auto md:m-0 w-full sm:w-2/3 md:h-1/2 md:w-1/3 lg:h-2/3 xl:h-full'>
-        <div className='aspect-[2/3]'>
+        <div className='aspect-[3/4]'>
           <Image src="/img/about/profile-character-1200x1600.png" alt='' fill className='object-cover h-[calc(full/4)] w-full' />
         </div>
       </div>
