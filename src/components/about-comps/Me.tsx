@@ -69,7 +69,7 @@ const Me = async () => {
 
       <div className='relative m-auto md:m-0 w-full sm:w-2/3 md:h-1/2 md:w-1/3 lg:h-2/3 xl:h-full'>
         <div className='aspect-[2/3]'>
-          <Image src="/img/me.jpg" alt='' fill className='object-cover h-[calc(full/4)] w-full' />
+          <Image src="/img/about/profile-character-1200x1600.png" alt='' fill className='object-cover h-[calc(full/4)] w-full' />
         </div>
       </div>
       
