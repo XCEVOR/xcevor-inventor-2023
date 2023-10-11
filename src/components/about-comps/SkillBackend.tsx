@@ -41,7 +41,10 @@ const SkillBackend = async () => {
         <div className="w-full flex flex-wrap gap-30 justify-center">
         {fetchedSkillData.map((sdata) => (
           <div className="flex flex-row relative max-w-500 m-2 p-2 border border-[#F8EFE4] border-opacity-20 rounded-lg  transition hover:-translate-y-1">
-            <Image src="/img/interest/python.svg" width={40} height={40} alt="" />
+              {sdata.image !== null 
+                ? <Image src={`${process.env.DEV_FILESERVER_URL}${sdata.image}`} width={40} height={40} alt="" />
+                : <Image src="/img/interest/python.svg" width={40} height={40} alt="" />
+              }
             <h1 className="flex items-center ml-2">{sdata.title}</h1>
           </div>
         ))}
