@@ -2,8 +2,8 @@ import React from 'react';
 import ProgressBar from '@/components/about-comps/ProgressBar';
 import SkillFrontend from './SkillFrontend';
 import SkillBackend from './SkillBackend';
-import SkillDevops from './SkillDevops';
-import SkillOthers from './SkillOthers';
+import SkillDeployment from './SkillDeployment';
+import SkillTools from './SkillTools';
 
 
 const Skills = () => {
@@ -23,8 +23,8 @@ const Skills = () => {
 
         <SkillFrontend />
         <SkillBackend />
-        <SkillDevops />
-        <SkillOthers />
+        <SkillDeployment />
+        <SkillTools />
 
         {/* <h1>Skills</h1> */}
         

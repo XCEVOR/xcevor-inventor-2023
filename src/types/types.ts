@@ -35,6 +35,16 @@ export type aboutMeDataType = {
   detail: string;
 }
 
+export type AboutSkillType = {
+  id: string;
+  classification: string;
+  priority: number;
+  title: string;
+  image: string;
+  url: string;
+  isDisplayed: boolean;
+}
+
 export type aboutInterestDataType = {
   id: string;
   priority: number;

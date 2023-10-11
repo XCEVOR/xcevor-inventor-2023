@@ -5,29 +5,29 @@ import { AboutSkillType } from '@/types/types';
 
 
 const getData = async (params:string) => {
-  const res = await fetch(`http://localhost:3000/api/aboutskill/${params}`, { cache: "no-cache" });
-  if (!res.ok) { throw new Error("Falied!"); };
+  const res = await fetch(`http://localhost:3000/api/aboutskill/${params}`, {cache: "no-cache"});
+  if (!res.ok) {throw new Error("Failed!");};
   return res.json();
 }
 
-const SkillFrontend = async () => {
+const SkillDeployment = async () => {
   const skillData = [
+    { toolName: "#6a1b9a11", },
+    { toolName: "#00695c1asdf", },
+    { toolName: "#ef6c0012d", },
+    { toolName: "#dd0000asdf", },
     { toolName: "#6a1b9a", },
-    { toolName: "#00695c", },
-    { toolName: "#ef6c00", },
-    { toolName: "#dd0000", },
-    { toolName: "#6a1b9a2", },
     { toolName: "#00695c2", },
-    { toolName: "#ef6c002", },
+    { toolName: "#ef6c002er", },
   ];
 
-  const fetchedSkillData:AboutSkillType[] = await getData("frontend");
+  const fetchedSkillData:AboutSkillType[] = await getData("deployment");
 
 
   return (
     // <div className='m-2 w-[200px] sm:w-[320px] md:w-[384px] lg:w-[512px] xl:w-[640px]'>
     <div className='w-full'>
-      <h1 className='flex justify-center text-xl my-2'>Front-end</h1>
+      <h1 className='flex justify-center text-xl my-2'>Deployment</h1>
       <div className='flex lg:flex-row p-8 bg-[#0A0A0A]/80 backdrop-blur rounded-xl'>
         {/* <div className="w-full flex flex-wrap gap-30 justify-center">
             {skillData.map((d) => (
@@ -51,9 +51,10 @@ const SkillFrontend = async () => {
           </div>
         ))}
         </div>
+        
       </div>
     </div>
   )
 }
 
-export default SkillFrontend
+export default SkillDeployment
