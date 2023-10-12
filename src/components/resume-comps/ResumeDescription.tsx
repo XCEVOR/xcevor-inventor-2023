@@ -22,7 +22,7 @@ const ResumeDescription = async ( {params}:{params: {resumeTitle:string}} ) => {
       {/* <h1>{params.resumeTitle}</h1> */}
       {bundleResumeDataDescription.map((rsDesc, index) => (
         <div>
-          {rsDesc.period !== null && <p className='ml-2 px-2 py-1 w-fit bg-gray-800'>{rsDesc.period}</p>}
+          {rsDesc.period !== null && <p className='ml-2 px-2 py-1 w-fit bg-[#282120]'>{rsDesc.period}</p>}
           {rsDesc.location !== null && <p className='mb-2 px-2 py-1 w-fit italic'>{rsDesc.location}</p>}
           <div>
             {rsDesc.thesis === false 
