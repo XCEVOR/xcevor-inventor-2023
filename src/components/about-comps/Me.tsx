@@ -143,7 +143,7 @@ const Me = async () => {
                         </svg>
                         <strong className="font-bold">{infoa.title}:</strong>
                         {infoa.detail.startsWith("https://") 
-                          ? (<Link href={infoa.detail} passHref legacyBehavior><a target='_blank'>{infoa.detail}</a></Link>) 
+                          ? (<Link href={infoa.detail} passHref legacyBehavior><a className='hover:text-[#FAD02C] transition-colors duration-300 ease-in-out' target='_blank'>{infoa.detail}</a></Link>) 
                           : (<span>{infoa.detail}</span>)
                         }
                       </li>
