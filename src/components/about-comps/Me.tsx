@@ -1,6 +1,8 @@
 import { aboutMeDataType } from '@/types/types';
+import CopyToClipboardButton from '@/utils/CopyToClipboardButton';
 import { Reveal } from '@/utils/Reveal';
 import Image from 'next/image'
+import Link from 'next/link';
 import React from 'react'
 
 
@@ -15,48 +17,33 @@ const Me = async () => {
   const infoData = [
     {
       id: 1,
-      title: "AAA", 
-      content: "1 May 1995",
+      classification: "maintitle",
+      title: "maintitle", 
+      detail: "MAIN TITLE",
     },
     {
       id: 2,
-      title: "AAA", 
-      content: "www.example.com",
+      classification: "subtitle",
+      title: "subtitle", 
+      detail: "SUB TITLE",
     },
     {
       id: 3,
-      title: "CCC", 
-      content: "+123 456 7890",
+      classification: "info-group-a",
+      title: "Blog", 
+      detail: "https://www.google.com",
     },
     {
       id: 4,
-      title: "DDD", 
-      content: "New York, USA",
+      classification: "info-group-a",
+      title: "Email", 
+      detail: "email@gmail.com",
     },
     {
       id: 5,
-      title: "EEE", 
-      content: "xx",
-    },
-    {
-      id: 6,
-      title: "FFF", 
-      content: "Master",
-    },
-    {
-      id: 7,
-      title: "GGG", 
-      content: "email@example.com",
-    },
-    {
-      id: 8,
-      title: "HHH", 
-      content: "Available",
-    },
-    {
-      id: 9,
-      title: "III", 
-      content: "Available22",
+      classification: "info-group-b",
+      title: "Group B Tille", 
+      detail: "Description",
     },
   ];
 
@@ -137,10 +124,12 @@ const Me = async () => {
                   {infoGroupAData.slice( 0, Math.ceil(infoGroupAData.length / 2) ).map((infoa:aboutMeDataType, index:number) => (
                     <Reveal mydelay={2 * 1.4} >
                       <li className={infoDataStyle}>
-                        <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                        </svg>
-                        <strong className="font-bold">{infoa.title}:</strong> <span>{infoa.detail}</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F8EFE4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                        <strong className="font-bold">{infoa.title}:</strong>
+                        {infoa.detail.startsWith("https://") 
+                          ? (<Link href={infoa.detail} passHref legacyBehavior><a className='hover:text-[#FAD02C] transition-colors duration-300 ease-in-out' target='_blank'>{infoa.detail}</a></Link>) 
+                          : (<span>{infoa.detail}</span>)
+                        }
                       </li>
                     </Reveal>
                   ))}
@@ -151,10 +140,17 @@ const Me = async () => {
                   {infoGroupAData.slice( Math.ceil(infoGroupAData.length / 2) ).map((infoa:aboutMeDataType, index:number) => (
                     <Reveal mydelay={2 * 1.6} >
                       <li className={infoDataStyle}>
-                        <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                        </svg>
-                        <strong className="font-bold">{infoa.title}:</strong> <span>{infoa.detail}</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F8EFE4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                        <strong className="font-bold">{infoa.title}:</strong>
+                        {infoa.title === "Email"
+                          // If the infoa.title is Email, activate the clipboard button function
+                          ? <CopyToClipboardButton text={infoa.detail} ></CopyToClipboardButton>
+                          :
+                        
+                            (infoa.detail.startsWith("https://") 
+                            ? (<Link href={infoa.detail} passHref legacyBehavior><a target='_blank'>{infoa.detail}</a></Link>) 
+                            : (<span>{infoa.detail}</span>))
+                        }
                       </li>
                     </Reveal>
                   ))}
@@ -162,25 +158,25 @@ const Me = async () => {
               </div>
             </div>
 
-            <Reveal mydelay={2 * 1.8} >
-              {infoGroupBData 
-                ?
-                <div>
-                  {infoGroupBData.map((infob:aboutMeDataType, index:number) => (
-                    <p className='mt-4'>{infob.detail}</p>
-                  ))}
-                </div>
-                :
-                <p className='mt-4'>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-              }
-
-
-            </Reveal>
+            <div className='mt-12'>
+              <Reveal mydelay={2 * 1.8} >
+                {infoGroupBData 
+                  ?
+                  <div>
+                    {infoGroupBData.map((infob:aboutMeDataType, index:number) => (
+                      <p className='mt-4'>{infob.detail}</p>
+                    ))}
+                  </div>
+                  :
+                  <p className='mt-4'>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                }
+              </Reveal>
+            </div>
           </div>
 
         </div>
