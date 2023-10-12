@@ -36,7 +36,7 @@ const Interests = async () => {
 
   return (
     <div className='mt-20'>
-      <h1>Interests</h1>
+      <h1 className='text-2xl text-[#FAD02C] font-bold uppercase'>Interests</h1>
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 w-[400px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px]'>
         {interestData.map((d) => (
           <div className='w-full'>
