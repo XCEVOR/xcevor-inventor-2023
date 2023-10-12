@@ -1,6 +1,7 @@
 import { aboutMeDataType } from '@/types/types';
 import { Reveal } from '@/utils/Reveal';
 import Image from 'next/image'
+import Link from 'next/link';
 import React from 'react'
 
 
@@ -140,7 +141,11 @@ const Me = async () => {
                         <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                         </svg>
-                        <strong className="font-bold">{infoa.title}:</strong> <span>{infoa.detail}</span>
+                        <strong className="font-bold">{infoa.title}:</strong>
+                        {infoa.detail.startsWith("https://") 
+                          ? (<Link href={infoa.detail} passHref legacyBehavior><a target='_blank'>{infoa.detail}</a></Link>) 
+                          : (<span>{infoa.detail}</span>)
+                        }
                       </li>
                     </Reveal>
                   ))}
@@ -154,7 +159,11 @@ const Me = async () => {
                         <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                         </svg>
-                        <strong className="font-bold">{infoa.title}:</strong> <span>{infoa.detail}</span>
+                        <strong className="font-bold">{infoa.title}:</strong>
+                        {infoa.detail.startsWith("https://") 
+                          ? (<Link href={infoa.detail} passHref legacyBehavior><a target='_blank'>{infoa.detail}</a></Link>) 
+                          : (<span>{infoa.detail}</span>)
+                        }
                       </li>
                     </Reveal>
                   ))}
