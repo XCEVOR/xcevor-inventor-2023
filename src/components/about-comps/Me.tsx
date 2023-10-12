@@ -1,4 +1,5 @@
 import { aboutMeDataType } from '@/types/types';
+import CopyToClipboardButton from '@/utils/CopyToClipboardButton';
 import { Reveal } from '@/utils/Reveal';
 import Image from 'next/image'
 import Link from 'next/link';
@@ -160,9 +161,13 @@ const Me = async () => {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                         </svg>
                         <strong className="font-bold">{infoa.title}:</strong>
-                        {infoa.detail.startsWith("https://") 
+                        {infoa.title === "Email"
+                          ? <CopyToClipboardButton text={infoa.detail} ></CopyToClipboardButton>
+                          :
+                        
+                          (infoa.detail.startsWith("https://") 
                           ? (<Link href={infoa.detail} passHref legacyBehavior><a target='_blank'>{infoa.detail}</a></Link>) 
-                          : (<span>{infoa.detail}</span>)
+                          : (<span>{infoa.detail}</span>))
                         }
                       </li>
                     </Reveal>
