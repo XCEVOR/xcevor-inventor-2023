@@ -2,6 +2,7 @@ import React from 'react'
 import SoftwareTool from './SoftwareTool';
 import Image from 'next/image';
 import { aboutInterestDataType } from '@/types/types';
+import { Reveal } from '@/utils/Reveal';
 
 
 
@@ -47,9 +48,13 @@ const Interests = async () => {
 
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 w-[400px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px]'>
         {aboutInterestData.map((data) => (
-          <div className='w-full'>
-            <SoftwareTool toolName={data.title} toolLogo={data.logo} />
-          </div>
+          <Reveal mydelay={ data.priority } key={ data.id }>
+            <div className='w-full'>
+
+                <SoftwareTool toolName={data.title} toolLogo={data.logo} />
+              
+            </div>
+          </Reveal>
         ))}
       </div>
 
