@@ -48,7 +48,7 @@ const Interests = async () => {
 
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 w-[400px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px]'>
         {aboutInterestData.map((data) => (
-          <Reveal mydelay={ data.priority } key={ data.id }>
+          <Reveal mydelay={ data.priority * 0.5 } key={ data.id }>
             <div className='w-full'>
 
                 <SoftwareTool toolName={data.title} toolLogo={data.logo} />
