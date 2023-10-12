@@ -20,7 +20,7 @@ const Me = async () => {
     },
     {
       id: 2,
-      title: "BBB", 
+      title: "AAA", 
       content: "www.example.com",
     },
     {
@@ -63,6 +63,8 @@ const Me = async () => {
   const infoDataStyle = "flex items-center space-x-2 mt-6";
 
   const aboutMeData:aboutMeDataType[] = await getData();
+  const maintitleData:aboutMeDataType | any = aboutMeData.find(data => data.classification === "maintitle");
+  // console.log(" @@ console.log(maintitleData)", maintitleData);
 
   return (
     // <div className='flex flex-col md:flex-row w-[400px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px] h-fit lg:h-[calc(80vh-3rem)] md:h-[calc(80vh-6rem)] p-4 bg-[#0A0A0A]/80 backdrop-blur rounded-xl'>
@@ -83,7 +85,10 @@ const Me = async () => {
 
           <div className="lg:col-span-8 pt-4 lg:pt-0">
             <Reveal mydelay={2 * 1.0} >
-              <h3 className="text-2xl font-bold">UI/UX &amp; Graphic Designer</h3>
+            {maintitleData 
+              ? <h3 className="text-2xl font-bold">{maintitleData.detail}</h3>
+              : <h3 className="text-2xl font-bold">Developer</h3>
+            }
             </Reveal>
             <Reveal mydelay={2 * 1.2} >
               <p className="italic mt-4">
