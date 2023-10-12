@@ -4,6 +4,7 @@ import SkillFrontend from './SkillFrontend';
 import SkillBackend from './SkillBackend';
 import SkillDeployment from './SkillDeployment';
 import SkillTools from './SkillTools';
+import { Reveal } from '@/utils/Reveal';
 
 
 const Skills = () => {
@@ -20,11 +21,11 @@ const Skills = () => {
       <h1 className='text-2xl text-[#FAD02C] font-bold uppercase'>Skills</h1>
       {/* <div className='grid grid-cols-2 p-4 pb-8  bg-[#0A0A0A]/80 backdrop-blur'> */}
       <div className='grid lg:grid-cols-2 gap-8 '>
-
-        <SkillFrontend />
-        <SkillBackend />
-        <SkillDeployment />
-        <SkillTools />
+        <Reveal mydelay={ 1 } >< SkillFrontend /></Reveal>
+        <Reveal mydelay={ 2 } >< SkillBackend /></Reveal>
+        <Reveal mydelay={ 1 } >< SkillDeployment /></Reveal>
+        <Reveal mydelay={ 2 } >< SkillTools /></Reveal>
+      
 
         {/* <h1>Skills</h1> */}
         

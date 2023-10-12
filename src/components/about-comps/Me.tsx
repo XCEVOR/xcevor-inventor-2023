@@ -1,4 +1,5 @@
 import { aboutMeDataType } from '@/types/types';
+import { Reveal } from '@/utils/Reveal';
 import Image from 'next/image'
 import React from 'react'
 
@@ -81,10 +82,14 @@ const Me = async () => {
           </h1> */}
 
           <div className="lg:col-span-8 pt-4 lg:pt-0">
-            <h3 className="text-2xl font-bold">UI/UX &amp; Graphic Designer</h3>
-            <p className="italic mt-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-            </p>
+            <Reveal mydelay={2 * 1.0} >
+              <h3 className="text-2xl font-bold">UI/UX &amp; Graphic Designer</h3>
+            </Reveal>
+            <Reveal mydelay={2 * 1.2} >
+              <p className="italic mt-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+              </p>
+            </Reveal>
             {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-4">
               <div className='m-0 p-0'>
                 <ul>
@@ -121,12 +126,14 @@ const Me = async () => {
                 <ul>
 
                   {aboutMeData.slice( 0, Math.ceil(aboutMeData.length / 2) ).map((info, index) => (
-                  <li className={infoDataStyle}>
-                    <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                    </svg>
-                    <strong className="font-bold">{info.title}:</strong> <span>{info.detail}</span>
-                  </li>
+                    <Reveal mydelay={2 * 1.4} >
+                      <li className={infoDataStyle}>
+                        <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                        <strong className="font-bold">{info.title}:</strong> <span>{info.detail}</span>
+                      </li>
+                    </Reveal>
                   ))}
 
                 </ul>
@@ -135,12 +142,14 @@ const Me = async () => {
                 <ul>
 
                   {aboutMeData.slice( Math.ceil(aboutMeData.length / 2) ).map((info, index) => (
-                  <li className={infoDataStyle}>
-                    <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                    </svg>
-                    <strong className="font-bold">{info.title}:</strong> <span>{info.detail}</span>
-                  </li>
+                    <Reveal mydelay={2 * 1.6} >
+                      <li className={infoDataStyle}>
+                        <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                        <strong className="font-bold">{info.title}:</strong> <span>{info.detail}</span>
+                      </li>
+                    </Reveal>
                   ))}
 
                   
@@ -149,13 +158,14 @@ const Me = async () => {
               </div>
             </div>
 
-
-            <p className='mt-4'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
+            <Reveal mydelay={2 * 1.8} >
+              <p className='mt-4'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </Reveal>
           </div>
 
         </div>
