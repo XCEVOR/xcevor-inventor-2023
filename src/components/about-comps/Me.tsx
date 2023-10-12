@@ -65,7 +65,9 @@ const Me = async () => {
   const aboutMeData:aboutMeDataType[] = await getData();
   const maintitleData:aboutMeDataType | any = aboutMeData.find(data => data.classification === "maintitle");
   const subtitleData:aboutMeDataType | any = aboutMeData.find(data => data.classification === "subtitle");
+  const infoGroupAData:aboutMeDataType[] = aboutMeData.filter(infoa => infoa.classification === "info-group-a");
   // console.log(" @@ console.log(maintitleData)", maintitleData);
+  // console.log(" @@ console.log(infoGroupAData)", infoGroupAData);
 
   return (
     // <div className='flex flex-col md:flex-row w-[400px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px] h-fit lg:h-[calc(80vh-3rem)] md:h-[calc(80vh-6rem)] p-4 bg-[#0A0A0A]/80 backdrop-blur rounded-xl'>
@@ -131,36 +133,30 @@ const Me = async () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-4">
               <div className='m-0 p-0'>
                 <ul>
-
-                  {aboutMeData.slice( 0, Math.ceil(aboutMeData.length / 2) ).map((info, index) => (
+                  {infoGroupAData.slice( 0, Math.ceil(infoGroupAData.length / 2) ).map((infoa:aboutMeDataType, index:number) => (
                     <Reveal mydelay={2 * 1.4} >
                       <li className={infoDataStyle}>
                         <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                         </svg>
-                        <strong className="font-bold">{info.title}:</strong> <span>{info.detail}</span>
+                        <strong className="font-bold">{infoa.title}:</strong> <span>{infoa.detail}</span>
                       </li>
                     </Reveal>
                   ))}
-
                 </ul>
               </div>
               <div className='m-0 p-0'>
                 <ul>
-
-                  {aboutMeData.slice( Math.ceil(aboutMeData.length / 2) ).map((info, index) => (
+                  {infoGroupAData.slice( Math.ceil(infoGroupAData.length / 2) ).map((infoa:aboutMeDataType, index:number) => (
                     <Reveal mydelay={2 * 1.6} >
                       <li className={infoDataStyle}>
                         <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                         </svg>
-                        <strong className="font-bold">{info.title}:</strong> <span>{info.detail}</span>
+                        <strong className="font-bold">{infoa.title}:</strong> <span>{infoa.detail}</span>
                       </li>
                     </Reveal>
                   ))}
-
-                  
-
                 </ul>
               </div>
             </div>
