@@ -6,6 +6,7 @@ import BackgroundImage from '@/components/BackgroundImage';
 import { PageWrapper } from '@/components/framer-motion/page-wrapper';
 import { ResumeDataType } from '@/types/types';
 import ResumeDescription from '@/components/resume-comps/ResumeDescription';
+import { Reveal } from '@/utils/Reveal';
 
 
 
@@ -161,32 +162,38 @@ const Resume = async () => {
             <div className='flex flex-col lg:flex-row'>
               <div className='lg:order-first w-full'>
               {Object.keys(groupedData).map((classification, index) => (
-                index === 0 && <div className="flex flex-wrap mx-0 my-4 lg:m-4 p-4 bg-[#0A0A0A]/80 backdrop-blur rounded-xl" key={classification}>
-                  <div className="w-full relative p-5">
-                    <h3 className="text-2xl font-bold mt-0 mb-4 text-[#F8EFE4]">{classification}</h3>
-                    {groupedData[classification].map((title) => (
-                      <div key={title}>
-                        <h4 className="text-lg font-semibold uppercase text-[#FAD02C] mt-6 mb-2">{title}</h4>
-                        <ResumeDescription params={{ resumeTitle: title }} />
-                      </div>
-                    ))}
+                index === 0 && 
+                <Reveal mydelay={2 * (1 + 0.4 * (index + 1))} >
+                  <div className="flex flex-wrap mx-0 my-4 lg:m-4 p-4 bg-[#0A0A0A]/80 backdrop-blur rounded-xl" key={classification}>
+                    <div className="w-full relative p-5">
+                      <h3 className="text-2xl font-bold mt-0 mb-4 text-[#F8EFE4]">{classification}</h3>
+                      {groupedData[classification].map((title) => (
+                        <div key={title}>
+                          <h4 className="text-lg font-semibold uppercase text-[#FAD02C] mt-6 mb-2">{title}</h4>
+                          <ResumeDescription params={{ resumeTitle: title }} />
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                </Reveal>
               ))}
               </div>
               <div className='lg:order-last w-full'>
               {Object.keys(groupedData).map((classification, index) => (
-                index !== 0 && <div className="flex flex-wrap mx-0 mt-4 mb-8 lg:m-4 lg:mb-8 p-4 bg-[#0A0A0A]/80 backdrop-blur rounded-xl" key={classification}>
-                  <div className="w-full relative p-5">
-                    <h3 className="text-2xl font-bold mt-0 mb-4 text-[#F8EFE4]">{classification}</h3>
-                    {groupedData[classification].map((title) => (
-                      <div key={title}>
-                        <h4 className="text-lg font-semibold uppercase text-[#FAD02C] mt-6 mb-2">{title}</h4>
-                        <ResumeDescription params={{ resumeTitle: title }} />
-                      </div>
-                    ))}
+                index !== 0 && 
+                <Reveal mydelay={2 * (1 + 0.4 * (index + 1))} >
+                  <div className="flex flex-wrap mx-0 mt-4 mb-8 lg:m-4 lg:mb-8 p-4 bg-[#0A0A0A]/80 backdrop-blur rounded-xl" key={classification}>
+                    <div className="w-full relative p-5">
+                      <h3 className="text-2xl font-bold mt-0 mb-4 text-[#F8EFE4]">{classification}</h3>
+                      {groupedData[classification].map((title) => (
+                        <div key={title}>
+                          <h4 className="text-lg font-semibold uppercase text-[#FAD02C] mt-6 mb-2">{title}</h4>
+                          <ResumeDescription params={{ resumeTitle: title }} />
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                </Reveal>
               ))}
               </div>
             </div>

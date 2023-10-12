@@ -1,4 +1,5 @@
 import { ResumeDataDescriptionType } from '@/types/types';
+import { Reveal } from '@/utils/Reveal';
 import React from 'react'
 
 
@@ -21,6 +22,7 @@ const ResumeDescription = async ( {params}:{params: {resumeTitle:string}} ) => {
       {/* <h1>ResumeDescription</h1> */}
       {/* <h1>{params.resumeTitle}</h1> */}
       {bundleResumeDataDescription.map((rsDesc, index) => (
+        <Reveal mydelay={2 * (1 + 0.4 * (index + 1))} >
         <div>
           {rsDesc.period !== null && <p className='ml-2 px-2 py-1 w-fit bg-[#282120] rounded-md'>{rsDesc.period}</p>}
           {rsDesc.location !== null && <p className='mb-2 px-2 py-1 w-fit italic'>{rsDesc.location}</p>}
@@ -35,6 +37,7 @@ const ResumeDescription = async ( {params}:{params: {resumeTitle:string}} ) => {
             }
           </div>
         </div>
+        </Reveal>
       ))}
     </div>
   )
