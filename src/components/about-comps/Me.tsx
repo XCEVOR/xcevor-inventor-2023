@@ -17,48 +17,33 @@ const Me = async () => {
   const infoData = [
     {
       id: 1,
-      title: "AAA", 
-      content: "1 May 1995",
+      classification: "maintitle",
+      title: "maintitle", 
+      detail: "MAIN TITLE",
     },
     {
       id: 2,
-      title: "AAA", 
-      content: "www.example.com",
+      classification: "subtitle",
+      title: "subtitle", 
+      detail: "SUB TITLE",
     },
     {
       id: 3,
-      title: "CCC", 
-      content: "+123 456 7890",
+      classification: "info-group-a",
+      title: "Blog", 
+      detail: "https://www.google.com",
     },
     {
       id: 4,
-      title: "DDD", 
-      content: "New York, USA",
+      classification: "info-group-a",
+      title: "Email", 
+      detail: "email@gmail.com",
     },
     {
       id: 5,
-      title: "EEE", 
-      content: "xx",
-    },
-    {
-      id: 6,
-      title: "FFF", 
-      content: "Master",
-    },
-    {
-      id: 7,
-      title: "GGG", 
-      content: "email@example.com",
-    },
-    {
-      id: 8,
-      title: "HHH", 
-      content: "Available",
-    },
-    {
-      id: 9,
-      title: "III", 
-      content: "Available22",
+      classification: "info-group-b",
+      title: "Group B Tille", 
+      detail: "Description",
     },
   ];
 
