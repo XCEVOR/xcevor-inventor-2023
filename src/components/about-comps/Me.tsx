@@ -162,12 +162,13 @@ const Me = async () => {
                         </svg>
                         <strong className="font-bold">{infoa.title}:</strong>
                         {infoa.title === "Email"
+                          // If the infoa.title is Email, activate the clipboard button function
                           ? <CopyToClipboardButton text={infoa.detail} ></CopyToClipboardButton>
                           :
                         
-                          (infoa.detail.startsWith("https://") 
-                          ? (<Link href={infoa.detail} passHref legacyBehavior><a target='_blank'>{infoa.detail}</a></Link>) 
-                          : (<span>{infoa.detail}</span>))
+                            (infoa.detail.startsWith("https://") 
+                            ? (<Link href={infoa.detail} passHref legacyBehavior><a target='_blank'>{infoa.detail}</a></Link>) 
+                            : (<span>{infoa.detail}</span>))
                         }
                       </li>
                     </Reveal>
