@@ -64,6 +64,7 @@ const Me = async () => {
 
   const aboutMeData:aboutMeDataType[] = await getData();
   const maintitleData:aboutMeDataType | any = aboutMeData.find(data => data.classification === "maintitle");
+  const subtitleData:aboutMeDataType | any = aboutMeData.find(data => data.classification === "subtitle");
   // console.log(" @@ console.log(maintitleData)", maintitleData);
 
   return (
@@ -85,15 +86,16 @@ const Me = async () => {
 
           <div className="lg:col-span-8 pt-4 lg:pt-0">
             <Reveal mydelay={2 * 1.0} >
-            {maintitleData 
-              ? <h3 className="text-2xl font-bold">{maintitleData.detail}</h3>
-              : <h3 className="text-2xl font-bold">Developer</h3>
-            }
+              {maintitleData 
+                ? <h3 className="text-2xl font-bold">{maintitleData.detail}</h3>
+                : <h3 className="text-2xl font-bold">Developer</h3>
+              }
             </Reveal>
             <Reveal mydelay={2 * 1.2} >
-              <p className="italic mt-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-              </p>
+              {subtitleData 
+                ? <p className="italic mt-4">{subtitleData.detail}</p>
+                : <p className="italic mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+              }
             </Reveal>
             {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-4">
               <div className='m-0 p-0'>
