@@ -20,7 +20,7 @@ const Me = async () => {
     },
     {
       id: 2,
-      title: "BBB", 
+      title: "AAA", 
       content: "www.example.com",
     },
     {
@@ -63,6 +63,12 @@ const Me = async () => {
   const infoDataStyle = "flex items-center space-x-2 mt-6";
 
   const aboutMeData:aboutMeDataType[] = await getData();
+  const maintitleData:aboutMeDataType | any = aboutMeData.find(data => data.classification === "maintitle");
+  const subtitleData:aboutMeDataType | any = aboutMeData.find(data => data.classification === "subtitle");
+  const infoGroupAData:aboutMeDataType[] = aboutMeData.filter(infoa => infoa.classification === "info-group-a");
+  const infoGroupBData:aboutMeDataType[] = aboutMeData.filter(infob => infob.classification === "info-group-b");
+  // console.log(" @@ console.log(maintitleData)", maintitleData);
+  // console.log(" @@ console.log(infoGroupAData)", infoGroupAData);
 
   return (
     // <div className='flex flex-col md:flex-row w-[400px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px] h-fit lg:h-[calc(80vh-3rem)] md:h-[calc(80vh-6rem)] p-4 bg-[#0A0A0A]/80 backdrop-blur rounded-xl'>
@@ -83,12 +89,16 @@ const Me = async () => {
 
           <div className="lg:col-span-8 pt-4 lg:pt-0">
             <Reveal mydelay={2 * 1.0} >
-              <h3 className="text-2xl font-bold">UI/UX &amp; Graphic Designer</h3>
+              {maintitleData 
+                ? <h3 className="text-2xl font-bold">{maintitleData.detail}</h3>
+                : <h3 className="text-2xl font-bold">Developer</h3>
+              }
             </Reveal>
             <Reveal mydelay={2 * 1.2} >
-              <p className="italic mt-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-              </p>
+              {subtitleData 
+                ? <p className="italic mt-4">{subtitleData.detail}</p>
+                : <p className="italic mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+              }
             </Reveal>
             {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-4">
               <div className='m-0 p-0'>
@@ -124,47 +134,52 @@ const Me = async () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-4">
               <div className='m-0 p-0'>
                 <ul>
-
-                  {aboutMeData.slice( 0, Math.ceil(aboutMeData.length / 2) ).map((info, index) => (
+                  {infoGroupAData.slice( 0, Math.ceil(infoGroupAData.length / 2) ).map((infoa:aboutMeDataType, index:number) => (
                     <Reveal mydelay={2 * 1.4} >
                       <li className={infoDataStyle}>
                         <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                         </svg>
-                        <strong className="font-bold">{info.title}:</strong> <span>{info.detail}</span>
+                        <strong className="font-bold">{infoa.title}:</strong> <span>{infoa.detail}</span>
                       </li>
                     </Reveal>
                   ))}
-
                 </ul>
               </div>
               <div className='m-0 p-0'>
                 <ul>
-
-                  {aboutMeData.slice( Math.ceil(aboutMeData.length / 2) ).map((info, index) => (
+                  {infoGroupAData.slice( Math.ceil(infoGroupAData.length / 2) ).map((infoa:aboutMeDataType, index:number) => (
                     <Reveal mydelay={2 * 1.6} >
                       <li className={infoDataStyle}>
                         <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                         </svg>
-                        <strong className="font-bold">{info.title}:</strong> <span>{info.detail}</span>
+                        <strong className="font-bold">{infoa.title}:</strong> <span>{infoa.detail}</span>
                       </li>
                     </Reveal>
                   ))}
-
-                  
-
                 </ul>
               </div>
             </div>
 
             <Reveal mydelay={2 * 1.8} >
-              <p className='mt-4'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
+              {infoGroupBData 
+                ?
+                <div>
+                  {infoGroupBData.map((infob:aboutMeDataType, index:number) => (
+                    <p className='mt-4'>{infob.detail}</p>
+                  ))}
+                </div>
+                :
+                <p className='mt-4'>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+              }
+
+
             </Reveal>
           </div>
 
