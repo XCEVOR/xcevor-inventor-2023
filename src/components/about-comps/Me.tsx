@@ -66,6 +66,7 @@ const Me = async () => {
   const maintitleData:aboutMeDataType | any = aboutMeData.find(data => data.classification === "maintitle");
   const subtitleData:aboutMeDataType | any = aboutMeData.find(data => data.classification === "subtitle");
   const infoGroupAData:aboutMeDataType[] = aboutMeData.filter(infoa => infoa.classification === "info-group-a");
+  const infoGroupBData:aboutMeDataType[] = aboutMeData.filter(infob => infob.classification === "info-group-b");
   // console.log(" @@ console.log(maintitleData)", maintitleData);
   // console.log(" @@ console.log(infoGroupAData)", infoGroupAData);
 
@@ -162,12 +163,23 @@ const Me = async () => {
             </div>
 
             <Reveal mydelay={2 * 1.8} >
-              <p className='mt-4'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
+              {infoGroupBData 
+                ?
+                <div>
+                  {infoGroupBData.map((infob:aboutMeDataType, index:number) => (
+                    <p className='mt-4'>{infob.detail}</p>
+                  ))}
+                </div>
+                :
+                <p className='mt-4'>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+              }
+
+
             </Reveal>
           </div>
 
