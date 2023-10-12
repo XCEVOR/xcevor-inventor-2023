@@ -124,9 +124,7 @@ const Me = async () => {
                   {infoGroupAData.slice( 0, Math.ceil(infoGroupAData.length / 2) ).map((infoa:aboutMeDataType, index:number) => (
                     <Reveal mydelay={2 * 1.4} >
                       <li className={infoDataStyle}>
-                        <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F8EFE4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
                         <strong className="font-bold">{infoa.title}:</strong>
                         {infoa.detail.startsWith("https://") 
                           ? (<Link href={infoa.detail} passHref legacyBehavior><a className='hover:text-[#FAD02C] transition-colors duration-300 ease-in-out' target='_blank'>{infoa.detail}</a></Link>) 
@@ -142,9 +140,7 @@ const Me = async () => {
                   {infoGroupAData.slice( Math.ceil(infoGroupAData.length / 2) ).map((infoa:aboutMeDataType, index:number) => (
                     <Reveal mydelay={2 * 1.6} >
                       <li className={infoDataStyle}>
-                        <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F8EFE4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
                         <strong className="font-bold">{infoa.title}:</strong>
                         {infoa.title === "Email"
                           // If the infoa.title is Email, activate the clipboard button function
