@@ -27,8 +27,8 @@ const SkillBackend = async () => {
   return (
     // <div className='m-2 w-[200px] sm:w-[320px] md:w-[384px] lg:w-[512px] xl:w-[640px]'>
     <div className='w-full'>
-      <h1 className='flex justify-center text-xl my-2'>Back-end</h1>
-      <div className='flex lg:flex-row p-8 bg-[#0A0A0A]/80 backdrop-blur rounded-xl'>
+      <div className='flex flex-col p-8 bg-[#0A0A0A]/80 backdrop-blur rounded-xl'>
+        <h1 className='flex justify-center text-xl font-bold mb-4'>Back-end</h1>
         {/* <div className="w-full flex flex-wrap gap-30 justify-center">
             {skillData.map((d) => (
               <div className="flex flex-row relative max-w-500 m-2 p-2 border border-[#F8EFE4] border-opacity-20 rounded-lg  transition hover:-translate-y-1">
