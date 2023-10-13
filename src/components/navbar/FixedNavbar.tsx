@@ -22,7 +22,12 @@ export default function FixedNavbar() {
     {
       name: "Resume",
       hash: "resume",
-    },    {
+    },
+    {
+      name: "Projects",
+      hash: "projects",
+    },     
+    {
       name: "Portfolio",
       hash: "portfolio",
     },
