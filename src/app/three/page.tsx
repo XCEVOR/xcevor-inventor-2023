@@ -10,6 +10,11 @@ import { TopBracket } from '@/components/three-models/object/TopBracket';
 import { BottomSpikes01 } from '@/components/three-models/object/BottomSpikes01';
 import { BottomSpikes02 } from '@/components/three-models/object/BottomSpikes02';
 
+import { DecoApple } from '@/components/three-models/object/DecoApple';
+import { DecoFlask } from '@/components/three-models/object/DecoFlask';
+import { DecoChatbubble } from '@/components/three-models/object/DecoChatbubble';
+
+
 
 const Three = () => {
   return (
@@ -41,6 +46,11 @@ const Three = () => {
             <Scroll>
               <TopBracket position={[2.4, 0, 0]} scale={1} />
 
+              <DecoApple position={[0, -10, -3.1]} scale={0.6} />
+              
+              <DecoFlask position={[0, -16, -1.3]} scale={0.3} />
+
+              <DecoChatbubble position={[0, -22, -1.3]} scale={130.2} />
 
             </Scroll>
 
