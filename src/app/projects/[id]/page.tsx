@@ -7,6 +7,7 @@ import { ProductDescType, ProductImgType, ProductType } from '@/types/types';
 import PfolioImage from '@/components/portfolio-comps/PfolioImage';
 import { PageWrapper } from '@/components/framer-motion/page-wrapper';
 import BackgroundImage from '@/components/BackgroundImage';
+import Footer from '@/components/footer/Footer';
 
 
 
@@ -51,7 +52,7 @@ const getImgData = async ( titleSlug: string ) => {
 // }
 
 
-const PortfolioPost = async ( {params}: {params: {id:string}} ) => {
+const ProjectPost = async ( {params}: {params: {id:string}} ) => {
 
   const singleProduct:ProductType = await getData( params.id );
   console.log(singleProduct)
@@ -65,10 +66,10 @@ const PortfolioPost = async ( {params}: {params: {id:string}} ) => {
   return (
     <>
       <BackgroundImage />
-    
-      <div className='flex flex-col items-center'>
+
+      <div className='flex flex-col items-center px-20 lg:px-40 py-28'>
         <PageWrapper>
-          <div className="relative flex flex-col justify-around h-screen w-[80vw]  text-[#FAD02C] md:flex-row md:gap-8 md:items-center">
+          <div className="relative flex flex-col justify-around h-[calc(100vh-10rem)] w-[80vw]  text-[#FAD02C] md:flex-row md:gap-8 md:items-center">
             {/* IMAGE CONTAINER */}
             {/* {singleProduct.img && (
               <div className="relative w-full h-1/2 md:h-[70%]">
@@ -147,8 +148,10 @@ const PortfolioPost = async ( {params}: {params: {id:string}} ) => {
         </div>
 
       </div>
+
+      <Footer />
     </>
   )
 }
 
-export default PortfolioPost
+export default ProjectPost

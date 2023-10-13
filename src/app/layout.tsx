@@ -23,9 +23,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className='text-[#F8EFE4]'>
           <FixedNavbar />
-          <Navbar />
           {children}
-          <Footer />
         </div>
       </body>
     </html>
