@@ -17,28 +17,28 @@ export default function FixedNavbar() {
     },
     {
       name: "Three",
-      hash: "three",
+      hash: "/three",
     },
     {
       name: "About",
-      hash: "about",
+      hash: "/about",
     },
     {
       name: "Resume",
-      hash: "resume",
+      hash: "/resume",
     },
     {
       name: "Projects",
-      hash: "projects",
+      hash: "/projects",
     },     
     {
       name: "Portfolio",
-      hash: "portfolio",
+      hash: "/portfolio",
     },
   ] as const;
 
   const path = usePathname();
-  console.log(path.slice(1));
+  console.log("  @@ console.log(path.split(/)[1]); ", path.split("/")[1]);
 
 
 
@@ -74,7 +74,7 @@ export default function FixedNavbar() {
                   "flex w-full items-center justify-center px-3 py-3 x-10 text-[1rem] font-bold hover:text-gray-950 transition dark:text-[#F8EFE4] dark:hover:text-[#FAD02C]",
                   {
                     "text-gray-950 dark:!text-[#282120]":
-                      ( (link.hash === "/" && path === "/") || link.hash === path.slice(1) ),
+                      ( (link.hash === "/" && path === "/") || link.hash === "/" + path.split("/")[1] ),
                   }
                 )}
                 href={link.hash}
@@ -85,7 +85,7 @@ export default function FixedNavbar() {
               >
                 {link.name}
 
-                {( (link.hash === "/" && path === "/") || link.hash === path.slice(1) ) && (
+                {( (link.hash === "/" && path === "/") || link.hash === "/" + path.split("/")[1] ) && (
                   <motion.span
                     className="bg-gray-100 rounded-full absolute inset-0 -z-10 dark:bg-[#FAD02C] "
                     // className="absolute inset-0 -x-10 hover:text-white border border-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 rounded-full dark:border-[#FAD02C] dark:text-purple-400 dark:hover:text-white dark:hover:bg-[#FAD02C]/[50%] dark:focus:ring-purple-900 transition duration-300 ease-in-out"
