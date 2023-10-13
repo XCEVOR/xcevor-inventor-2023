@@ -44,12 +44,12 @@ const Portfolio = async () => {
         </div> */}
         
         <div className='flex px-1 md:px-20 items-center justify-center  '>
-          <div className="grid lg:grid-cols-2 2xl:grid-cols-3 w-full max-w-full">
+          <div className="grid lg:grid-cols-2 2xl:grid-cols-3 w-full xl:max-w-fit">
             {featureProducts.map((item, index) => (
               <Reveal mydelay={1.5 * (1 + 0.4 * index)} >
               <div className='sm:p-8'>
 
-                <Link className="w-full h-[90vw] md:max-h-[80vw] lg:max-h-[30vw] border-r-2 border-b-2 border-[#F8EFE4]/[2%]  flex flex-col justify-between group" href={`/portfolio/${item.id}`} key={item.id}> 
+                <Link className="w-fit h-[90vw] md:max-h-[80vw] lg:max-h-[30vw] aspect-square border-r-2 border-b-2 border-[#F8EFE4]/[2%]  flex flex-col justify-between group" href={`/portfolio/${item.id}`} key={item.id}> 
 
                   {/* IMAGE CONTAINER */}
                   {item.img && (
