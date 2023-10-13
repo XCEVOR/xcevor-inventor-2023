@@ -6,6 +6,7 @@ import Image from 'next/image';
 import BackgroundImage from '@/components/BackgroundImage';
 import { ProductType } from '@/types/types';
 import { PageWrapper } from '@/components/framer-motion/page-wrapper';
+import { Reveal } from '@/utils/Reveal';
 
 
 
@@ -43,40 +44,46 @@ const Portfolio = async () => {
         </div> */}
         
 
-        <div className="flex flex-wrap text-[#F8EFE4] px-20">
-          {featureProducts.map((item) => (
+        <div className="grid xl:grid-cols-3 text-[#F8EFE4] px-20">
+          {featureProducts.map((item, index) => (
+            <Reveal mydelay={1.5 * (1 + 0.4 * index)} >
+            
 
-            // REMOVED odd:bg-fuchsia-50
-            <Link className="w-full h-[60vh] border-r-2 border-b-2 border-[#F8EFE4]/[2%] sm:w-1/2 lg:w-1/3 p-4 flex flex-col justify-between group" href={`/portfolio/${item.id}`} key={item.id}> 
-              {/* IMAGE CONTAINER */}
-              {item.img && (
-                <div className="relative flex items-center justify-center h-full">
-                  <div className="relative flex items-center justify-center h-[90%] aspect-square rounded-3xl overflow-hidden bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-60 border border-gray-200 border-opacity-10 transition-all duration-700 hover:scale-105">
-                    <div className="relative h-[86%] aspect-square rounded-2xl overflow-hidden">
-                      <Image src={`${process.env.DEV_FILESERVER_URL}${item.img}`} alt="" fill className="object-contain aspect-square"/>
-                      <div className="opacity-0 hover:opacity-100 duration-300 absolute inset-0 z-10 flex justify-center items-center bg-[#282120]/[90%] text-2xl text-[#F8EFE4] font-semibold">
-                        <div className='flex flex-col items-center justify-center'>
-                          <p>{item.title}</p>
-                          <p className='mt-2 text-[1rem]'>{item.catSlug.toUpperCase()}</p>
+              <Link className="w-full h-[60vh] border-r-2 border-b-2 border-[#F8EFE4]/[2%] p-4 flex flex-col justify-between group" href={`/portfolio/${item.id}`} key={item.id}> 
+
+                {/* IMAGE CONTAINER */}
+                {item.img && (
+                  <div className="relative flex items-center justify-center h-full">
+                    <div className="relative flex items-center justify-center h-[90%] aspect-square rounded-3xl overflow-hidden bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-60 border border-gray-200 border-opacity-10 transition-all duration-700 hover:scale-105">
+                      <div className="relative h-[86%] aspect-square rounded-2xl overflow-hidden">
+                        <Image src={`${process.env.DEV_FILESERVER_URL}${item.img}`} alt="" fill className="object-contain aspect-square"/>
+                        <div className="opacity-0 hover:opacity-100 duration-300 absolute inset-0 z-10 flex justify-center items-center bg-[#282120]/[90%] text-2xl text-[#F8EFE4] font-semibold">
+                          <div className='flex flex-col items-center justify-center'>
+                            <p>{item.title}</p>
+                            <p className='mt-2 text-[1rem]'>{item.catSlug.toUpperCase()}</p>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
+                )}
+                {/* <div className="relative h-[80%]">
+                  <img src="https://picsum.photos/800" alt="" className="object-contain"/>
+                  
+                </div> */}
+
+
+                {/* TEXT CONTAINER */}
+                <div className="flex items-center justify-between font-bold">
+                  {/* <h1 className="text-2xl uppercase p-2">{item.title}</h1> */}
+                  {/* <h2 className="group-hover:hidden text-xl">${item.price}</h2> */}
+                  {/* <button className="hidden group-hover:block uppercase bg-[#FAD02C] text-[#F8EFE4] p-2 rounded-md">Add to Cart</button> */}
                 </div>
-              )}
-              {/* <div className="relative h-[80%]">
-                <img src="https://picsum.photos/800" alt="" className="object-contain"/>
-                
-              </div> */}
+              
+              </Link>
 
-
-              {/* TEXT CONTAINER */}
-              <div className="flex items-center justify-between font-bold">
-                {/* <h1 className="text-2xl uppercase p-2">{item.title}</h1> */}
-                {/* <h2 className="group-hover:hidden text-xl">${item.price}</h2> */}
-                {/* <button className="hidden group-hover:block uppercase bg-[#FAD02C] text-[#F8EFE4] p-2 rounded-md">Add to Cart</button> */}
-              </div>
-            </Link>
+            
+            </Reveal>
           ))}
         </div>
 
