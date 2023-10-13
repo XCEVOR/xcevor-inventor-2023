@@ -9,7 +9,7 @@ export const GET = async ( req: NextRequest, { params }: {params: {id:string}} )
     const products = await connPrisma.product.findUnique({
       where: {        id: id,      },
     });
-    console.log(JSON.stringify( products ));
+    // console.log(JSON.stringify( products ));
     return new NextResponse( JSON.stringify( products ), { status: 200 } );
   } catch (error) {
     console.log(error);

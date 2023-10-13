@@ -4,7 +4,7 @@ import connPrisma from "@/utils/connect";
 
 export const GET = async ( req: NextRequest, { params }: {params: {titleSlug:string}} ) => {
   const { titleSlug } = params;
-  console.log("  ========> ", titleSlug)
+  // console.log("  ========> ", titleSlug)
 
   try {
     const productsImg = await connPrisma.productimage.findMany({
@@ -12,7 +12,7 @@ export const GET = async ( req: NextRequest, { params }: {params: {titleSlug:str
     });
     // const productsImg = await connPrisma.productimage.findMany();
     
-    console.log(JSON.stringify( productsImg ));
+    // console.log(JSON.stringify( productsImg ));
     return new NextResponse( JSON.stringify( productsImg ), { status: 200 } );
   } catch (error) {
     console.log(error);

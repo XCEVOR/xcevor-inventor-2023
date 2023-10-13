@@ -20,7 +20,7 @@ import Footer from '@/components/footer/Footer';
 
 
 const getData = async () => {
-  console.log(" @@@@@@@@@@ const resumeData:ResumeDataType = await getData(); ")
+  // console.log(" @@@@@@@@@@ const resumeData:ResumeDataType = await getData(); ")
   const res = await fetch("http://localhost:3000/api/resume", {cache:"no-cache"});
   // console.log("res", res.json);  // res [Function: json]
   if (!res.ok) {throw new Error("Failed!");};
@@ -39,7 +39,7 @@ const Resume = async () => {
     accumulator[item.classification].push(item.title);
     return accumulator;
   }, {});
-  console.log("groupData", groupedData)
+  // console.log("groupData", groupedData)
 
   let prevClassification: string | null = null;
 

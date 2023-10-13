@@ -12,7 +12,7 @@ export const GET = async (req: NextRequest) => {
         ...(cat ? { catSlug: cat } : { isFeatured: true }),
       },
     });
-    console.log(JSON.stringify( products ));
+    // console.log(JSON.stringify( products ));
     return new NextResponse( JSON.stringify( products ), { status: 200 } );
   } catch (error) {
     console.log(error);

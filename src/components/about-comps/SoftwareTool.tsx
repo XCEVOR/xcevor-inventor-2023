@@ -16,7 +16,7 @@ const SoftwareTool = ( {toolName, toolLogo}: Props ) => {
     //     // margin: 0,
     //   };
 
-console.log(toolLogo)
+// console.log(toolLogo)
 
 
     return (

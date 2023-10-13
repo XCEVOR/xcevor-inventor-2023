@@ -5,7 +5,7 @@ import { title } from "process";
 
 export const GET = async ( req: NextRequest, { params }: {params: {titleSlug:string}} ) => {
   const { titleSlug } = params;
-  console.log("  ========> ", titleSlug)
+  // console.log("  ========> ", titleSlug)
 
   try {
     const productDescs = await connPrisma.productdescription.findMany({
@@ -13,7 +13,7 @@ export const GET = async ( req: NextRequest, { params }: {params: {titleSlug:str
     });
     // const productDescs = await connPrisma.productdescription.findMany();
     
-    console.log(JSON.stringify( productDescs ));
+    // console.log(JSON.stringify( productDescs ));
     return new NextResponse( JSON.stringify( productDescs ), { status: 200 } );
   } catch (error) {
     console.log(error);
