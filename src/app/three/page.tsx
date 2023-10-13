@@ -10,6 +10,10 @@ import { TopBracket } from '@/components/three-models/object/TopBracket';
 import { BottomSpikes01 } from '@/components/three-models/object/BottomSpikes01';
 import { BottomSpikes02 } from '@/components/three-models/object/BottomSpikes02';
 
+import { DescN1Challenge } from '@/components/three-models/text/DescN1Challenge';
+import { DescN2Fullstack } from '@/components/three-models/text/DescN2Fullstack';
+import { DescN3Teamwork } from '@/components/three-models/text/DescN3Teamwork';
+
 import { DecoApple } from '@/components/three-models/object/DecoApple';
 import { DecoFlask } from '@/components/three-models/object/DecoFlask';
 import { DecoChatbubble } from '@/components/three-models/object/DecoChatbubble';
@@ -37,6 +41,10 @@ const Three = () => {
             <Sparkles size={2} color={"#fff"} scale={[18,10,10]}></Sparkles>
 
             <MainText position={[0, 0, 0.1]}/>
+
+            <DescN1Challenge position={[77, -0, -10.1]} scale={30.8} />
+            <DescN2Fullstack position={[-77, -0, -10.1]} scale={30.8} />
+            <DescN3Teamwork position={[77, -0, -10.1]} scale={30.8} />
             
             <BottomSpikes01 position={[77, 1, 0.1]} scale={24.2} />
             <BottomSpikes02 position={[-77, -1, 0.1]} scale={24.2} />
