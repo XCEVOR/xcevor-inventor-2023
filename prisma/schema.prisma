@@ -39,12 +39,17 @@ model Product {
 model Productimage {
   id String @id @default(cuid())
   img String
+  desc String?
   product Product @relation(fields: [titleSlug], references: [title])
   titleSlug String
 }
 
 model Productdescription {
   id String @id @default(cuid())
+  class String
+  tool String?
+  url String?
+  github String?
   desc String
   product Product @relation(fields: [titleSlug], references: [title])
   titleSlug String

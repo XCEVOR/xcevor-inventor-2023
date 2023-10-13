@@ -30,6 +30,7 @@ CREATE TABLE "Product" (
 CREATE TABLE "Productimage" (
     "id" TEXT NOT NULL,
     "img" TEXT NOT NULL,
+    "desc" TEXT,
     "titleSlug" TEXT NOT NULL,
 
     CONSTRAINT "Productimage_pkey" PRIMARY KEY ("id")
@@ -38,6 +39,10 @@ CREATE TABLE "Productimage" (
 -- CreateTable
 CREATE TABLE "Productdescription" (
     "id" TEXT NOT NULL,
+    "class" TEXT NOT NULL,
+    "tool" TEXT,
+    "url" TEXT,
+    "github" TEXT,
     "desc" TEXT NOT NULL,
     "titleSlug" TEXT NOT NULL,
 
