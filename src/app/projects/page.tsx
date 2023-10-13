@@ -43,18 +43,19 @@ const Portfolio = async () => {
           ))}
         </div> */}
         
-        <div className='flex px-1 md:px-20 items-center justify-center  '>
+        <div className='flex px-1 md:px-20 xl:px-40 items-center justify-center  '>
           <div className="grid lg:grid-cols-2 2xl:grid-cols-3 w-full xl:max-w-fit">
             {featureProducts.map((item, index) => (
               <Reveal mydelay={1.5 * (1 + 0.4 * index)} >
               <div className='sm:p-8'>
 
-                <Link className="w-fit h-[90vw] md:max-h-[80vw] lg:max-h-[30vw] aspect-square border-r-2 border-b-2 border-[#F8EFE4]/[2%]  flex flex-col justify-between group" href={`/portfolio/${item.id}`} key={item.id}> 
+
 
                   {/* IMAGE CONTAINER */}
                   {item.img && (
                     <div className="relative flex items-center justify-center h-full">
-                      <div className="relative flex items-center justify-center h-[90%] aspect-square rounded-3xl overflow-hidden bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-60 border border-gray-200 border-opacity-10 transition-all duration-700 hover:scale-105">
+                      <Link className="w-fit h-[90vw] sm:max-h-[90vw] lg:max-h-[25vw] aspect-square   border-r-2 border-b-2 border-[#F8EFE4]/[2%]  flex flex-col justify-between group" href={`/portfolio/${item.id}`} key={item.id} >
+                      <div className="relative flex items-center justify-center h-[100%] aspect-square rounded-3xl overflow-hidden bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-60 border border-gray-200 border-opacity-10 transition-all duration-700 hover:scale-105">
                         <div className="relative h-[86%] aspect-square rounded-2xl overflow-hidden">
                           <Image src={`${process.env.DEV_FILESERVER_URL}${item.img}`} alt="" fill className="object-contain aspect-square"/>
                           <div className="opacity-0 hover:opacity-100 duration-300 absolute inset-0 z-10 flex justify-center items-center bg-[#282120]/[90%] text-2xl text-[#F8EFE4] font-semibold">
@@ -65,22 +66,10 @@ const Portfolio = async () => {
                           </div>
                         </div>
                       </div>
+                      </Link>
                     </div>
                   )}
-                  {/* <div className="relative h-[80%]">
-                    <img src="https://picsum.photos/800" alt="" className="object-contain"/>
-                    
-                  </div> */}
 
-
-                  {/* TEXT CONTAINER */}
-                  <div className="flex items-center justify-between font-bold">
-                    {/* <h1 className="text-2xl uppercase p-2">{item.title}</h1> */}
-                    {/* <h2 className="group-hover:hidden text-xl">${item.price}</h2> */}
-                    {/* <button className="hidden group-hover:block uppercase bg-[#FAD02C] text-[#F8EFE4] p-2 rounded-md">Add to Cart</button> */}
-                  </div>
-                
-                </Link>
 
               </div>
               </Reveal>
