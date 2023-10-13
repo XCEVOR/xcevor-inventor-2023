@@ -3,7 +3,7 @@
 import React from 'react';
 import { Canvas } from '@react-three/fiber';
 import { Environment, Scroll, ScrollControls, Sparkles } from '@react-three/drei';
-import BackgroundImage from '@/components/BackgroundImage';
+import BackgroundImageThree from '@/components/BackgroundImageThree';
 
 import { MainText } from '@/components/three-models/text/MainText';
 import { TopBracket } from '@/components/three-models/object/TopBracket';
@@ -23,7 +23,7 @@ import { DecoChatbubble } from '@/components/three-models/object/DecoChatbubble'
 const Three = () => {
   return (
     <>
-      <BackgroundImage />
+      <BackgroundImageThree />
 
 
       <div className='h-screen overflow-hidden'>
