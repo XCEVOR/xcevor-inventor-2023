@@ -31,10 +31,10 @@ export default function FixedNavbar() {
       name: "Projects",
       hash: "/projects",
     },     
-    {
-      name: "Portfolio",
-      hash: "/portfolio",
-    },
+    // {
+    //   name: "Portfolio",
+    //   hash: "/portfolio",
+    // },
   ] as const;
 
   const path = usePathname();
