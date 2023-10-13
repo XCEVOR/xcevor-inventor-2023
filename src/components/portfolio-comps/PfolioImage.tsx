@@ -12,7 +12,7 @@ const getImgData = async ( titleSlug: string ) => {
 
   if (!res.ok) { throw new Error("Failed!"); }
 
-  // return res.json();
+  return res.json();
 }
 
 
