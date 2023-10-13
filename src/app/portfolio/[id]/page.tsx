@@ -11,11 +11,11 @@ import BackgroundImage from '@/components/BackgroundImage';
 
 
 const getData = async ( id: string ) => {
-  console.log(" @@@@@@@@@@ const PortfolioPost = async ( {params}: {params: {id:string}} ) => ")
+  // console.log(" @@@@@@@@@@ const PortfolioPost = async ( {params}: {params: {id:string}} ) => ")
   const res = await fetch(`http://localhost:3000/api/products/${id}`,{
     cache:"no-store"
   });
-  console.log(res.json);
+  // console.log(res.json);
 
   if (!res.ok) { throw new Error("Failed!"); }
 
@@ -23,11 +23,11 @@ const getData = async ( id: string ) => {
 }
 
 const getDescData = async ( titleSlug: string ) => {
-  console.log(" @@@@@@@@@@ const getDescData = async ( titleSlug: string ) => ")
+  // console.log(" @@@@@@@@@@ const getDescData = async ( titleSlug: string ) => ")
   const res = await fetch(`http://localhost:3000/api/product-desc/${titleSlug}`,{
     cache:"no-store"
   });
-  console.log(res.json);
+  // console.log(res.json);
 
   if (!res.ok) { throw new Error("Failed!"); }
 
@@ -35,11 +35,11 @@ const getDescData = async ( titleSlug: string ) => {
 }
 
 const getImgData = async ( titleSlug: string ) => {
-  console.log(" @@@@@@@@@@ const getImgData = async ( titleSlug: string ) => ")
+  // console.log(" @@@@@@@@@@ const getImgData = async ( titleSlug: string ) => ")
   const res = await fetch(`http://localhost:3000/api/product-img/${titleSlug}`,{
     cache:"no-store"
   });
-  console.log(res.json);
+  // console.log(res.json);
 
   if (!res.ok) { throw new Error("Failed!"); }
 
@@ -54,11 +54,11 @@ const getImgData = async ( titleSlug: string ) => {
 const PortfolioPost = async ( {params}: {params: {id:string}} ) => {
 
   const singleProduct:ProductType = await getData( params.id );
-  console.log(singleProduct)
-  console.log(params.id)
+  // console.log(singleProduct)
+  // console.log(params.id)
 
   const singleDescProduct:ProductDescType[] = await getDescData( singleProduct.title );
-  console.log(singleDescProduct)
+  // console.log(singleDescProduct)
 
   const singleImgProduct:ProductImgType[] = await getImgData( singleProduct.title );
 

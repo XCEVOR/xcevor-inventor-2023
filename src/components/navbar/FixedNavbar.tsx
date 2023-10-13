@@ -38,7 +38,7 @@ export default function FixedNavbar() {
   ] as const;
 
   const path = usePathname();
-  console.log("  @@ console.log(path.split(/)[1]); ", path.split("/")[1]);
+  // console.log("  @@ console.log(path.split(/)[1]); ", path.split("/")[1]);
 
 
 

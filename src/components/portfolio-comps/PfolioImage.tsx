@@ -4,15 +4,15 @@ import Image from 'next/image';
 import { ProductImgType, ProductType } from '@/types/types';
 
 const getImgData = async ( titleSlug: string ) => {
-  console.log(" @@@@@@@@@@ const getImgData = async ( titleSlug: string ) => ")
+  // console.log(" @@@@@@@@@@ const getImgData = async ( titleSlug: string ) => ")
   const res = await fetch(`http://localhost:3000/api/product-img/${titleSlug}`,{
     cache:"no-store"
   });
-  console.log(res.json);
+  // console.log(res.json);
 
   if (!res.ok) { throw new Error("Failed!"); }
 
-  return res.json();
+  // return res.json();
 }
 
 

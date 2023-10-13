@@ -12,7 +12,7 @@ import Footer from '@/components/footer/Footer';
 
 
 const getData = async () => {
-  console.log(" @@@@@@@@@@ const Portfolio = async () ")
+  // console.log(" @@@@@@@@@@ const Portfolio = async () ")
   const res = await fetch("http://localhost:3000/api/products",{
     cache:"no-store"
   });

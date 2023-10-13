@@ -8,7 +8,7 @@ import { CategoriesType } from '@/types/types';
 
 
 const getData = async () => {
-  console.log(" @@@@@@@@@@ asdfasdfasdf")
+  // console.log(" @@@@@@@@@@ asdfasdfasdf")
   const res = await fetch("http://localhost:3000/api/categories",{
     cache:"no-store"
   });
@@ -21,7 +21,7 @@ const getData = async () => {
 const CategoriesPage = async () => {
 
   const categories:CategoriesType = await getData();
-  console.log("  console.log(data);   :   " + categories);
+  // console.log("  console.log(data);   :   " + categories);
 
   // try {
   //   const data = await getData();
