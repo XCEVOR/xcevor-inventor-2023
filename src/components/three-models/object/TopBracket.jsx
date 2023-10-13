@@ -8,8 +8,8 @@ import { useGLTF,useScroll } from '@react-three/drei'
 import {useFrame} from '@react-three/fiber'
 import gsap from 'gsap'
 
-export function HeaderBracket(props) {
-  const { nodes, materials } = useGLTF('./models/object/header-bracket-transformed.glb')
+export function TopBracket(props) {
+  const { nodes, materials } = useGLTF('./models/object/top-bracket-transformed.glb')
 
   const myxxxRef = useRef()
   const scroll = useScroll()
@@ -99,4 +99,4 @@ export function HeaderBracket(props) {
   )
 }
 
-useGLTF.preload('./models/object/header-bracket-transformed.glb')
+useGLTF.preload('./models/object/top-bracket-transformed.glb')

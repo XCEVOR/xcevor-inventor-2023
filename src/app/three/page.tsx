@@ -6,7 +6,7 @@ import { Environment, Scroll, ScrollControls, Sparkles } from '@react-three/drei
 import BackgroundImage from '@/components/BackgroundImage';
 
 import { MainText } from '@/components/three-models/text/MainText';
-import { HeaderBracket } from '@/components/three-models/object/HeaderBracket';
+import { TopBracket } from '@/components/three-models/object/TopBracket';
 
 
 const Three = () => {
@@ -31,9 +31,9 @@ const Three = () => {
             
 
             <Scroll>
-              <HeaderBracket position={[2.4, 0, 0]} scale={1} />
+              <TopBracket position={[2.4, 0, 0]} scale={1} />
             </Scroll>
-            
+
           </ScrollControls>
         </Canvas>
       </div>
