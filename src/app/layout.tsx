@@ -23,9 +23,9 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className='text-[#F8EFE4]'>
           <FixedNavbar />
-          <Navbar />
+          {typeof window !== 'undefined' && window.location.pathname !== '/three' && <Navbar />}
           {children}
-          <Footer />
+          {typeof window !== 'undefined' && window.location.pathname !== '/three' && <Footer />}
         </div>
       </body>
     </html>

@@ -24,7 +24,6 @@ const Three = () => {
   return (
     <>
       <BackgroundImage />
-      <div>Three</div>
 
 
       <div className='h-screen overflow-hidden'>
@@ -68,7 +67,6 @@ const Three = () => {
       </div>
 
 
-      <div>Three</div>
     </>
   )
 }
