@@ -122,7 +122,7 @@ const Me = async () => {
               <div className='m-0 p-0'>
                 <ul>
                   {infoGroupAData.slice( 0, Math.ceil(infoGroupAData.length / 2) ).map((infoa:aboutMeDataType, index:number) => (
-                    <Reveal mydelay={2 * 1.4} >
+                    <Reveal mydelay={2 * 1.4} key={index} >
                       <li className={infoDataStyle}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F8EFE4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
                         <strong className="font-bold">{infoa.title}:</strong>
@@ -138,7 +138,7 @@ const Me = async () => {
               <div className='m-0 p-0'>
                 <ul>
                   {infoGroupAData.slice( Math.ceil(infoGroupAData.length / 2) ).map((infoa:aboutMeDataType, index:number) => (
-                    <Reveal mydelay={2 * 1.6} >
+                    <Reveal mydelay={2 * 1.6} key={index} >
                       <li className={infoDataStyle}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F8EFE4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
                         <strong className="font-bold">{infoa.title}:</strong>
@@ -164,7 +164,7 @@ const Me = async () => {
                   ?
                   <div>
                     {infoGroupBData.map((infob:aboutMeDataType, index:number) => (
-                      <p className='mt-4'>{infob.detail}</p>
+                      <p className='mt-4' key={index} >{infob.detail}</p>
                     ))}
                   </div>
                   :

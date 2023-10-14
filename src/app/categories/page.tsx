@@ -53,8 +53,8 @@ const CategoriesPage = async () => {
 
 
     <div>
-    {categories.map((cat) => (
-      <h1>{cat.id}</h1>
+    {categories.map((cat, index) => (
+      <h1 key={index}>{cat.id}</h1>
     ))}
     </div>
 

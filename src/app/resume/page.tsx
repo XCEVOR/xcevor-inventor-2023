@@ -113,7 +113,7 @@ const Resume = async () => {
                   <div className='lg:order-first w-full'>
                   {Object.keys(groupedData).map((classification, index) => (
                     index === 0 && 
-                    <Reveal mydelay={2 * (1 + 0.4 * (index + 1))} >
+                    <Reveal key={index} mydelay={2 * (1 + 0.4 * (index + 1))} >
                       <div className="flex flex-wrap mx-0 my-4 lg:m-4 p-4 bg-[#0A0A0A]/80 backdrop-blur rounded-xl" key={classification}>
                         <div className="w-full relative p-5">
                           <h3 className="text-2xl font-bold mt-0 mb-4 text-[#F8EFE4]">{classification}</h3>
@@ -131,7 +131,7 @@ const Resume = async () => {
                   <div className='lg:order-last w-full'>
                   {Object.keys(groupedData).map((classification, index) => (
                     index !== 0 && 
-                    <Reveal mydelay={2 * (1 + 0.4 * (index + 1))} >
+                    <Reveal key={index} mydelay={2 * (1 + 0.4 * (index + 1))} >
                       <div className="flex flex-wrap mx-0 mt-4 mb-8 lg:m-4 lg:mb-8 p-4 bg-[#0A0A0A]/80 backdrop-blur rounded-xl" key={classification}>
                         <div className="w-full relative p-5">
                           <h3 className="text-2xl font-bold mt-0 mb-4 text-[#F8EFE4]">{classification}</h3>

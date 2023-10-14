@@ -40,8 +40,8 @@ const PfolioImage = async ( {params}: {params: {id:string, titleSlug:string}} ) 
           />
         </div>
       ))} */}
-      {singleImgProduct.slice(1).map((singleImg) => (
-        <div className="relative aspect-[3/2]">
+      {singleImgProduct.slice(1).map((singleImg, index) => (
+        <div key={index} className="relative aspect-[3/2]">
           <Image
             src={`${process.env.DEV_FILESERVER_URL}${singleImg.img}`}
             alt=""
