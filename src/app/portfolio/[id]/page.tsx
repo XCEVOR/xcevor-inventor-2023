@@ -93,7 +93,7 @@ const PortfolioPost = async ( {params}: {params: {id:string}} ) => {
                 </div>
               ))} */}
               {singleImgProduct.map((singleImg, index) => (
-                index === 0 && <div className="relative flex gap-4 w-full aspect-[2/3]">
+                index === 0 && <div className="relative flex gap-4 w-full aspect-[2/3]" key={index}>
                   <Image
                     src={`${process.env.DEV_FILESERVER_URL}${singleImg.img}`}
                     alt=""
@@ -116,8 +116,8 @@ const PortfolioPost = async ( {params}: {params: {id:string}} ) => {
               <p>{singleProduct.desc}</p>
               <p>{singleProduct.desc}</p> */}
               <h1>xxx  xxx</h1>
-                {singleDescProduct.map((desc) => (
-                <h1>{desc.desc}</h1>
+                {singleDescProduct.map((desc, index) => (
+                <h1 key={index} >{desc.desc}</h1>
                 ))}
               <h1>xxx  xxx</h1>
 

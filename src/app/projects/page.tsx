@@ -49,7 +49,7 @@ const Portfolio = async () => {
           <div className='flex items-center justify-center  '>
             <div className="grid lg:grid-cols-2 2xl:grid-cols-3 w-full xl:max-w-fit">
               {featureProducts.map((item, index) => (
-                <Reveal mydelay={1.5 * (1 + 0.4 * index)} >
+                <Reveal key={index} mydelay={1.5 * (1 + 0.4 * index)} >
                 <div className='sm:p-8'>
 
 
