@@ -47,7 +47,7 @@ const Portfolio = async () => {
           {featureProducts.map((item) => (
 
             // REMOVED odd:bg-fuchsia-50
-            <Link className="w-full h-[60vh] border-r-2 border-b-2 border-[#F8EFE4]/[2%] sm:w-1/2 lg:w-1/3 p-4 flex flex-col justify-between group" href={`/portfolio/${item.id}`} key={item.id}> 
+            <Link key={item.id} className="w-full h-[60vh] border-r-2 border-b-2 border-[#F8EFE4]/[2%] sm:w-1/2 lg:w-1/3 p-4 flex flex-col justify-between group" href={`/portfolio/${item.id}`} > 
               {/* IMAGE CONTAINER */}
               {item.img && (
                 <div className="relative flex items-center justify-center h-full">
