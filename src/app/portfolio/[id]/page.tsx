@@ -24,7 +24,8 @@ const getData = async ( id: string ) => {
 
 const getDescData = async ( titleSlug: string ) => {
   // console.log(" @@@@@@@@@@ const getDescData = async ( titleSlug: string ) => ")
-  const res = await fetch(`http://localhost:3000/api/product-desc/${titleSlug}`,{
+  const dbServerUrl = process.env.DEV_DBSERVER_URL || "http://localhost:3000";
+  const res = await fetch(`${dbServerUrl}/api/product-desc/${titleSlug}`, {
     cache:"no-store"
   });
   // console.log(res.json);

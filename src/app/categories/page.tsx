@@ -9,7 +9,9 @@ import { CategoriesType } from '@/types/types';
 
 const getData = async () => {
   // console.log(" @@@@@@@@@@ asdfasdfasdf")
-  const res = await fetch("http://localhost:3000/api/categories",{
+
+  const dbServerUrl = process.env.DEV_DBSERVER_URL || "http://localhost:3000";
+  const res = await fetch(`${dbServerUrl}/api/categories`, {
     cache:"no-store"
   });
 
@@ -20,9 +22,40 @@ const getData = async () => {
 
 const CategoriesPage = async () => {
 
-  const categories:CategoriesType = await getData();
+  const categories = [
+    {
+      id: 'clmrfqd930000ua8k3on07c5v',
+      createdAt: '2023-09-20 07:41:08.632',
+      title: 'UPDATE aaa',
+      desc: 'aaaaa',
+      color: 'white',
+      img: 'img/pfolio/02.png',
+      slug: 'web'
+    },
+    {
+      id: 'clmrfr1g20001ua8kucj6jwns',
+      createdAt: '2023-09-20 07:41:39.987',
+      title: 'UPDATE bbb',
+      desc: 'bbbbb',
+      color: 'black',
+      img: 'img/pfolio/03.png',
+      slug: 'app'
+    },
+    {
+      id: 'clmrfry7r0003ua8khvbqs8yw',
+      createdAt: '2023-09-20 07:42:22.455',
+      title: 'UPDATE ccc',
+      desc: 'ccccc',
+      color: 'white',
+      img: 'img/pfolio/04.png',
+      slug: 'etc'
+    }
+  ];
+
+  // const categories:CategoriesType = await getData();
   // console.log("  console.log(data);   :   " + categories);
 
+  
   // try {
   //   const data = await getData();
   //   // 데이터를 사용하는 코드 작성

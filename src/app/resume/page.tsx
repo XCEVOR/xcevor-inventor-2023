@@ -21,7 +21,8 @@ import Footer from '@/components/footer/Footer';
 
 const getData = async () => {
   // console.log(" @@@@@@@@@@ const resumeData:ResumeDataType = await getData(); ")
-  const res = await fetch("http://localhost:3000/api/resume", {cache:"no-cache"});
+  const dbServerUrl = process.env.DEV_DBSERVER_URL || "http://localhost:3000";
+  const res = await fetch(`${dbServerUrl}/api/resume`, {cache:"no-cache"});
   // console.log("res", res.json);  // res [Function: json]
   if (!res.ok) {throw new Error("Failed!");};
   return res.json();

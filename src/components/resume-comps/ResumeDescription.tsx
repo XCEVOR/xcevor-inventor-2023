@@ -6,7 +6,8 @@ import React from 'react'
 
 const getResumeDataDescription = async ( titleSlug: string ) => {
   // console.log(" @@@@@@@@@@ const getResumeDataDescription = async ( titleSlug: string ) => ");
-  const res = await fetch(`http://localhost:3000/api/resume/${titleSlug}`, {cache: "no-cache"});
+  const dbServerUrl = process.env.DEV_DBSERVER_URL || "http://localhost:3000";
+  const res = await fetch(`${dbServerUrl}/api/resume/${titleSlug}`, {cache: "no-cache"});
   // console.log(res.json);
   if (!res.ok) {throw new Error("Failed!");};
   return res.json();
