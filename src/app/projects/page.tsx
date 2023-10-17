@@ -13,8 +13,9 @@ import Footer from '@/components/footer/Footer';
 
 const getData = async () => {
   // console.log(" @@@@@@@@@@ const Portfolio = async () ")
-  const res = await fetch("http://localhost:3000/api/products",{
-    cache:"no-store"
+  const dbServerUrl = process.env.DEV_DBSERVER_URL || "http://localhost:3000";
+  const res = await fetch(`${dbServerUrl}/api/products`, {
+  cache:"no-store"
   });
 
   if (!res.ok) { throw new Error("Failed!"); }

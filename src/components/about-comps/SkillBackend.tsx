@@ -5,7 +5,8 @@ import { AboutSkillType } from '@/types/types';
 
 
 const getData = async (params:string) => {
-  const res = await fetch(`http://localhost:3000/api/aboutskill/${params}`, {cache: "no-cache"});
+  const dbServerUrl = process.env.DEV_DBSERVER_URL || "http://localhost:3000";
+  const res = await fetch(`${dbServerUrl}/api/aboutskill/${params}`, {cache: "no-cache"});
   if (!res.ok) {throw new Error("Failed!");};
   return res.json();
 }

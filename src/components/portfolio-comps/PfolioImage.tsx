@@ -5,7 +5,8 @@ import { ProductImgType, ProductType } from '@/types/types';
 
 const getImgData = async ( titleSlug: string ) => {
   // console.log(" @@@@@@@@@@ const getImgData = async ( titleSlug: string ) => ")
-  const res = await fetch(`http://localhost:3000/api/product-img/${titleSlug}`,{
+  const dbServerUrl = process.env.DEV_DBSERVER_URL || "http://localhost:3000";
+  const res = await fetch(`${dbServerUrl}/api/product-img/${titleSlug}`, {
     cache:"no-store"
   });
   // console.log(res.json);
