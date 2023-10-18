@@ -16,8 +16,8 @@ const About = () => {
         <PageWrapper>
           <div className='flex flex-col items-center'>
             <Me />
-            {/* <Skills /> */}
-            {/* <Interests /> */}
+            <Skills />
+            <Interests />
           </div>
         </PageWrapper>
 
