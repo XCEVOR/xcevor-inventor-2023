@@ -19,7 +19,12 @@ export type ProductType = {
 
 export type ProductDescType = {
   id: string;
+  class: string;
+  tool: string;
+  url: string;
+  github: string;
   desc: string;
+  titleSlug: string;
 }
 
 export type ProductImgType = {

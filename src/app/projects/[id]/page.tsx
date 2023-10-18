@@ -121,7 +121,16 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
               <p>{singleProduct.desc}</p> */}
               <h1>xxx  xxx</h1>
                 {singleDescProduct.map((desc, index) => (
-                <h1 key={index} >{desc.desc}</h1>
+                  <div key={index} >
+                    <h1>{desc.id}</h1>
+                    <h1>{desc.class}</h1>
+                    <h1>{desc.tool.split("/").map((t, idx) => (<p key={idx}>{idx} {t}</p>))}</h1>
+                    <h1>{desc.url}</h1>
+                    <h1>{desc.github}</h1>
+                    <h1>{desc.desc}</h1>
+                    <h1>{desc.titleSlug}</h1>
+                  </div>
+                
                 ))}
               <h1>xxx  xxx</h1>
 
