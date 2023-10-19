@@ -125,9 +125,12 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
                     <h1>{desc.id}</h1>
                     <h1>{desc.class}</h1>
                     <h1>{desc.tool.split("/").map((t, idx) => (<p key={idx}>{idx} {t}</p>))}</h1>
+                    <h1>{desc.cat}</h1>
+                    <h1>{desc.release}</h1>
                     <h1>{desc.url}</h1>
                     <h1>{desc.github}</h1>
                     <h1>{desc.desc}</h1>
+                    <h1>{desc.abstract}</h1>
                     <h1>{desc.titleSlug}</h1>
                   </div>
                 
