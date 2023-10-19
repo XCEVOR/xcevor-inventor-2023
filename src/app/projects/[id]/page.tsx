@@ -72,9 +72,9 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
 
       <div className='flex flex-col items-center px-20 lg:px-40 py-28'>
         <PageWrapper>
-        <div className='relative flex flex-col h-[calc(100vh)] w-[80vw] '>
+        <div className='relative flex flex-col  lg:h-[calc(100vh)] w-[80vw] '>
           <h1 className="relative text-3xl font-bold uppercase lg:text-4xl">{singleProduct.title}</h1>
-          <div className="relative flex flex-col justify-around h-[80%]   lg:flex-row lg:gap-8 lg:items-center">
+          <div className="relative flex flex-col justify-start h-[80%]   lg:flex-row lg:gap-8 lg:items-center">
             {/* IMAGE CONTAINER */}
             {/* {singleProduct.img && (
               <div className="relative w-full h-1/2 md:h-[70%]">
@@ -88,7 +88,7 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
             )} */}
             
 
-            <div className="lg:w-2/5 h-1/2 flex flex-col gap-4 lg:h-[70%] lg:justify-center lg:gap-6 xl:gap-8">
+            <div className="relative lg:w-2/5 h-full flex flex-col gap-4  lg:h-[70%] justify-start lg:justify-center lg:gap-6 xl:gap-8">
               {/* {singleImgProduct.map((singleImg) => (
                 <div className="relative w-full h-1/2 md:h-[70%]">
                   <Image
@@ -116,7 +116,7 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
 
 
             {/* TEXT CONTAINER */}
-            <div className="lg:w-3/5 h-1/2 flex flex-col gap-4 md:h-[70%] lg:justify-start  p-4 bg-[#0A0A0A]/80 backdrop-blur rounded-xl">
+            <div className="relative lg:w-3/5 h-1/2 flex flex-col gap-4 md:h-[70%] lg:justify-start  p-4 bg-[#0A0A0A]/80 backdrop-blur rounded-xl">
               {/* <h3 className="text-3xl font-bold uppercase xl:text-5xl">{singleProduct.title}</h3> */}
               <h2 className="relative text-xl font-bold lg:text-2xl text-[#FAD02C]">Project information</h2>
               {/* <p>{singleProduct.desc}</p>
