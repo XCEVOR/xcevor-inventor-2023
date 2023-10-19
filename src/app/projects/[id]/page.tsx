@@ -5,6 +5,7 @@ import Price from '@/components/project-comps/Price';
 import { singleProduct } from '@/data/dummyData';
 import { ProductDescType, ProductImgType, ProductType } from '@/types/types';
 import ProductImages from '@/components/project-comps/ProductImages';
+import ToolImage from "@/components/project-comps/ToolImage";
 import { PageWrapper } from '@/components/framer-motion/page-wrapper';
 import BackgroundImage from '@/components/BackgroundImage';
 import Footer from '@/components/footer/Footer';
@@ -70,9 +71,11 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
     <>
       <BackgroundImage />
 
-      <div className='flex flex-col items-center px-20 lg:px-40 py-28'>
+      <div className='flex flex-col items-center px-20 lg:px-40 py-28 '>
         <PageWrapper>
-          <div className="relative flex flex-col justify-around h-[calc(100vh-10rem)] w-[80vw]  text-[#FAD02C] md:flex-row md:gap-8 md:items-center">
+        <div className='relative flex flex-col  lg:h-[calc(100vh)] w-[80vw] lg:max-w-[80rem] '>
+          <h1 className="relative text-3xl font-bold uppercase lg:text-4xl">{singleProduct.title}</h1>
+          <div className="relative flex flex-col items-stretch justify-start h-[80%]  mt-8   lg:flex-row lg:gap-8 ">
             {/* IMAGE CONTAINER */}
             {/* {singleProduct.img && (
               <div className="relative w-full h-1/2 md:h-[70%]">
@@ -84,8 +87,9 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
                 />
               </div>
             )} */}
+            
 
-            <div className="md:w-2/3 h-1/2 flex flex-col gap-4 md:h-[70%] md:justify-center md:gap-6 xl:gap-8">
+            <div className="relative lg:w-2/5 h-full flex flex-col gap-4  lg:h-[70%] lg:gap-6 xl:gap-8">
               {/* {singleImgProduct.map((singleImg) => (
                 <div className="relative w-full h-1/2 md:h-[70%]">
                   <Image
@@ -97,7 +101,7 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
                 </div>
               ))} */}
               {singleImgProduct.map((singleImg, index) => (
-                index === 0 && <div className="relative flex gap-4 w-full aspect-[2/3]" key={index}>
+                index === 0 && <div className="relative flex gap-4 w-full aspect-square" key={index}>
                   <Image
                     src={`${process.env.DEV_FILESERVER_URL}${singleImg.img}`}
                     alt=""
@@ -113,29 +117,58 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
 
 
             {/* TEXT CONTAINER */}
-            <div className="md:w-1/3 h-1/2 flex flex-col gap-4 md:h-[70%] md:justify-center md:gap-6 xl:gap-8  p-4 bg-[#0A0A0A]/80 backdrop-blur rounded-xl">
-              <h1 className="text-3xl font-bold uppercase xl:text-5xl">{singleProduct.title}</h1>
+            <div className="relative lg:w-3/5 h-1/2 flex flex-col gap-4 md:h-[70%] lg:justify-start  mt-4 lg:mt-0 p-4 bg-[#0A0A0A]/80 backdrop-blur rounded-xl">
+              {/* <h3 className="text-3xl font-bold uppercase xl:text-5xl">{singleProduct.title}</h3> */}
+              <h2 className="relative text-xl font-bold lg:text-2xl text-[#FAD02C]">Project information</h2>
               {/* <p>{singleProduct.desc}</p>
               <p>{singleProduct.desc}</p>
               <p>{singleProduct.desc}</p>
               <p>{singleProduct.desc}</p> */}
-              <h1>xxx  xxx</h1>
+
+              {/* <h3>xxx  xxx</h3> */}
                 {singleDescProduct.map((desc, index) => (
-                  <div key={index} >
-                    <h1>{desc.id}</h1>
-                    <h1>{desc.class}</h1>
-                    <h1>{desc.tool.split("/").map((t, idx) => (<p key={idx}>{idx} {t}</p>))}</h1>
-                    <h1>{desc.cat}</h1>
-                    <h1>{desc.release}</h1>
-                    <h1>{desc.url}</h1>
-                    <h1>{desc.github}</h1>
-                    <h1>{desc.desc}</h1>
-                    <h1>{desc.abstract}</h1>
-                    <h1>{desc.titleSlug}</h1>
+                  <div key={index} className='flex flex-col gap-2 lg:gap-4'>
+                    {/* <h3>{desc.id}</h3> */}
+                    {/* <h3>{desc.class}</h3> */}
+                    <h3>{desc.cat}</h3>
+                    <p className='flex flex-row gap-4'>{desc.tool.split("/").map((tName, idx) => (
+                      <p key={idx}>{idx} {tName} 
+                        {/* <div className='relative w-8 h-8 '><Image src="/img/interest/python.svg" fill alt="" /> </div> */}
+                        <div className='relative w-8 h-8 '>
+                        {tName !== null 
+                          ? <Image src={`${process.env.DEV_FILESERVER_URL}/pfolio-fileserver/logo-${tName.toLowerCase()}-ddd.svg`} fill alt="" />
+                          : <Image src="/img/interest/python.svg" fill alt="" />
+                        }
+                        {/* <ToolImage tName={tName} ></ToolImage> */}
+                        </div>
+                      </p>))}
+                    </p>
+
+
+                    {/* <h3>{desc.release}</h3>
+                    <h3>{desc.url}</h3>
+                    <h3>{desc.github}</h3>
+                    <h3>{desc.desc}</h3>
+                    <h3>{desc.abstract}</h3>
+                    <h3>{desc.titleSlug}</h3> */}
+                    {/* <ul>
+                      <li><strong>Category</strong>: Web Service</li>
+                      <li><strong>Release date</strong>: 01 March, 2020</li>
+                      <li><strong>GitHub URL</strong>: <a href="https://github.com/XCEVOR/final-dalrun-back" target="_blank">https://github.com/XCEVOR/final-dalrun-back</a></li>
+                      <li><strong>GitHub URL</strong>: <a href="https://github.com/XCEVOR/final-dalrun-front" target="_blank">https://github.com/XCEVOR/final-dalrun-front</a></li>
+                      <li><strong>Description</strong>: 러너들을 위한 정보 및 편의성을 위한 웹서비스</li>
+                    </ul> */}
+                    <ul className='flex flex-col gap-2 lg:gap-4 mt-4'>
+                      <li><strong>Release date</strong>: {desc.release}</li>
+                      <li><strong>Page URL</strong>: <a href={desc.url} target="_blank">{desc.url}</a></li>
+                      <li><strong>GitHub URL</strong>: <a href={desc.github} target="_blank">{desc.github}</a></li>
+                      <li><strong>Description</strong>: {desc.desc}</li>
+                    </ul>
+                    <p className='flex flex-col mt-4'>{desc.abstract}</p>
                   </div>
                 
                 ))}
-              <h1>xxx  xxx</h1>
+              {/* <h3>xxx  xxx</h3> */}
 
 
               {/* <Price price={singleProduct.price} id={singleProduct.id} options={singleProduct.options}/> */}
@@ -149,6 +182,7 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
           </div>
 
 
+          </div>
         </PageWrapper>
 
 
