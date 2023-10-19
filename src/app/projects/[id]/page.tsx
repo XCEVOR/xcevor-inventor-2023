@@ -145,8 +145,8 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
                     </ul> */}
                     <ul>
                       <li><strong>Release date</strong>: {desc.release}</li>
-                      <li><strong>GitHub URL</strong>: <a href={desc.url} target="_blank">{desc.url}</a></li>
-                      <li><strong>GitHub URL</strong>: <a href={desc.url} target="_blank">{desc.url}</a></li>
+                      <li><strong>Page URL</strong>: <a href={desc.url} target="_blank">{desc.url}</a></li>
+                      <li><strong>GitHub URL</strong>: <a href={desc.github} target="_blank">{desc.github}</a></li>
                       <li><strong>Description</strong>: {desc.desc}</li>
                     </ul>
                     <p>{desc.abstract}</p>
