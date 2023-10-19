@@ -129,7 +129,7 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
                     {/* <h3>{desc.id}</h3> */}
                     {/* <h3>{desc.class}</h3> */}
                     <h3>{desc.cat}</h3>
-                    <h3>{desc.tool.split("/").map((t, idx) => (<p key={idx}>{idx} {t}</p>))}</h3>
+                    <p className='flex flex-row gap-4'>{desc.tool.split("/").map((t, idx) => (<p key={idx}>{idx} {t}</p>))}</p>
                     {/* <h3>{desc.release}</h3>
                     <h3>{desc.url}</h3>
                     <h3>{desc.github}</h3>
