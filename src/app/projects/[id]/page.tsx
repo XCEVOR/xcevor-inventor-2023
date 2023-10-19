@@ -1,10 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
 
-import Price from '@/components/portfolio-comps/Price';
+import Price from '@/components/project-comps/Price';
 import { singleProduct } from '@/data/dummyData';
 import { ProductDescType, ProductImgType, ProductType } from '@/types/types';
-import PfolioImage from '@/components/portfolio-comps/PfolioImage';
+import ProductImages from '@/components/project-comps/ProductImages';
 import { PageWrapper } from '@/components/framer-motion/page-wrapper';
 import BackgroundImage from '@/components/BackgroundImage';
 import Footer from '@/components/footer/Footer';
@@ -155,7 +155,7 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
         <div className="relative flex flex-col h-fit max-w-fit">
 
             {/* <img src="https://picsum.photos/1920/1080" alt="" className="object-contain max-w-4xl"/> */}
-            <PfolioImage params={{ id: params.id, titleSlug: singleProduct.title }} />
+            <ProductImages params={{ id: params.id, titleSlug: singleProduct.title }} />
 
         </div>
 
