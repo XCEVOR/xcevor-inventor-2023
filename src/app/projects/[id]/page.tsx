@@ -5,6 +5,7 @@ import Price from '@/components/project-comps/Price';
 import { singleProduct } from '@/data/dummyData';
 import { ProductDescType, ProductImgType, ProductType } from '@/types/types';
 import ProductImages from '@/components/project-comps/ProductImages';
+import ToolImage from "@/components/project-comps/ToolImage";
 import { PageWrapper } from '@/components/framer-motion/page-wrapper';
 import BackgroundImage from '@/components/BackgroundImage';
 import Footer from '@/components/footer/Footer';
@@ -138,6 +139,7 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
                           ? <Image src={`${process.env.DEV_FILESERVER_URL}/pfolio-fileserver/logo-${tName}-ddd.svg`} fill alt="" />
                           : <Image src="/img/interest/python.svg" fill alt="" />
                         }
+                        {/* <ToolImage tName={tName} ></ToolImage> */}
                         </div>
                       </p>))}
                     </p>
