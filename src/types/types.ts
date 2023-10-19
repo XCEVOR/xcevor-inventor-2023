@@ -21,9 +21,12 @@ export type ProductDescType = {
   id: string;
   class: string;
   tool: string;
+  cat: string;
+  release: string;
   url: string;
   github: string;
   desc: string;
+  abstract: string;
   titleSlug: string;
 }
 
