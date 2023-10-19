@@ -130,7 +130,19 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
                     {/* <h3>{desc.id}</h3> */}
                     {/* <h3>{desc.class}</h3> */}
                     <h3>{desc.cat}</h3>
-                    <p className='flex flex-row gap-4'>{desc.tool.split("/").map((t, idx) => (<p key={idx}>{idx} {t}</p>))}</p>
+                    <p className='flex flex-row gap-4'>{desc.tool.split("/").map((tName, idx) => (
+                      <p key={idx}>{idx} {tName} 
+                        {/* <div className='relative w-8 h-8 '><Image src="/img/interest/python.svg" fill alt="" /> </div> */}
+                        <div className='relative w-8 h-8 '>
+                        {tName !== null 
+                          ? <Image src={`${process.env.DEV_FILESERVER_URL}/pfolio-fileserver/logo-${tName}-ddd.svg`} fill alt="" />
+                          : <Image src="/img/interest/python.svg" fill alt="" />
+                        }
+                        </div>
+                      </p>))}
+                    </p>
+
+
                     {/* <h3>{desc.release}</h3>
                     <h3>{desc.url}</h3>
                     <h3>{desc.github}</h3>
