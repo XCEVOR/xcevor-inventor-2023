@@ -18,7 +18,7 @@ const getImgData = async ( titleSlug: string ) => {
 
 
 
-const PfolioImage = async ( {params}: {params: {id:string, titleSlug:string}} ) => {
+const ProductImages = async ( {params}: {params: {id:string, titleSlug:string}} ) => {
 // const PfolioImage = async (  ) => {
 
   // const singleProduct:ProductType = await getData( params.id );
@@ -63,4 +63,4 @@ const PfolioImage = async ( {params}: {params: {id:string, titleSlug:string}} ) 
   )
 }
 
-export default PfolioImage
+export default ProductImages
