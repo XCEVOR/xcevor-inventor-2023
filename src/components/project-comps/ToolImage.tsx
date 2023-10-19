@@ -16,7 +16,7 @@ export default function ToolImage({ tName } : tNameType) {
       className='relative w-8 h-8'
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-    >
+    ><p>{tName}</p>
       {hovered && <span style={{ position: 'absolute', right: '1rem' }}>{tName}</span>}
       {tName !== null 
         ? <Image src={`${process.env.DEV_FILESERVER_URL}/pfolio-fileserver/logo-${tName}-ddd.svg`} fill alt="" />

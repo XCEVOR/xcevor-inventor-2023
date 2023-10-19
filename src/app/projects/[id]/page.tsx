@@ -136,7 +136,7 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
                         {/* <div className='relative w-8 h-8 '><Image src="/img/interest/python.svg" fill alt="" /> </div> */}
                         <div className='relative w-8 h-8 '>
                         {tName !== null 
-                          ? <Image src={`${process.env.DEV_FILESERVER_URL}/pfolio-fileserver/logo-${tName}-ddd.svg`} fill alt="" />
+                          ? <Image src={`${process.env.DEV_FILESERVER_URL}/pfolio-fileserver/logo-${tName.toLowerCase()}-ddd.svg`} fill alt="" />
                           : <Image src="/img/interest/python.svg" fill alt="" />
                         }
                         {/* <ToolImage tName={tName} ></ToolImage> */}
