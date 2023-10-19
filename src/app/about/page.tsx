@@ -11,7 +11,7 @@ const About = () => {
   return (
     <>
       <div className='px-2 md:px-20 lg:px-40 py-28 '>
-        {/* <BackgroundImage /> */}
+        <BackgroundImage />
 
         <PageWrapper>
           <div className='flex flex-col items-center'>
