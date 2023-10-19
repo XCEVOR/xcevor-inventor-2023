@@ -116,16 +116,17 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
 
 
             {/* TEXT CONTAINER */}
-            <div className="lg:w-3/5 h-1/2 flex flex-col gap-4 md:h-[70%] lg:justify-center lg:gap-6 xl:gap-8  p-4 bg-[#0A0A0A]/80 backdrop-blur rounded-xl">
+            <div className="lg:w-3/5 h-1/2 flex flex-col gap-4 md:h-[70%] lg:justify-start  p-4 bg-[#0A0A0A]/80 backdrop-blur rounded-xl">
               {/* <h3 className="text-3xl font-bold uppercase xl:text-5xl">{singleProduct.title}</h3> */}
               <h2 className="relative text-xl font-bold lg:text-2xl text-[#FAD02C]">Project information</h2>
               {/* <p>{singleProduct.desc}</p>
               <p>{singleProduct.desc}</p>
               <p>{singleProduct.desc}</p>
               <p>{singleProduct.desc}</p> */}
-              <h3>xxx  xxx</h3>
+
+              {/* <h3>xxx  xxx</h3> */}
                 {singleDescProduct.map((desc, index) => (
-                  <div key={index} className='flex flex-col'>
+                  <div key={index} className='flex flex-col gap-2 lg:gap-4'>
                     {/* <h3>{desc.id}</h3> */}
                     {/* <h3>{desc.class}</h3> */}
                     <h3>{desc.cat}</h3>
@@ -143,7 +144,7 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
                       <li><strong>GitHub URL</strong>: <a href="https://github.com/XCEVOR/final-dalrun-front" target="_blank">https://github.com/XCEVOR/final-dalrun-front</a></li>
                       <li><strong>Description</strong>: 러너들을 위한 정보 및 편의성을 위한 웹서비스</li>
                     </ul> */}
-                    <ul>
+                    <ul className='flex flex-col gap-2 lg:gap-4 '>
                       <li><strong>Release date</strong>: {desc.release}</li>
                       <li><strong>Page URL</strong>: <a href={desc.url} target="_blank">{desc.url}</a></li>
                       <li><strong>GitHub URL</strong>: <a href={desc.github} target="_blank">{desc.github}</a></li>
@@ -153,7 +154,7 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
                   </div>
                 
                 ))}
-              <h3>xxx  xxx</h3>
+              {/* <h3>xxx  xxx</h3> */}
 
 
               {/* <Price price={singleProduct.price} id={singleProduct.id} options={singleProduct.options}/> */}
