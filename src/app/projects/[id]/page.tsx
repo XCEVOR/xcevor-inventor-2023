@@ -125,17 +125,31 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
               <p>{singleProduct.desc}</p> */}
               <h3>xxx  xxx</h3>
                 {singleDescProduct.map((desc, index) => (
-                  <div key={index} >
+                  <div key={index} className='flex flex-col'>
                     {/* <h3>{desc.id}</h3> */}
                     {/* <h3>{desc.class}</h3> */}
                     <h3>{desc.cat}</h3>
                     <h3>{desc.tool.split("/").map((t, idx) => (<p key={idx}>{idx} {t}</p>))}</h3>
-                    <h3>{desc.release}</h3>
+                    {/* <h3>{desc.release}</h3>
                     <h3>{desc.url}</h3>
                     <h3>{desc.github}</h3>
                     <h3>{desc.desc}</h3>
                     <h3>{desc.abstract}</h3>
-                    <h3>{desc.titleSlug}</h3>
+                    <h3>{desc.titleSlug}</h3> */}
+                    {/* <ul>
+                      <li><strong>Category</strong>: Web Service</li>
+                      <li><strong>Release date</strong>: 01 March, 2020</li>
+                      <li><strong>GitHub URL</strong>: <a href="https://github.com/XCEVOR/final-dalrun-back" target="_blank">https://github.com/XCEVOR/final-dalrun-back</a></li>
+                      <li><strong>GitHub URL</strong>: <a href="https://github.com/XCEVOR/final-dalrun-front" target="_blank">https://github.com/XCEVOR/final-dalrun-front</a></li>
+                      <li><strong>Description</strong>: 러너들을 위한 정보 및 편의성을 위한 웹서비스</li>
+                    </ul> */}
+                    <ul>
+                      <li><strong>Release date</strong>: {desc.release}</li>
+                      <li><strong>GitHub URL</strong>: <a href={desc.url} target="_blank">{desc.url}</a></li>
+                      <li><strong>GitHub URL</strong>: <a href={desc.url} target="_blank">{desc.url}</a></li>
+                      <li><strong>Description</strong>: {desc.desc}</li>
+                    </ul>
+                    <p>{desc.abstract}</p>
                   </div>
                 
                 ))}
