@@ -71,9 +71,9 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
     <>
       <BackgroundImage />
 
-      <div className='flex flex-col items-center px-20 lg:px-40 py-28'>
+      <div className='flex flex-col items-center px-20 lg:px-40 py-28 '>
         <PageWrapper>
-        <div className='relative flex flex-col  lg:h-[calc(100vh)] w-[80vw] '>
+        <div className='relative flex flex-col  lg:h-[calc(100vh)] w-[80vw] lg:max-w-[80rem] '>
           <h1 className="relative text-3xl font-bold uppercase lg:text-4xl">{singleProduct.title}</h1>
           <div className="relative flex flex-col justify-start h-[80%]   lg:flex-row lg:gap-8 lg:items-center">
             {/* IMAGE CONTAINER */}
