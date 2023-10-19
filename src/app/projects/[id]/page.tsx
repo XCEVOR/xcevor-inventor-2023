@@ -144,13 +144,13 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
                       <li><strong>GitHub URL</strong>: <a href="https://github.com/XCEVOR/final-dalrun-front" target="_blank">https://github.com/XCEVOR/final-dalrun-front</a></li>
                       <li><strong>Description</strong>: 러너들을 위한 정보 및 편의성을 위한 웹서비스</li>
                     </ul> */}
-                    <ul className='flex flex-col gap-2 lg:gap-4 '>
+                    <ul className='flex flex-col gap-2 lg:gap-4 mt-4'>
                       <li><strong>Release date</strong>: {desc.release}</li>
                       <li><strong>Page URL</strong>: <a href={desc.url} target="_blank">{desc.url}</a></li>
                       <li><strong>GitHub URL</strong>: <a href={desc.github} target="_blank">{desc.github}</a></li>
                       <li><strong>Description</strong>: {desc.desc}</li>
                     </ul>
-                    <p>{desc.abstract}</p>
+                    <p className='flex flex-col mt-4'>{desc.abstract}</p>
                   </div>
                 
                 ))}
