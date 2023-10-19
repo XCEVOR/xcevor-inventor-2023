@@ -72,7 +72,9 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
 
       <div className='flex flex-col items-center px-20 lg:px-40 py-28'>
         <PageWrapper>
-          <div className="relative flex flex-col justify-around h-[calc(100vh-10rem)] w-[80vw]  text-[#FAD02C] md:flex-row md:gap-8 md:items-center">
+        <div className='relative flex flex-col h-[calc(100vh)] w-[80vw] '>
+          <h1 className="relative text-3xl font-bold uppercase xl:text-5xl">{singleProduct.title}</h1>
+          <div className="relative flex flex-col justify-around h-[80%]   md:flex-row md:gap-8 md:items-center">
             {/* IMAGE CONTAINER */}
             {/* {singleProduct.img && (
               <div className="relative w-full h-1/2 md:h-[70%]">
@@ -84,6 +86,7 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
                 />
               </div>
             )} */}
+            
 
             <div className="md:w-2/3 h-1/2 flex flex-col gap-4 md:h-[70%] md:justify-center md:gap-6 xl:gap-8">
               {/* {singleImgProduct.map((singleImg) => (
@@ -149,6 +152,7 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
           </div>
 
 
+          </div>
         </PageWrapper>
 
 
