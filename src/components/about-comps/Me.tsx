@@ -63,16 +63,19 @@ const Me = async () => {
   return (
     // <div className='flex flex-col md:flex-row w-[400px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px] h-fit lg:h-[calc(80vh-3rem)] md:h-[calc(80vh-6rem)] p-4 bg-[#0A0A0A]/80 backdrop-blur rounded-xl'>
     <div>
-      <h1 className='text-2xl text-[#FAD02C] font-bold uppercase'>About</h1>
-      <div className='flex flex-col md:flex-row w-[400px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px] h-fit lg:h-[calc(80vh-3rem)] p-4 bg-[#0A0A0A]/80 backdrop-blur rounded-xl'>
+      <h1 className="relative mb-8  text-3xl font-bold uppercase lg:text-4xl  text-[#FAD02C]">About</h1>
+      {/* <div className='flex flex-col md:flex-row  w-[400px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px]  h-fit lg:h-[calc(80vh-3rem)]  p-4  bg-[#0A0A0A]/80 backdrop-blur rounded-xl'> */}
+      {/* <div className='flex flex-col lg:flex-row items-start justify-start   h-fit lg:h-[calc(80vh-3rem)]  p-4 lg:p-8 mt-8  bg-[#0A0A0A]/80 backdrop-blur rounded-xl'> */}
+      <div className='flex flex-col lg:flex-row items-start justify-start  p-4 lg:p-8 mt-8  bg-[#0A0A0A]/80 backdrop-blur rounded-xl'>
 
-        <div className='relative m-auto md:m-0 w-full sm:w-2/3 md:h-1/2 md:w-1/3 lg:h-2/3 xl:h-full'>
-          <div className='aspect-[3/4]'>
-            <Image src="/img/about/profile-character-1200x1600.png" alt='' fill className='object-cover h-[calc(full/4)] w-full' />
+        {/* <div className='relative m-auto md:m-0 w-full sm:w-2/3 md:h-1/2 md:w-1/3 lg:h-2/3 xl:h-full'> */}
+        <div className='relative m-auto lg:m-0  w-4/5 sm:w-1/2 lg:w-1/3  '>
+          <div className='aspect-[3/4] '>
+            <Image src="/img/about/profile-character-1200x1600.png" alt='' fill className='object-contain  ' />
           </div>
         </div>
         
-        <div className='relative flex flex-col w-full md:w-2/3 items-center justify-start gap-8 text-[111111] mt-8 px-10 '>
+        <div className='relative flex flex-col w-full lg:w-2/3 items-center justify-start gap-8  lg:pl-12 '>
           {/* <h1 className='text-5xl text-center uppercase p-4 md:text-6xl xl:text-7xl'>
             me
           </h1> */}

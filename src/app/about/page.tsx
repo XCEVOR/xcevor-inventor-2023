@@ -10,20 +10,27 @@ import Footer from '@/components/footer/Footer';
 const About = () => {
   return (
     <>
-      <div className='px-2 md:px-20 lg:px-40 py-28 '>
+      <div className='flex flex-col items-center  h-fit px-0 lg:px-40 py-28 '>
         <BackgroundImage />
-
-        <PageWrapper>
-          <div className='flex flex-col items-center'>
-            <Me />
-            <Skills />
-            <Interests />
-          </div>
-        </PageWrapper>
-
+        {/* <div className='relative flex flex-col  lg:h-[calc(100vh-9.4rem)] w-[90vw] lg:max-w-[80rem] '> */}
+        <div className='relative flex flex-col  w-[90vw] lg:max-w-[80rem] '>
+          <PageWrapper>
+              <Me />
+          </PageWrapper>
+        </div>
+        <div className='relative flex flex-col  w-[90vw] lg:max-w-[80rem] '>
+          <PageWrapper>
+              <Skills />
+          </PageWrapper>
+        </div>
+        <div className='relative flex flex-col  w-[90vw] lg:max-w-[80rem] '>
+          <PageWrapper>
+              <Interests />
+          </PageWrapper>
+        </div>
       </div>
 
-      {/* <Footer /> */}
+      <Footer />
     </>
   )
 }
