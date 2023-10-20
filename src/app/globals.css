@@ -7,3 +7,11 @@ html {
   background-color: #111;
   color: #bbb;
 }
+
+.tooltip {
+  @apply invisible absolute;
+}
+
+.has-tooltip:hover .tooltip {
+  @apply visible z-50;
+}

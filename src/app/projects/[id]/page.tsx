@@ -113,7 +113,6 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
             </div>
           
 
-          
 
 
             {/* TEXT CONTAINER */}
@@ -132,17 +131,22 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
                     {/* <h3>{desc.class}</h3> */}
                     <h3>{desc.cat}</h3>
                     <p className='flex flex-row gap-4'>{desc.tool.split("/").map((tName, idx) => (
-                      <p key={idx}>{idx} {tName} 
+                      <p key={idx} data-tooltip-target="tooltip-default" >{idx} {tName} 
                         {/* <div className='relative w-8 h-8 '><Image src="/img/interest/python.svg" fill alt="" /> </div> */}
-                        <div className='relative w-8 h-8 '>
+
+                        <div className='relative w-8 h-8   has-tooltip' >  
                         {tName !== null 
-                          ? <Image src={`${process.env.DEV_FILESERVER_URL}/pfolio-fileserver/logo-${tName.toLowerCase()}-ddd.svg`} fill alt="" />
+                          ? <div>
+                              <Image src={`${process.env.DEV_FILESERVER_URL}/pfolio-fileserver/logo-${tName.toLowerCase()}-ddd.svg`} fill alt="" />
+                              <span className='tooltip rounded shadow-lg p-1 bg-gray-100 text-red-500 -mt-8'>{tName}</span>
+                            </div>
                           : <Image src="/img/interest/python.svg" fill alt="" />
                         }
-                        {/* <ToolImage tName={tName} ></ToolImage> */}
                         </div>
+
                       </p>))}
                     </p>
+                    
 
 
                     {/* <h3>{desc.release}</h3>
