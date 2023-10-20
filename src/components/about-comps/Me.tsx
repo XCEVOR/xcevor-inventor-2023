@@ -83,7 +83,7 @@ const Me = async () => {
           <div className="w-full lg:col-span-8 pt-4 lg:pt-0">
             <Reveal mydelay={2 * 1.0} >
               {maintitleData 
-                ? <h3 className="text-2xl font-bold">{maintitleData.detail}</h3>
+                ? <h3 className="text-[#FAD02C] text-2xl font-bold">{maintitleData.detail}</h3>
                 : <h3 className="text-2xl font-bold">Developer</h3>
               }
             </Reveal>
