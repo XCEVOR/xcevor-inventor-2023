@@ -12,15 +12,13 @@ const About = () => {
     <>
       <div className='flex flex-col items-center px-0 lg:px-40 py-28 '>
         <BackgroundImage />
-
-        <PageWrapper>
-          <div className='relative flex flex-col  lg:h-[calc(100vh)] w-[90vw] lg:max-w-[80rem] '>
-            <Me />
-            <Skills />
-            <Interests />
-          </div>
-        </PageWrapper>
-
+        <div className='relative flex flex-col  lg:h-[calc(100vh)] w-[90vw] lg:max-w-[80rem] '>
+          <PageWrapper>
+              <Me />
+              <Skills />
+              <Interests />
+          </PageWrapper>
+        </div>
       </div>
 
       {/* <Footer /> */}
