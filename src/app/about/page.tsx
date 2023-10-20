@@ -10,11 +10,11 @@ import Footer from '@/components/footer/Footer';
 const About = () => {
   return (
     <>
-      <div className='px-2 md:px-20 lg:px-40 py-28 '>
+      <div className='flex flex-col items-center px-0 lg:px-40 py-28 '>
         <BackgroundImage />
 
         <PageWrapper>
-          <div className='flex flex-col items-center'>
+          <div className='relative flex flex-col  lg:h-[calc(100vh)] w-[90vw] lg:max-w-[80rem] '>
             <Me />
             <Skills />
             <Interests />
