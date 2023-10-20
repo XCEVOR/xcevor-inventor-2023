@@ -41,7 +41,7 @@ const SkillTools = async () => {
 
         <div className="w-full flex flex-wrap gap-30 justify-center">
         {fetchedSkillData.map((sdata, index) => (
-          <div key={index} className="flex flex-row relative max-w-500 m-2 p-4 border border-[#F8EFE4] border-opacity-20 rounded-lg  transition duration-300 hover:-translate-y-2">
+          <div key={index} className="flex flex-row relative max-w-500 m-2 p-4 border border-[#F8EFE4] border-opacity-20 rounded-lg  transition duration-300 hover:scale-110">
             <div className='relative w-12 h-12 '>
               {sdata.image !== null 
                 ? <Image src={`${process.env.DEV_FILESERVER_URL}${sdata.image}`} fill alt="" />
