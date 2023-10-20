@@ -28,7 +28,7 @@ const SoftwareTool = ( {toolName, toolLogo}: Props ) => {
         //     <h1 className="flex items-center ml-2">{toolName}</h1>
         // </div>
 
-        <div className="flex flex-row relative m-2 p-4 bg-[#0A0A0A]/80 backdrop-blur rounded-xl">
+        <div className="flex flex-row relative m-2 p-4   border border-white/20  bg-[#282120]/80 backdrop-blur rounded-xl">
             <div className="relative w-10 aspect-square">
                 <Image src={`${process.env.DEV_FILESERVER_URL}${toolLogo.toLowerCase()}`} fill alt="" />
             </div>
