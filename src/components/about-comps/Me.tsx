@@ -74,7 +74,7 @@ const Me = async () => {
           </div>
         </div>
         
-        <div className='relative flex flex-col w-full lg:w-2/3 items-center justify-start gap-8 text-[111111] px-10 '>
+        <div className='relative flex flex-col w-full lg:w-2/3 items-center justify-start gap-8  lg:pl-12 '>
           {/* <h1 className='text-5xl text-center uppercase p-4 md:text-6xl xl:text-7xl'>
             me
           </h1> */}
