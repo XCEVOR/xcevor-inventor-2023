@@ -29,7 +29,7 @@ const SkillTools = async () => {
     // <div className='m-2 w-[200px] sm:w-[320px] md:w-[384px] lg:w-[512px] xl:w-[640px]'>
     <div className='w-full'>
       <div className='flex flex-col p-8   border border-white/20 bg-[#282120]/80 backdrop-blur rounded-xl'>
-        <h1 className='flex justify-center text-2xl font-bold mb-4'>Tools</h1>
+        <h1 className='flex justify-center  text-[#FAD02C] text-2xl font-bold mb-4'>Tools</h1>
         {/* <div className="w-full flex flex-wrap gap-30 justify-center">
             {skillData.map((d) => (
               <div className="flex flex-row relative max-w-500 m-2 p-2 border border-[#F8EFE4] border-opacity-20 rounded-lg  transition hover:-translate-y-1">
@@ -41,7 +41,7 @@ const SkillTools = async () => {
 
         <div className="w-full flex flex-wrap gap-30 justify-center">
         {fetchedSkillData.map((sdata, index) => (
-          <div key={index} className="flex flex-row relative max-w-500 m-2 p-4 border border-[#F8EFE4] border-opacity-20 rounded-lg  transition duration-300 hover:-translate-y-2">
+          <div key={index} className="flex flex-row relative max-w-500 m-2 p-4 border border-[#F8EFE4] border-opacity-20 rounded-lg  transition duration-300 hover:scale-110">
             <div className='relative w-12 h-12 '>
               {sdata.image !== null 
                 ? <Image src={`${process.env.DEV_FILESERVER_URL}${sdata.image}`} fill alt="" />

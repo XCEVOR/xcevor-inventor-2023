@@ -49,7 +49,7 @@ const Interests = async () => {
       </div> */}
 
       {/* <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 w-[400px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px]'> */}
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 '>
+      <div className='grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 '>
         {aboutInterestData.map((data, index) => (
           <Reveal mydelay={ data.priority * 0.5 } key={index}>
             <div className='w-full'>
