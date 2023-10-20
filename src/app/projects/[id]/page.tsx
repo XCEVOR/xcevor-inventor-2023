@@ -138,7 +138,7 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
                         {tName !== null 
                           ? <div>
                               <Image src={`${process.env.DEV_FILESERVER_URL}/pfolio-fileserver/logo-${tName.toLowerCase()}-ddd.svg`} fill alt="" />
-                              <span className='tooltip rounded shadow-lg p-1 bg-gray-100 text-red-500 -mt-8'>{tName}</span>
+                              <span className='tooltip rounded shadow-lg p-2 bg-[#282120] text-[#FAD02C] -mt-10 '>{tName}</span>
                             </div>
                           : <Image src="/img/interest/python.svg" fill alt="" />
                         }
