@@ -47,16 +47,16 @@ const Resume = async () => {
 
   return (
     <>
-      <div className='flex flex-col items-center px-0 lg:px-40 py-28 '>
+      <div className='flex flex-col items-center  h-fit px-0 lg:px-40 py-28 '>
         <BackgroundImage />
-        <div className='relative flex flex-col  lg:h-[calc(100vh)] w-[90vw] lg:max-w-[80rem] '>
+        <div className='relative flex flex-col  w-[90vw] lg:max-w-[80rem] '>
           <PageWrapper>
             <div className='flex items-center justify-center'>
               <section id="resume" className="resume">
-                <div className="container px-10 ">
-                  <div className="m-5">
-                    <h2>Resume</h2>
-                    <p className='text-4xl uppercase font-bold'>Check My Resume</p>
+                <div className="container ">
+                  <div className="">
+                    {/* <h2>Resume</h2> */}
+                    <h1 className="relative mb-8  text-3xl font-bold uppercase lg:text-4xl  text-[#FAD02C]">Check My Resume</h1>
                   </div>
                   
 
@@ -111,13 +111,13 @@ const Resume = async () => {
 
 
 
-                  <div className='flex flex-col lg:flex-row'>
+                  <div className='flex flex-col gap-8 lg:flex-row'>
                     <div className='lg:order-first w-full'>
                     {Object.keys(groupedData).map((classification, index) => (
                       index === 0 && 
                       <Reveal key={index} mydelay={2 * (1 + 0.4 * (index + 1))} >
-                        <div className="flex flex-wrap mx-0 my-4 lg:m-4 p-4 bg-[#0A0A0A]/80 backdrop-blur rounded-xl" key={classification}>
-                          <div className="w-full relative p-5">
+                        <div className="flex flex-wrap   border border-white/20 bg-[#282120]/80 backdrop-blur rounded-xl" key={classification}>
+                          <div className="w-full relative p-4">
                             <h3 className="text-2xl font-bold mt-0 mb-4 text-[#F8EFE4]">{classification}</h3>
                             {groupedData[classification].map((title) => (
                               <div key={title}>
@@ -134,8 +134,8 @@ const Resume = async () => {
                     {Object.keys(groupedData).map((classification, index) => (
                       index !== 0 && 
                       <Reveal key={index} mydelay={2 * (1 + 0.4 * (index + 1))} >
-                        <div className="flex flex-wrap mx-0 mt-4 mb-8 lg:m-4 lg:mb-8 p-4 bg-[#0A0A0A]/80 backdrop-blur rounded-xl" key={classification}>
-                          <div className="w-full relative p-5">
+                        <div className="flex flex-wrap mb-8   border border-white/20 bg-[#282120]/80 backdrop-blur rounded-xl" key={classification}>
+                          <div className="w-full relative p-4">
                             <h3 className="text-2xl font-bold mt-0 mb-4 text-[#F8EFE4]">{classification}</h3>
                             {groupedData[classification].map((title) => (
                               <div key={title}>
