@@ -47,15 +47,15 @@ const Resume = async () => {
 
   return (
     <>
-      <div className='flex flex-col items-center px-0 lg:px-40 py-28 '>
+      <div className='flex flex-col items-center  h-fit px-0 lg:px-40 py-28 '>
         <BackgroundImage />
-        <div className='relative flex flex-col  lg:h-[calc(100vh)] w-[90vw] lg:max-w-[80rem] '>
+        <div className='relative flex flex-col  w-[90vw] lg:max-w-[80rem] '>
           <PageWrapper>
             <div className='flex items-center justify-center'>
               <section id="resume" className="resume">
-                <div className="container px-10 ">
-                  <div className="m-5">
-                    <h2>Resume</h2>
+                <div className="container ">
+                  <div className="">
+                    {/* <h2>Resume</h2> */}
                     <p className='text-4xl uppercase font-bold'>Check My Resume</p>
                   </div>
                   
