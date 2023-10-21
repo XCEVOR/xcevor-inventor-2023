@@ -117,7 +117,7 @@ const Resume = async () => {
                       index === 0 && 
                       <Reveal key={index} mydelay={2 * (1 + 0.4 * (index + 1))} >
                         <div className="flex flex-wrap  bg-[#282120]/80 backdrop-blur rounded-xl" key={classification}>
-                          <div className="w-full relative p-5">
+                          <div className="w-full relative p-4">
                             <h3 className="text-2xl font-bold mt-0 mb-4 text-[#F8EFE4]">{classification}</h3>
                             {groupedData[classification].map((title) => (
                               <div key={title}>
@@ -135,7 +135,7 @@ const Resume = async () => {
                       index !== 0 && 
                       <Reveal key={index} mydelay={2 * (1 + 0.4 * (index + 1))} >
                         <div className="flex flex-wrap  bg-[#282120]/80 backdrop-blur rounded-xl" key={classification}>
-                          <div className="w-full relative p-5">
+                          <div className="w-full relative p-4">
                             <h3 className="text-2xl font-bold mt-0 mb-4 text-[#F8EFE4]">{classification}</h3>
                             {groupedData[classification].map((title) => (
                               <div key={title}>
