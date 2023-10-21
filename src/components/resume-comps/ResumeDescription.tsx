@@ -25,7 +25,7 @@ const ResumeDescription = async ( {params}:{params: {resumeTitle:string}} ) => {
       {bundleResumeDataDescription.map((rsDesc, index) => (
         <Reveal key={index} mydelay={2 * (1 + 0.4 * (index + 1))} >
         <div>
-          {rsDesc.period !== null && <p className='ml-2 px-2 py-1 w-fit bg-[#282120] rounded-md'>{rsDesc.period}</p>}
+          {rsDesc.period !== null && <p className='`ml-2 px-2 py-1 w-fit bg-[#3e373e] rounded-md`'>{rsDesc.period}</p>}
           {rsDesc.location !== null && <p className='mb-2 px-2 py-1 w-fit italic'>{rsDesc.location}</p>}
           <div>
             {rsDesc.thesis === false 

@@ -56,7 +56,7 @@ const Resume = async () => {
                 <div className="container ">
                   <div className="">
                     {/* <h2>Resume</h2> */}
-                    <h1 className="relative mb-8  text-3xl font-bold uppercase lg:text-4xl  text-[#FAD02C]">Check My Resume</h1>
+                    <h1 className="relative mb-8  text-3xl font-bold uppercase lg:text-4xl  text-[#edf048]">Check My Resume</h1>
                   </div>
                   
 
@@ -116,12 +116,12 @@ const Resume = async () => {
                     {Object.keys(groupedData).map((classification, index) => (
                       index === 0 && 
                       <Reveal key={index} mydelay={2 * (1 + 0.4 * (index + 1))} >
-                        <div className="flex flex-wrap   border border-white/20 bg-[#282120]/80 backdrop-blur rounded-xl" key={classification}>
+                        <div className="flex flex-wrap   border border-white/20 bg-[#221e22]/80 backdrop-blur rounded-xl" key={classification}>
                           <div className="w-full relative p-4">
-                            <h3 className="text-2xl font-bold mt-0 mb-4 text-[#F8EFE4]">{classification}</h3>
+                            <h3 className="text-2xl font-bold mt-0 mb-4 ">{classification}</h3>
                             {groupedData[classification].map((title) => (
                               <div key={title}>
-                                <h4 className="text-lg font-semibold uppercase text-[#FAD02C] mt-6 mb-2">{title}</h4>
+                                <h4 className="text-lg font-semibold uppercase text-[#edf048] mt-6 mb-2">{title}</h4>
                                 <ResumeDescription params={{ resumeTitle: title }} />
                               </div>
                             ))}
@@ -134,12 +134,12 @@ const Resume = async () => {
                     {Object.keys(groupedData).map((classification, index) => (
                       index !== 0 && 
                       <Reveal key={index} mydelay={2 * (1 + 0.4 * (index + 1))} >
-                        <div className="flex flex-wrap mb-8   border border-white/20 bg-[#282120]/80 backdrop-blur rounded-xl" key={classification}>
+                        <div className="flex flex-wrap mb-8   border border-white/20 bg-[#221e22]/80 backdrop-blur rounded-xl" key={classification}>
                           <div className="w-full relative p-4">
-                            <h3 className="text-2xl font-bold mt-0 mb-4 text-[#F8EFE4]">{classification}</h3>
+                            <h3 className="text-2xl font-bold mt-0 mb-4 ">{classification}</h3>
                             {groupedData[classification].map((title) => (
                               <div key={title}>
-                                <h4 className="text-lg font-semibold uppercase text-[#FAD02C] mt-6 mb-2">{title}</h4>
+                                <h4 className="text-lg font-semibold uppercase text-[#edf048] mt-6 mb-2">{title}</h4>
                                 <ResumeDescription params={{ resumeTitle: title }} />
                               </div>
                             ))}
