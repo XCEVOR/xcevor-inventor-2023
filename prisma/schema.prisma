@@ -48,9 +48,12 @@ model Productdescription {
   id String @id @default(cuid())
   class String
   tool String?
+  cat String
+  release String
   url String?
   github String?
   desc String
+  abstract String
   product Product @relation(fields: [titleSlug], references: [title])
   titleSlug String
 }
@@ -93,6 +96,7 @@ model ResumeDataDescription {
   location String?
   thesis Boolean
   desc String
+  note String?
   resumeData ResumeData @relation(fields: [titleSlug], references: [title])
   titleSlug String
 }
