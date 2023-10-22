@@ -10,7 +10,7 @@ const Footer = () => {
         <div className='flex items-center justify-between w-full'>
           <div className='flex flex-row gap-4 items-center'>
             <div className="relative w-14 aspect-square">
-              <Image src={`${process.env.DEV_FILESERVER_URL}/pfolio-fileserver/logo-facebook-ddd.svg`} fill alt="" />
+              <Image src={`/images/logo/logo-H-03.svg`} fill alt="" />
             </div>
             <Link href="/" className='font-bold text-3xl'>HOCHAN</Link>
           </div>
