@@ -33,7 +33,7 @@ const SkillFrontend = async () => {
         {/* <div className="w-full flex flex-wrap gap-30 justify-center">
             {skillData.map((d) => (
               <div className="flex flex-row relative max-w-500 m-2 p-2 border border-[#F8EFE4] border-opacity-20 rounded-lg  transition hover:-translate-y-1">
-                  <Image src="/img/interest/python.svg" width={40} height={40} alt="" />
+                  <Image src="/images/interest/python.svg" width={40} height={40} alt="" />
                 <h1 className="flex items-center ml-2">{d.toolName}</h1>
               </div>
             ))}
@@ -45,7 +45,7 @@ const SkillFrontend = async () => {
             <div className='relative w-12 h-12 '>
               {sdata.image !== null 
                 ? <Image src={`${process.env.DEV_FILESERVER_URL}${sdata.image}`} fill alt="" />
-                : <Image src="/img/interest/python.svg" fill alt="" />
+                : <Image src="/images/interest/python.svg" fill alt="" />
               }
             </div>
             <h1 className="relative flex items-center ml-4">{sdata.title}</h1>

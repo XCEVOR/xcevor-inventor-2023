@@ -132,7 +132,7 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
                     <h3>{desc.cat}</h3>
                     <p className='flex flex-row gap-4'>{desc.tool.split("/").map((tName, idx) => (
                       <p key={idx} >{idx} {tName} 
-                        {/* <div className='relative w-8 h-8 '><Image src="/img/interest/python.svg" fill alt="" /> </div> */}
+                        {/* <div className='relative w-8 h-8 '><Image src="/images/interest/python.svg" fill alt="" /> </div> */}
 
                         <div className='relative w-8 h-8   has-tooltip' >  
                         {tName !== null 
@@ -140,7 +140,7 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
                               <Image src={`${process.env.DEV_FILESERVER_URL}/pfolio-fileserver/logo-${tName.toLowerCase()}-ddd.svg`} fill alt="" />
                               <span className='tooltip rounded shadow-lg p-2 bg-[#282120] text-[#FAD02C] -mt-10 '>{tName}</span>
                             </div>
-                          : <Image src="/img/interest/python.svg" fill alt="" />
+                          : <Image src="/images/interest/python.svg" fill alt="" />
                         }
                         </div>
 

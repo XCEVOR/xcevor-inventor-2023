@@ -20,7 +20,7 @@ export default function ToolImage({ tName } : tNameType) {
       {hovered && <span style={{ position: 'absolute', right: '1rem' }}>{tName}</span>}
       {tName !== null 
         ? <Image src={`${process.env.DEV_FILESERVER_URL}/pfolio-fileserver/logo-${tName}-ddd.svg`} fill alt="" />
-        : <Image src="/img/interest/python.svg" fill alt="" />
+        : <Image src="/images/interest/python.svg" fill alt="" />
       }
     </div>
   );
