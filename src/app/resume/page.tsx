@@ -216,8 +216,9 @@ const Resume = async () => {
           </PageWrapper>
 
         </div>
-        <Footer />
+        
       </div>
+      <Footer />
     </>
   )
 }
