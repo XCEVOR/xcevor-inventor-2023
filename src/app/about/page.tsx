@@ -1,10 +1,13 @@
 import React from 'react'
 import BackgroundImage from '@/components/BackgroundImage';
+import { PageWrapper } from '@/components/framer-motion/page-wrapper';
+import Footer from '@/components/footer/Footer';
+
 import Me from "@/components/about-comps/Me";
 import Skills from "@/components/about-comps/Skills";
 import Interests from "@/components/about-comps/Interests";
-import { PageWrapper } from '@/components/framer-motion/page-wrapper';
-import Footer from '@/components/footer/Footer';
+import Certificate from '@/components/about-comps/Certificate';
+
 
 
 const About = () => {
@@ -26,6 +29,11 @@ const About = () => {
         <div className='relative flex flex-col  w-[90vw] lg:max-w-[80rem] '>
           <PageWrapper>
               <Interests />
+          </PageWrapper>
+        </div>
+        <div className='relative flex flex-col  w-[90vw] lg:max-w-[80rem] '>
+          <PageWrapper>
+              <Certificate />
           </PageWrapper>
         </div>
       </div>

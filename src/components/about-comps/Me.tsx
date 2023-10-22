@@ -66,7 +66,7 @@ const Me = async () => {
       <h1 className="relative mb-8  text-3xl font-bold uppercase lg:text-4xl  text-[#FAD02C]">About</h1>
       {/* <div className='flex flex-col md:flex-row  w-[400px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px]  h-fit lg:h-[calc(80vh-3rem)]  p-4  bg-[#0A0A0A]/80 backdrop-blur rounded-xl'> */}
       {/* <div className='flex flex-col lg:flex-row items-start justify-start   h-fit lg:h-[calc(80vh-3rem)]  p-4 lg:p-8 mt-8  bg-[#0A0A0A]/80 backdrop-blur rounded-xl'> */}
-      <div className='flex flex-col lg:flex-row items-start justify-start  p-4 lg:p-8 mt-8    border border-white/20  bg-[#282120]/80 backdrop-blur rounded-xl'>
+      <div className='flex flex-col lg:flex-row items-start justify-start  p-4 lg:p-8 mt-8    border border-white/20  bg-[#221e22]/80 backdrop-blur rounded-xl'>
 
         {/* <div className='relative m-auto md:m-0 w-full sm:w-2/3 md:h-1/2 md:w-1/3 lg:h-2/3 xl:h-full'> */}
         <div className='relative m-auto lg:m-0  w-4/5 sm:w-1/2 lg:w-1/3  '>
