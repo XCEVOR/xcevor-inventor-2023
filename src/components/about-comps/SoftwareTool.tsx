@@ -23,7 +23,7 @@ const SoftwareTool = ( {toolName, toolLogo}: Props ) => {
         // <div style={containerStyles}>
         // <div className="flex flex-row relative m-4 p-4 bg-[#0A0A0A]/80 backdrop-blur">
         //     <div className="">
-        //         <Image src="/img/interest/python.svg" width={40} height={40} alt="" />
+        //         <Image src="/images/interest/python.svg" width={40} height={40} alt="" />
         //     </div>
         //     <h1 className="flex items-center ml-2">{toolName}</h1>
         // </div>

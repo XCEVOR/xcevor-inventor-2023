@@ -40,8 +40,8 @@ const Menu = () => {
   return (
     <div>
       {!open 
-        ? (<Image src="/img/open-FAD02C.svg" alt='' width={20} height={20} onClick={() => setOpen(true)} />)
-        : (<Image src="/img/close-FAD02C.svg" alt='' width={20} height={20} onClick={() => setOpen(false)} />)
+        ? (<Image src="/images/open-FAD02C.svg" alt='' width={20} height={20} onClick={() => setOpen(true)} />)
+        : (<Image src="/images/close-FAD02C.svg" alt='' width={20} height={20} onClick={() => setOpen(false)} />)
       }
 
       {open && <div className="bg-[#ffbf11] text-[#111] font-bold absolute left-0 top-24 w-full h-full h=[calc(100vh-3rem)] flex flex-col gap-8 items-center justify-center text-3xl z-10">
