@@ -41,9 +41,12 @@ CREATE TABLE "Productdescription" (
     "id" TEXT NOT NULL,
     "class" TEXT NOT NULL,
     "tool" TEXT,
+    "cat" TEXT NOT NULL,
+    "release" TEXT NOT NULL,
     "url" TEXT,
     "github" TEXT,
     "desc" TEXT NOT NULL,
+    "abstract" TEXT NOT NULL,
     "titleSlug" TEXT NOT NULL,
 
     CONSTRAINT "Productdescription_pkey" PRIMARY KEY ("id")
@@ -99,6 +102,7 @@ CREATE TABLE "ResumeDataDescription" (
     "location" TEXT,
     "thesis" BOOLEAN NOT NULL,
     "desc" TEXT NOT NULL,
+    "note" TEXT,
     "titleSlug" TEXT NOT NULL,
 
     CONSTRAINT "ResumeDataDescription_pkey" PRIMARY KEY ("id")
