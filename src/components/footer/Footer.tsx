@@ -6,7 +6,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
     <div className='flex flex-col items-center  h-fit px-0 md:px-20 lg:px-40 py-28   backdrop-blur-[0.5rem] bg-[#0D0B0D] bg-opacity-75'>
-      <div className='h-12 relative flex flex-col  w-[90vw] lg:w-[80vw] items-center justify-center '>
+      <div className='h-12 relative flex flex-col  w-[90vw] lg:w-[80vw] lg:max-w-[80rem] items-center justify-center '>
         <div className='flex items-center justify-between w-full'>
           <div className='flex flex-row gap-4 items-center'>
             <div className="relative w-16 aspect-square">
