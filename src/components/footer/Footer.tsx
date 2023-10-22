@@ -9,19 +9,19 @@ const Footer = () => {
       <div className='h-12 relative flex flex-col  w-[90vw] lg:w-[80vw] lg:max-w-[80rem] items-center justify-center '>
         <div className='flex items-center justify-between w-full'>
           <div className='flex flex-row gap-4 items-center'>
-            <div className="relative w-16 aspect-square">
+            <div className="relative w-14 aspect-square">
               <Image src={`${process.env.DEV_FILESERVER_URL}/pfolio-fileserver/logo-facebook-ddd.svg`} fill alt="" />
             </div>
             <Link href="/" className='font-bold text-3xl'>HOCHAN</Link>
           </div>
           <div className='flex flex-row gap-4'>
-            <div className="relative w-12 aspect-square">
+            <div className="relative w-10 aspect-square">
               <Image src={`${process.env.DEV_FILESERVER_URL}/pfolio-fileserver/logo-github-ddd.svg`} fill alt="" />
             </div>
-            <div className="relative w-12 aspect-square">
+            <div className="relative w-10 aspect-square">
               <Image src={`${process.env.DEV_FILESERVER_URL}/pfolio-fileserver/logo-tistory-ddd.svg`} fill alt="" />
             </div>
-            <div className="relative w-12 aspect-square">
+            <div className="relative w-10 aspect-square">
               <Image src={`${process.env.DEV_FILESERVER_URL}/pfolio-fileserver/logo-facebook-ddd.svg`} fill alt="" />
             </div>
             {/* <div className="relative w-12 aspect-square">
