@@ -15,6 +15,7 @@ import { DescN2Fullstack } from '@/components/three-models/text/DescN2Fullstack'
 import { DescN3Teamwork } from '@/components/three-models/text/DescN3Teamwork';
 
 import { DecoApple } from '@/components/three-models/object/DecoApple';
+import { DecoMoon } from '@/components/three-models/object/DecoMoon';
 import { DecoFlask } from '@/components/three-models/object/DecoFlask';
 import { DecoChatbubble } from '@/components/three-models/object/DecoChatbubble';
 
@@ -53,7 +54,8 @@ const Three = () => {
             <Scroll>
               <TopBracket position={[2.4, 0, 0]} scale={1} />
 
-              <DecoApple position={[0, -10, -3.1]} scale={0.6} />
+              {/* <DecoApple position={[0, -10, -3.1]} scale={0.6} /> */}
+              <DecoMoon position={[0, -10, -3.1]} scale={0.1} />
               
               <DecoFlask position={[0, -16, -1.3]} scale={0.3} />
 
