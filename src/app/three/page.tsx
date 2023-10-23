@@ -9,13 +9,18 @@ import { MainText } from '@/components/three-models/text/MainText';
 import { TopBracket } from '@/components/three-models/object/TopBracket';
 import { BottomSpikes01 } from '@/components/three-models/object/BottomSpikes01';
 import { BottomSpikes02 } from '@/components/three-models/object/BottomSpikes02';
+import { BottomText01 } from '@/components/three-models/object/BottomText01';
+import { BottomText02 } from '@/components/three-models/object/BottomText02';
 
 import { DescN1Challenge } from '@/components/three-models/text/DescN1Challenge';
 import { DescN2Fullstack } from '@/components/three-models/text/DescN2Fullstack';
 import { DescN3Teamwork } from '@/components/three-models/text/DescN3Teamwork';
 
 import { DecoApple } from '@/components/three-models/object/DecoApple';
-import { DecoFlask } from '@/components/three-models/object/DecoFlask';
+import { DecoMoon } from '@/components/three-models/object/DecoMoon';
+import { DecoShuttle } from '@/components/three-models/object/DecoShuttle';
+// import { DecoFlask } from '@/components/three-models/object/DecoFlask';
+import { DecoBooks } from '@/components/three-models/object/DecoBooks';
 import { DecoChatbubble } from '@/components/three-models/object/DecoChatbubble';
 
 
@@ -47,16 +52,21 @@ const Three = () => {
             
             <BottomSpikes01 position={[77, 1, 0.1]} scale={24.2} />
             <BottomSpikes02 position={[-77, -1, 0.1]} scale={24.2} />
-
+            <BottomText01 position={[77, 1, 0.1]} scale={24.2} />
+            <BottomText02 position={[-77, -1, 0.1]} scale={24.2} />
+            
 
 
             <Scroll>
               <TopBracket position={[2.4, 0, 0]} scale={1} />
 
-              <DecoApple position={[0, -10, -3.1]} scale={0.6} />
+              {/* <DecoApple position={[0, -10, -3.1]} scale={0.6} /> */}
+              <DecoMoon position={[0, -10, -3.1]} scale={0.1} />
+              <DecoShuttle position={[-1, -12, -3.1]} scale={0.2} />
               
-              <DecoFlask position={[0, -16, -1.3]} scale={0.3} />
-
+              {/* <DecoFlask position={[0, -16, -1.3]} scale={0.3} /> */}
+              <DecoBooks position={[0, -16, -1.3]} scale={0.1} />
+              
               <DecoChatbubble position={[0, -22, -1.3]} scale={130.2} />
 
             </Scroll>

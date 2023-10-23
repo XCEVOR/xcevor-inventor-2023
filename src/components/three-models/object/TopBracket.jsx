@@ -11,7 +11,7 @@ import gsap from 'gsap'
 export function TopBracket(props) {
   const { nodes, materials } = useGLTF('./models/object/top-bracket-transformed.glb')
 
-  const myxxxRef = useRef()
+  const model3d = useRef()
   const scroll = useScroll()
   const tl = useRef()
 
@@ -25,62 +25,62 @@ export function TopBracket(props) {
 
 
     tl.current
-    // .to(myxxxRef.current.scale, {scale: 10}, 0)
-    .to(myxxxRef.current.position, {z: -5}, 0)
+    // .to(model3d.current.scale, {scale: 10}, 0)
+    .to(model3d.current.position, {z: -5}, 0)
 
-    // .to(myxxxRef.current.rotation, {x: 2*Math.PI}, 1)
-    // .to(myxxxRef.current.position, {x: 2}, 1)
-    // .to(myxxxRef.current.position, {z: 2}, 1)
-
-
-    // .to(myxxxRef.current.rotation, {x: 4*Math.PI}, 2)
-    // .to(myxxxRef.current.rotation, {y: -Math.PI/16}, 2)
-    // .to(myxxxRef.current.rotation, {z: +Math.PI/48}, 2)
-    // .to(myxxxRef.current.position, {x: 4}, 2)
-    // .to(myxxxRef.current.position, {y: -5}, 2)
-    // .to(myxxxRef.current.position, {z: -6}, 2)
+    // .to(model3d.current.rotation, {x: 2*Math.PI}, 1)
+    // .to(model3d.current.position, {x: 2}, 1)
+    // .to(model3d.current.position, {z: 2}, 1)
 
 
-    // .to(myxxxRef.current.rotation, {x: 2*Math.PI}, 5)
-    // .to(myxxxRef.current.position, {x: -2}, 5)
-    // .to(myxxxRef.current.position, {z: 2}, 5)
-
-    // .to(myxxxRef.current.rotation, {x: 0}, 6)
-    // .to(myxxxRef.current.rotation, {y: +Math.PI/16}, 6)
-    // .to(myxxxRef.current.rotation, {z: -Math.PI/48}, 6)
-    // .to(myxxxRef.current.position, {x: -4}, 6)
-    // .to(myxxxRef.current.position, {y: -5}, 6)
-    // .to(myxxxRef.current.position, {z: -6}, 6)
+    // .to(model3d.current.rotation, {x: 4*Math.PI}, 2)
+    // .to(model3d.current.rotation, {y: -Math.PI/16}, 2)
+    // .to(model3d.current.rotation, {z: +Math.PI/48}, 2)
+    // .to(model3d.current.position, {x: 4}, 2)
+    // .to(model3d.current.position, {y: -5}, 2)
+    // .to(model3d.current.position, {z: -6}, 2)
 
 
-    // .to(myxxxRef.current.rotation, {x: 2*Math.PI}, 9)
-    // .to(myxxxRef.current.position, {x: 2}, 9)
-    // .to(myxxxRef.current.position, {z: 2}, 9)
+    // .to(model3d.current.rotation, {x: 2*Math.PI}, 5)
+    // .to(model3d.current.position, {x: -2}, 5)
+    // .to(model3d.current.position, {z: 2}, 5)
 
-    // .to(myxxxRef.current.rotation, {x: 4*Math.PI}, 10)
-    // .to(myxxxRef.current.rotation, {y: -Math.PI/16}, 10)
-    // .to(myxxxRef.current.rotation, {z: +Math.PI/48}, 10)
-    // .to(myxxxRef.current.position, {x: 4}, 10)
-    // .to(myxxxRef.current.position, {y: -5}, 10)
-    // .to(myxxxRef.current.position, {z: -6}, 10)
+    // .to(model3d.current.rotation, {x: 0}, 6)
+    // .to(model3d.current.rotation, {y: +Math.PI/16}, 6)
+    // .to(model3d.current.rotation, {z: -Math.PI/48}, 6)
+    // .to(model3d.current.position, {x: -4}, 6)
+    // .to(model3d.current.position, {y: -5}, 6)
+    // .to(model3d.current.position, {z: -6}, 6)
 
 
-    // .to(myxxxRef.current.rotation, {y: 0}, 13)
-    .to(myxxxRef.current.rotation, {x: 0}, 14)
-    .to(myxxxRef.current.rotation, {y: 0}, 14)
-    .to(myxxxRef.current.rotation, {z: 0}, 14)
-    .to(myxxxRef.current.position, {x: 0}, 14)
-    .to(myxxxRef.current.position, {y: 0}, 14)
-    .to(myxxxRef.current.position, {z: 0}, 14)
+    // .to(model3d.current.rotation, {x: 2*Math.PI}, 9)
+    // .to(model3d.current.position, {x: 2}, 9)
+    // .to(model3d.current.position, {z: 2}, 9)
+
+    // .to(model3d.current.rotation, {x: 4*Math.PI}, 10)
+    // .to(model3d.current.rotation, {y: -Math.PI/16}, 10)
+    // .to(model3d.current.rotation, {z: +Math.PI/48}, 10)
+    // .to(model3d.current.position, {x: 4}, 10)
+    // .to(model3d.current.position, {y: -5}, 10)
+    // .to(model3d.current.position, {z: -6}, 10)
+
+
+    // .to(model3d.current.rotation, {y: 0}, 13)
+    .to(model3d.current.rotation, {x: 0}, 14)
+    .to(model3d.current.rotation, {y: 0}, 14)
+    .to(model3d.current.rotation, {z: 0}, 14)
+    .to(model3d.current.position, {x: 0}, 14)
+    .to(model3d.current.position, {y: 0}, 14)
+    .to(model3d.current.position, {z: 0}, 14)
   
-    .to(myxxxRef.current.rotation, {x: 0}, 20) 
-    .to(myxxxRef.current.position, {x: 0}, 20)   
+    .to(model3d.current.rotation, {x: 0}, 20) 
+    .to(model3d.current.position, {x: 0}, 20)   
 
   },[])
 
 
   return (
-    <group {...props} dispose={null} ref={myxxxRef}>
+    <group {...props} dispose={null} ref={model3d}>
       {/* <mesh geometry={nodes.Cube.geometry} material={nodes.Cube.material} rotation={[Math.PI / 2, Math.PI / 4, 0]} scale={[2.5, 1, 1]} /> */}
       {/* <mesh geometry={nodes.Cube.geometry} material={materials.Material} /> */}
       <mesh geometry={nodes.Curve.geometry} material={nodes.Curve.material} position={[-2.391, 0, 0]} rotation={[1*Math.PI/2, 0, 0]} scale={[30, 30, 30]}/>

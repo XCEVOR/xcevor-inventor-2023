@@ -10,7 +10,7 @@ import gsap from 'gsap'
 
 export function DecoFlask(props) {
   const { nodes, materials } = useGLTF('./models/object/deco-flask-transformed.glb')
-  const robot = useRef()
+  const model3d = useRef()
   const scroll = useScroll()
   const tl = useRef()
 
@@ -22,22 +22,22 @@ export function DecoFlask(props) {
     tl.current = gsap.timeline({defaults: {duration: 2, ease: 'power1.inOut'}})
 
     tl.current
-    .to(robot.current.position, {x: -2.5}, 0)
-    .to(robot.current.rotation, {x: -1*Math.PI/3}, 0)
-    .to(robot.current.rotation, {y: -2*Math.PI}, 0)
+    .to(model3d.current.position, {x: -2.5}, 0)
+    .to(model3d.current.rotation, {x: -1*Math.PI/3}, 0)
+    .to(model3d.current.rotation, {y: -2*Math.PI}, 0)
     
-    .to(robot.current.rotation, {x: -1*Math.PI/3}, 6)
-    .to(robot.current.rotation, {y: -2*Math.PI}, 6)
+    .to(model3d.current.rotation, {x: -1*Math.PI/3}, 6)
+    .to(model3d.current.rotation, {y: -2*Math.PI}, 6)
 
-    .to(robot.current.rotation, {y: 0}, 8)    
+    .to(model3d.current.rotation, {y: 0}, 8)    
 
-    // .to(robot.current.rotation, {x: -1*Math.PI/2}, 20)
-    .to(robot.current.position, {x: -2.5}, 20)   
+    // .to(model3d.current.rotation, {x: -1*Math.PI/2}, 20)
+    .to(model3d.current.position, {x: -2.5}, 20)   
 
   },[])
   
   return (
-    <group {...props} dispose={null} ref={robot}>      
+    <group {...props} dispose={null} ref={model3d}>      
       <mesh geometry={nodes.flask.geometry} material={nodes.flask.material} position={[0, 0, 0]} rotation={[1*Math.PI/2, 0, 0]} scale={[1, 1, 1]}/>
     </group>
   )

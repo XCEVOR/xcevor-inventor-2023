@@ -10,7 +10,7 @@ import gsap from 'gsap'
 
 export function DecoChatbubble(props) {
   const { nodes, materials } = useGLTF('./models/object/deco-chatbubble-transformed.glb')
-  const robot = useRef()
+  const model3d = useRef()
   const scroll = useScroll()
   const tl = useRef()
 
@@ -22,19 +22,19 @@ export function DecoChatbubble(props) {
     tl.current = gsap.timeline({defaults: {duration: 2, ease: 'power1.inOut'}})
 
     tl.current
-    .to(robot.current.rotation, {y: 2*Math.PI}, 0)
-    .to(robot.current.position, {x: 2}, 0)
+    .to(model3d.current.rotation, {y: 2*Math.PI}, 0)
+    .to(model3d.current.position, {x: 2}, 0)
 
-    .to(robot.current.rotation, {y: 2*Math.PI}, 9)
+    .to(model3d.current.rotation, {y: 2*Math.PI}, 9)
 
-    .to(robot.current.rotation, {y: 0}, 11)    
+    .to(model3d.current.rotation, {y: 0}, 11)    
 
-    .to(robot.current.position, {x: 2}, 20)   
+    .to(model3d.current.position, {x: 2}, 20)   
 
   },[])
   
   return (
-    <group {...props} dispose={null} ref={robot}>      
+    <group {...props} dispose={null} ref={model3d}>      
       <mesh geometry={nodes.chatbubble.geometry} material={nodes.chatbubble.material} position={[0, 0, 0]} rotation={[0, 0, 0]} scale={[1.6, 1.6, .3]}/>
     </group>
   )
