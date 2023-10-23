@@ -121,7 +121,7 @@ const Resume = async () => {
                             <h3 className="text-2xl font-bold mt-0 mb-4 ">{classification}</h3>
                             {groupedData[classification].map((title) => (
                               <div key={title}>
-                                <h4 className="text-lg font-semibold uppercase text-[#edf048] mt-6 mb-2">{title}</h4>
+                                <h4 className={title !== "Personal Exp." ? "text-lg font-semibold uppercase text-[#edf048] mt-6 mb-2" : "text-lg font-semibold uppercase text-[#edf048] mt-16 mb-2"}>{title}</h4>
                                 <ResumeDescription params={{ resumeTitle: title }} />
                               </div>
                             ))}
