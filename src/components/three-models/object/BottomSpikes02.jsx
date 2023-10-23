@@ -10,7 +10,7 @@ import gsap from 'gsap'
 
 export function BottomSpikes02(props) {
   const { nodes, materials } = useGLTF('./models/object/bottom-spikes02-transformed.glb')
-  const robot = useRef()
+  const model3d = useRef()
   const scroll = useScroll()
   const tl = useRef()
 
@@ -22,18 +22,18 @@ export function BottomSpikes02(props) {
     tl.current = gsap.timeline({defaults: {duration: 2, ease: 'power1.inOut'}})
 
     tl.current
-    .to(robot.current.position, {x: 1.6}, 17)
-    .to(robot.current.position, {y: -1}, 17)
+    .to(model3d.current.position, {x: 1.6}, 17)
+    .to(model3d.current.position, {y: -1}, 17)
  
 
-    // .to(robot.current.rotation, {y: 0}, 20)   
-    // .to(robot.current.rotation, {x: 0}, 20) 
-    .to(robot.current.position, {x: 1.6}, 20)  
+    // .to(model3d.current.rotation, {y: 0}, 20)   
+    // .to(model3d.current.rotation, {x: 0}, 20) 
+    .to(model3d.current.position, {x: 1.6}, 20)  
 
   },[])
   
   return (
-    <group {...props} dispose={null} ref={robot}>      
+    <group {...props} dispose={null} ref={model3d}>      
       <mesh geometry={nodes.spikesbot.geometry} material={nodes.spikesbot.material} position={[0, 0, 0]} rotation={[1*Math.PI/2, 0, 0]} scale={[1, 1, 1]}/>
     </group>
   )

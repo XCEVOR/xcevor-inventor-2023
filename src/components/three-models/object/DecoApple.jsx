@@ -10,7 +10,7 @@ import gsap from 'gsap'
 
 export function DecoApple(props) {
   const { nodes, materials } = useGLTF('./models/object/deco-apple-transformed.glb')
-  const robot = useRef()
+  const model3d = useRef()
   const scroll = useScroll()
   const tl = useRef()
 
@@ -22,35 +22,35 @@ export function DecoApple(props) {
     tl.current = gsap.timeline({defaults: {duration: 2, ease: 'power1.inOut'}})
 
     tl.current
-    .to(robot.current.position, {x: 2.5}, 0)
-    .to(robot.current.rotation, {x: Math.PI/2}, 0)
-    .to(robot.current.rotation, {y: 1*Math.PI}, 0)
+    .to(model3d.current.position, {x: 2.5}, 0)
+    .to(model3d.current.rotation, {x: Math.PI/2}, 0)
+    .to(model3d.current.rotation, {y: 1*Math.PI}, 0)
 
-    .to(robot.current.rotation, {x: Math.PI/10}, 3)
-    .to(robot.current.rotation, {y: 1*Math.PI}, 2)
+    .to(model3d.current.rotation, {x: Math.PI/10}, 3)
+    .to(model3d.current.rotation, {y: 1*Math.PI}, 2)
 
-    .to(robot.current.rotation, {y: 0}, 4)    
+    .to(model3d.current.rotation, {y: 0}, 4)    
 
-    // .to(robot.current.rotation, {y: 0}, 11)
-    // .to(robot.current.rotation, {x: 1}, 11)
-    // .to(robot.current.position, {x: 3}, 11)
+    // .to(model3d.current.rotation, {y: 0}, 11)
+    // .to(model3d.current.rotation, {x: 1}, 11)
+    // .to(model3d.current.position, {x: 3}, 11)
 
-    // .to(robot.current.rotation, {y: 0}, 13)
-    // .to(robot.current.rotation, {x: -1}, 13)    
-    // .to(robot.current.position, {x: 3}, 13)
+    // .to(model3d.current.rotation, {y: 0}, 13)
+    // .to(model3d.current.rotation, {x: -1}, 13)    
+    // .to(model3d.current.position, {x: 3}, 13)
 
-    // .to(robot.current.rotation, {y: 0}, 16)   
-    // .to(robot.current.rotation, {x: 0}, 16) 
-    // .to(robot.current.position, {x: 3}, 16)    
+    // .to(model3d.current.rotation, {y: 0}, 16)   
+    // .to(model3d.current.rotation, {x: 0}, 16) 
+    // .to(model3d.current.position, {x: 3}, 16)    
 
-    .to(robot.current.rotation, {y: 0}, 20)   
-    .to(robot.current.rotation, {x: 0}, 20) 
-    .to(robot.current.position, {x: 2.5}, 20)   
+    .to(model3d.current.rotation, {y: 0}, 20)   
+    .to(model3d.current.rotation, {x: 0}, 20) 
+    .to(model3d.current.position, {x: 2.5}, 20)   
 
   },[])
   
   return (
-    <group {...props} dispose={null} ref={robot}>      
+    <group {...props} dispose={null} ref={model3d}>      
       <mesh geometry={nodes.apple.geometry} material={nodes.apple.material} position={[0, 0, 0]} rotation={[1*Math.PI/2, 0, 0]} scale={[1, 1, 1]}/>
     </group>
   )

@@ -10,7 +10,7 @@ import gsap from 'gsap'
 
 export function BottomText02(props) {
   const { nodes, materials } = useGLTF('./models/object/bottom-trust-transformed.glb')
-  const robot = useRef()
+  const model3d = useRef()
   const scroll = useScroll()
   const tl = useRef()
 
@@ -22,18 +22,18 @@ export function BottomText02(props) {
     tl.current = gsap.timeline({defaults: {duration: 2, ease: 'power1.inOut'}})
 
     tl.current
-    .to(robot.current.position, {x: -2.2}, 18.0)
-    .to(robot.current.position, {y: -1.1}, 18.0)
+    .to(model3d.current.position, {x: -2.2}, 18.0)
+    .to(model3d.current.position, {y: -1.1}, 18.0)
  
 
-    // .to(robot.current.rotation, {y: 0}, 20)   
-    // .to(robot.current.rotation, {x: 0}, 20) 
-    .to(robot.current.position, {x: -2.2}, 20)  
+    // .to(model3d.current.rotation, {y: 0}, 20)   
+    // .to(model3d.current.rotation, {x: 0}, 20) 
+    .to(model3d.current.position, {x: -2.2}, 20)  
 
   },[])
   
   return (
-    <group {...props} dispose={null} ref={robot}>      
+    <group {...props} dispose={null} ref={model3d}>      
       <mesh geometry={nodes.trust.geometry} material={nodes.trust.material} position={[0, 0, 0]} rotation={[1*Math.PI/2, 0, 0]} scale={[1, 1, 1]}/>
     </group>
   )

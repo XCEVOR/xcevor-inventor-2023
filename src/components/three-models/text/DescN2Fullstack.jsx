@@ -10,7 +10,7 @@ import gsap from 'gsap'
 
 export function DescN2Fullstack(props) {
   const { nodes, materials } = useGLTF('./models/text/desc-n2fullstack-transformed.glb')
-  const robot = useRef()
+  const model3d = useRef()
   const scroll = useScroll()
   const tl = useRef()
 
@@ -22,35 +22,35 @@ export function DescN2Fullstack(props) {
     tl.current = gsap.timeline({defaults: {duration: 2, ease: 'power1.inOut'}})
 
     tl.current
-    .to(robot.current.rotation, {y: -1*Math.PI/24}, 6)
-    .to(robot.current.position, {x: 2}, 6)
-    .to(robot.current.position, {z: 0.1}, 6)
+    .to(model3d.current.rotation, {y: -1*Math.PI/24}, 6)
+    .to(model3d.current.position, {x: 2}, 6)
+    .to(model3d.current.position, {z: 0.1}, 6)
 
-    .to(robot.current.position, {y: 10}, 10)
+    .to(model3d.current.position, {y: 10}, 10)
 
-    // .to(robot.current.rotation, {y: 1}, 6)   
-    // .to(robot.current.position, {x: -1}, 6)
+    // .to(model3d.current.rotation, {y: 1}, 6)   
+    // .to(model3d.current.position, {x: -1}, 6)
 
-    // .to(robot.current.rotation, {y: 0}, 11)
-    // .to(robot.current.rotation, {x: 1}, 11)
-    // .to(robot.current.position, {x: 0}, 11)
+    // .to(model3d.current.rotation, {y: 0}, 11)
+    // .to(model3d.current.rotation, {x: 1}, 11)
+    // .to(model3d.current.position, {x: 0}, 11)
 
-    // .to(robot.current.rotation, {y: 0}, 13)
-    // .to(robot.current.rotation, {x: -1}, 13)    
-    // .to(robot.current.position, {x: 0}, 13)
+    // .to(model3d.current.rotation, {y: 0}, 13)
+    // .to(model3d.current.rotation, {x: -1}, 13)    
+    // .to(model3d.current.position, {x: 0}, 13)
 
-    // .to(robot.current.rotation, {y: 0}, 16)   
-    // .to(robot.current.rotation, {x: 0}, 16) 
-    // .to(robot.current.position, {x: 0}, 16)    
+    // .to(model3d.current.rotation, {y: 0}, 16)   
+    // .to(model3d.current.rotation, {x: 0}, 16) 
+    // .to(model3d.current.position, {x: 0}, 16)    
 
-    // .to(robot.current.rotation, {y: 0}, 20)   
-    // .to(robot.current.rotation, {x: 0}, 20) 
-    .to(robot.current.position, {x: 2}, 20)   
+    // .to(model3d.current.rotation, {y: 0}, 20)   
+    // .to(model3d.current.rotation, {x: 0}, 20) 
+    .to(model3d.current.position, {x: 2}, 20)   
 
   },[])
   
   return (
-    <group {...props} dispose={null} ref={robot}>      
+    <group {...props} dispose={null} ref={model3d}>      
       <mesh geometry={nodes.fullstack.geometry} material={nodes.fullstack.material} position={[0, 0, 0]} rotation={[1*Math.PI/2, 0, 0]} scale={[1, 1, 1]}/>
     </group>
   )
