@@ -9,6 +9,8 @@ import { MainText } from '@/components/three-models/text/MainText';
 import { TopBracket } from '@/components/three-models/object/TopBracket';
 import { BottomSpikes01 } from '@/components/three-models/object/BottomSpikes01';
 import { BottomSpikes02 } from '@/components/three-models/object/BottomSpikes02';
+import { BottomText01 } from '@/components/three-models/object/BottomText01';
+import { BottomText02 } from '@/components/three-models/object/BottomText02';
 
 import { DescN1Challenge } from '@/components/three-models/text/DescN1Challenge';
 import { DescN2Fullstack } from '@/components/three-models/text/DescN2Fullstack';
@@ -50,7 +52,9 @@ const Three = () => {
             
             <BottomSpikes01 position={[77, 1, 0.1]} scale={24.2} />
             <BottomSpikes02 position={[-77, -1, 0.1]} scale={24.2} />
-
+            <BottomText01 position={[77, 1, 0.1]} scale={24.2} />
+            <BottomText02 position={[-77, -1, 0.1]} scale={24.2} />
+            
 
 
             <Scroll>
