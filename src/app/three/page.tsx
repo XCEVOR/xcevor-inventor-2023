@@ -62,7 +62,7 @@ const Three = () => {
 
               {/* <DecoApple position={[0, -10, -3.1]} scale={0.6} /> */}
               <DecoMoon position={[0, -10, -3.1]} scale={0.1} />
-              <DecoShuttle position={[-1, -9, -3.1]} scale={0.2} />
+              <DecoShuttle position={[-1, -12, -3.1]} scale={0.2} />
               
               {/* <DecoFlask position={[0, -16, -1.3]} scale={0.3} /> */}
               <DecoBooks position={[0, -16, -1.3]} scale={0.1} />
