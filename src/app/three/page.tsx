@@ -17,7 +17,8 @@ import { DescN3Teamwork } from '@/components/three-models/text/DescN3Teamwork';
 import { DecoApple } from '@/components/three-models/object/DecoApple';
 import { DecoMoon } from '@/components/three-models/object/DecoMoon';
 import { DecoShuttle } from '@/components/three-models/object/DecoShuttle';
-import { DecoFlask } from '@/components/three-models/object/DecoFlask';
+// import { DecoFlask } from '@/components/three-models/object/DecoFlask';
+import { DecoBooks } from '@/components/three-models/object/DecoBooks';
 import { DecoChatbubble } from '@/components/three-models/object/DecoChatbubble';
 
 
@@ -59,8 +60,9 @@ const Three = () => {
               <DecoMoon position={[0, -10, -3.1]} scale={0.1} />
               <DecoShuttle position={[-1, -9, -3.1]} scale={0.2} />
               
-              <DecoFlask position={[0, -16, -1.3]} scale={0.3} />
-
+              {/* <DecoFlask position={[0, -16, -1.3]} scale={0.3} /> */}
+              <DecoBooks position={[0, -16, -1.3]} scale={0.1} />
+              
               <DecoChatbubble position={[0, -22, -1.3]} scale={130.2} />
 
             </Scroll>
