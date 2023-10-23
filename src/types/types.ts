@@ -74,4 +74,6 @@ export type ResumeDataDescriptionType = {
   location?: string;
   thesis: boolean;
   desc: string;
+  note: string;
+  titleSlug: string;
 }
