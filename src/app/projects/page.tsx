@@ -50,7 +50,7 @@ const Portfolio = async () => {
           {/* <div className='flex items-center justify-center  '> */}
           <div className='flex flex-col items-center  h-fit px-0 lg:px-40 py-28 '>
             {/* <div className="grid lg:grid-cols-2 2xl:grid-cols-3 w-full xl:max-w-fit"> */}
-            <div className='relative grid gap-8 lg:grid-cols-2 2xl:grid-cols-3  w-[90vw] lg:max-w-[80rem] '>
+            <div className='relative grid gap-2 sm:gap-8 grid-cols-2 lg:grid-cols-3  w-[90vw] lg:max-w-[80rem] '>
               {featureProducts.map((item, index) => (
                 <Reveal key={index} mydelay={1.5 * (1 + 0.4 * index)} >
                 {/* <div className='sm:p-8'> */}
