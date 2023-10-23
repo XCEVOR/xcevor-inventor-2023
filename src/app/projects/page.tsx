@@ -31,10 +31,11 @@ const Portfolio = async () => {
   return (
     <>
       <BackgroundImage />
-      <div className='px-2 md:px-20 lg:px-40 py-28 '>
+      <div className='flex flex-col items-center  h-fit px-0 lg:px-40 py-28 '>
       
 
         <PageWrapper>
+        <h1 className="relative mb-8  text-3xl font-bold uppercase lg:text-4xl  text-[#edf048]">Projects</h1>
           {/* <div className='flex text-[#FAD02C]'>
             {pizzas.map((item) => (
               <Link className='' href={`/product/${item.id}`} key={item.id}>
@@ -48,7 +49,7 @@ const Portfolio = async () => {
           </div> */}
           
           {/* <div className='flex items-center justify-center  '> */}
-          <div className='flex flex-col items-center  h-fit px-0 lg:px-40 py-28 '>
+          {/* <div className='flex flex-col items-center  h-fit px-0 lg:px-40 py-28 '> */}
             {/* <div className="grid lg:grid-cols-2 2xl:grid-cols-3 w-full xl:max-w-fit"> */}
             <div className='relative grid gap-2 sm:gap-8 grid-cols-2 lg:grid-cols-3  w-[90vw] lg:max-w-[80rem] '>
               {featureProducts.map((item, index) => (
@@ -85,7 +86,7 @@ const Portfolio = async () => {
                 </Reveal>
               ))}
             </div>
-          </div>
+          {/* </div> */}
 
           {/* <div className="p-4 lg:px-20 xl:px-40 h-[calc(100vh-6rem)] md:h-[calc(100vh-9rem)] flex flex-col md:flex-row items-center">
           {menu.map((category) => (
