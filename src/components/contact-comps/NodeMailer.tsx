@@ -30,7 +30,7 @@ const NodeMailer = () => {
   const [state, setState] = useState(initState);
   const { values, isLoading } = state;
   const [touched, setTouched] = useState<touchedFields>(initTouched);
-  const useTopDownToast = useToast();
+  const UseTopDownToast = useToast();
   
 
   const onBlur:any = ({target}:targetType) => setTouched((prev) => ({ ...prev, [target.name]:true }));
@@ -58,14 +58,14 @@ const NodeMailer = () => {
       await sendContactForm(values);
       setTouched(initTouched);
       setState(initState);
-      useTopDownToast({
+      UseTopDownToast({
         title: "Message sent.",
         status: "success",
         duration: 3000,
         position: "top",
       })
     } catch (error) {
-      useTopDownToast({
+      UseTopDownToast({
         title: "Error",
         status: "error",
         duration: 3000,
