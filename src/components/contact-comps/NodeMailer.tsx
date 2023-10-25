@@ -80,7 +80,7 @@ const NodeMailer = () => {
     
     <ChakraProvider theme={theme} resetCSS={false} disableGlobalStyle={true}>
       <Container >
-        <div className='flex flex-col gap-4  p-8 lg:p-16 mt-8    border border-white/20  bg-[#221e22]/80 backdrop-blur rounded-xl'>
+        <div className='flex flex-col gap-4  p-8 lg:py-12 lg:px-16 mt-8    border border-white/20  bg-[#221e22]/80 backdrop-blur rounded-xl'>
           {/* <div>NodeMailer</div> */}
 
             <FormControl isRequired isInvalid={touched.senderName && !values.senderName} >
@@ -115,6 +115,7 @@ const NodeMailer = () => {
                 !values.senderName || !values.senderEmail || !values.senderEmail.includes("@") || !values.senderSubject || !values.senderMessage
               }
               onClick={onSubmit}
+              className='mt-4'
             >
               Submit
             </Button>
