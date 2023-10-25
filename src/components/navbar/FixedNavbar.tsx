@@ -30,7 +30,11 @@ export default function FixedNavbar() {
     {
       name: "Projects",
       hash: "/projects",
-    },     
+    },
+    {
+      name: "Contact",
+      hash: "/contact",
+    },   
     // {
     //   name: "Portfolio",
     //   hash: "/portfolio",
