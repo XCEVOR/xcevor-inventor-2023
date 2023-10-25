@@ -1,0 +1,126 @@
+"use client";
+
+import React, { useState } from 'react'
+import { ChakraProvider, Container, FormControl, FormLabel, FormErrorMessage, Input, Textarea, Button, useToast,  } from '@chakra-ui/react'
+import theme from './theme';
+import { touchedFields, targetType, tempDataType } from '@/types/types-cantact';
+
+import { sendContactForm } from './api';
+
+
+
+
+const initValues = { senderName: "", senderEmail: "", senderSubject: "", senderMessage: "" };
+const initState = { values: initValues, isLoading: false };
+const initTouched = {
+  senderName: false,
+  senderEmail: false,
+  senderSubject: false,
+  senderMessage: false,
+
+  touchedName: false,
+  touchedEmail: false,
+  touchedSubject: false,
+  touchedMessage: false,
+}
+
+
+
+const NodeMailer = () => {
+  const [state, setState] = useState(initState);
+  const { values, isLoading } = state;
+  const [touched, setTouched] = useState<touchedFields>(initTouched);
+  const useTopDownToast = useToast();
+  
+
+  const onBlur:any = ({target}:targetType) => setTouched((prev) => ({ ...prev, [target.name]:true }));
+
+  const handleChange:any = ({ target }: targetType) => {
+    setState((prev) => ({
+      ...prev, values: {...prev.values, [target.name]: target.value,},
+      isLoading: false,
+    }))
+  }
+
+  const onSubmit = async () => {
+    console.log(values.senderName)
+    setState((prev) => ({
+      ...prev, isLoading: true,
+    }));
+
+    // const myData:tempDataType = {
+    //   userEmailAddress: "test12@testtsettetfasdfasdf.com",
+    //   userTitle: "2 한글한글 Title from NEXTJS",
+    //   userContent: "한글 Content from NEXTJS.. You should.."
+    // }
+
+    try {
+      await sendContactForm(values);
+      setTouched(initTouched);
+      setState(initState);
+      useTopDownToast({
+        title: "Message sent.",
+        status: "success",
+        duration: 2000,
+        position: "top",
+      })
+    } catch (error) {
+      setState((prev) => ({
+        ...prev,
+        isLoading: false,
+      }))
+    }
+    
+  }
+
+
+
+  return (
+    <ChakraProvider theme={theme}>
+      <Container className=' max-w-lg' >
+
+        <div>NodeMailer</div>
+
+        <FormControl isRequired isInvalid={touched.senderName && !values.senderName}>
+          <FormLabel>Name</FormLabel>
+          <Input type="text" name='senderName' errorBorderColor='red.300' value={values.senderName} onChange={handleChange} onBlur={onBlur} />
+          <FormErrorMessage>Required</FormErrorMessage>
+        </FormControl>
+
+        <FormControl isRequired isInvalid={touched.senderEmail && !values.senderEmail}>
+          <FormLabel>Email</FormLabel>
+          <Input type="email" name='senderEmail' value={values.senderEmail} onChange={handleChange} onBlur={onBlur} />
+          <FormErrorMessage>Required</FormErrorMessage>
+        </FormControl>
+
+        <FormControl isRequired isInvalid={touched.senderSubject && !values.senderSubject}>
+          <FormLabel>Subject</FormLabel>
+          <Input type="text" name='senderSubject' value={values.senderSubject} onChange={handleChange} onBlur={onBlur} />
+          <FormErrorMessage>Required</FormErrorMessage>
+        </FormControl>
+
+        <FormControl isRequired isInvalid={touched.senderMessage && !values.senderMessage}>
+          <FormLabel>Message</FormLabel>
+          <Textarea name='senderMessage' rows={4} value={values.senderMessage} onChange={handleChange} onBlur={onBlur} />
+          <FormErrorMessage>Required</FormErrorMessage>
+        </FormControl>
+
+
+        <Button
+          variant="outline"
+          colorScheme="blue"
+          isLoading={isLoading}
+          isDisabled={
+            !values.senderName || !values.senderEmail || !values.senderEmail.includes("@") || !values.senderSubject || !values.senderMessage
+          }
+          onClick={onSubmit}
+        >
+          Submit
+        </Button>
+
+      </Container>
+    </ChakraProvider>
+  )
+}
+
+export default NodeMailer

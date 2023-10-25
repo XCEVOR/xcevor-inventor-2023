@@ -1,4 +1,5 @@
 import BackgroundImage from '@/components/BackgroundImage'
+import NodeMailer from '@/components/contact-comps/NodeMailer'
 import { PageWrapper } from '@/components/framer-motion/page-wrapper'
 import React from 'react'
 
@@ -10,7 +11,7 @@ const ContactMe = () => {
         {/* <div className='relative flex flex-col  lg:h-[calc(100vh-9.4rem)] w-[90vw] lg:max-w-[80rem] '> */}
         <div className='relative flex flex-col  w-[90vw] lg:max-w-[80rem] '>
           <PageWrapper>
-            <h2>ContactMe</h2>
+            <NodeMailer />
           </PageWrapper>
         </div>
       </div>
