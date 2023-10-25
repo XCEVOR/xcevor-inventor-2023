@@ -18,7 +18,7 @@ const ResumeDescription = async ( {params}:{params: {resumeTitle:string}} ) => {
 
   // console.log(params.resumeTitle)
   const bundleResumeDataDescription:ResumeDataDescriptionType[] = await getResumeDataDescription( params.resumeTitle );
-  console.log(bundleResumeDataDescription)
+  // console.log(bundleResumeDataDescription)
 
   return (
     <div>
