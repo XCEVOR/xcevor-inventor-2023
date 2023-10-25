@@ -15,10 +15,10 @@ export default function FixedNavbar() {
       name: "Home",
       hash: "/",
     },
-    {
-      name: "Three",
-      hash: "/three",
-    },
+    // {
+    //   name: "Three",
+    //   hash: "/three",
+    // },
     {
       name: "About",
       hash: "/about",
