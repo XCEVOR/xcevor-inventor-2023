@@ -80,46 +80,46 @@ const NodeMailer = () => {
     
     <ChakraProvider theme={theme} resetCSS={false} disableGlobalStyle={true}>
       <Container >
+        <div className='flex flex-col gap-4  p-8 lg:p-16 mt-8    border border-white/20  bg-[#221e22]/80 backdrop-blur rounded-xl'>
+          {/* <div>NodeMailer</div> */}
 
-        <div>NodeMailer</div>
+            <FormControl isRequired isInvalid={touched.senderName && !values.senderName} >
+              <FormLabel>Name</FormLabel>
+              <Input type="text" name='senderName' errorBorderColor='red.300' value={values.senderName} onChange={handleChange} onBlur={onBlur} />
+              <FormErrorMessage>Required</FormErrorMessage>
+            </FormControl>
 
-        <FormControl isRequired isInvalid={touched.senderName && !values.senderName} >
-          <FormLabel>Name</FormLabel>
-          <Input type="text" name='senderName' errorBorderColor='red.300' value={values.senderName} onChange={handleChange} onBlur={onBlur} />
-          <FormErrorMessage>Required</FormErrorMessage>
-        </FormControl>
+            <FormControl isRequired isInvalid={touched.senderEmail && !values.senderEmail}>
+              <FormLabel>Email</FormLabel>
+              <Input type="email" name='senderEmail' value={values.senderEmail} onChange={handleChange} onBlur={onBlur} />
+              <FormErrorMessage>Required</FormErrorMessage>
+            </FormControl>
 
-        <FormControl isRequired isInvalid={touched.senderEmail && !values.senderEmail}>
-          <FormLabel>Email</FormLabel>
-          <Input type="email" name='senderEmail' value={values.senderEmail} onChange={handleChange} onBlur={onBlur} />
-          <FormErrorMessage>Required</FormErrorMessage>
-        </FormControl>
+            <FormControl isRequired isInvalid={touched.senderSubject && !values.senderSubject}>
+              <FormLabel>Subject</FormLabel>
+              <Input type="text" name='senderSubject' value={values.senderSubject} onChange={handleChange} onBlur={onBlur} />
+              <FormErrorMessage>Required</FormErrorMessage>
+            </FormControl>
 
-        <FormControl isRequired isInvalid={touched.senderSubject && !values.senderSubject}>
-          <FormLabel>Subject</FormLabel>
-          <Input type="text" name='senderSubject' value={values.senderSubject} onChange={handleChange} onBlur={onBlur} />
-          <FormErrorMessage>Required</FormErrorMessage>
-        </FormControl>
+            <FormControl isRequired isInvalid={touched.senderMessage && !values.senderMessage}>
+              <FormLabel>Message</FormLabel>
+              <Textarea name='senderMessage' rows={4} value={values.senderMessage} onChange={handleChange} onBlur={onBlur} />
+              <FormErrorMessage>Required</FormErrorMessage>
+            </FormControl>
 
-        <FormControl isRequired isInvalid={touched.senderMessage && !values.senderMessage}>
-          <FormLabel>Message</FormLabel>
-          <Textarea name='senderMessage' rows={4} value={values.senderMessage} onChange={handleChange} onBlur={onBlur} />
-          <FormErrorMessage>Required</FormErrorMessage>
-        </FormControl>
+            <Button
+              variant="outline"
+              colorScheme="blue"
+              isLoading={isLoading}
+              isDisabled={
+                !values.senderName || !values.senderEmail || !values.senderEmail.includes("@") || !values.senderSubject || !values.senderMessage
+              }
+              onClick={onSubmit}
+            >
+              Submit
+            </Button>
 
-
-        <Button
-          variant="outline"
-          colorScheme="blue"
-          isLoading={isLoading}
-          isDisabled={
-            !values.senderName || !values.senderEmail || !values.senderEmail.includes("@") || !values.senderSubject || !values.senderMessage
-          }
-          onClick={onSubmit}
-        >
-          Submit
-        </Button>
-
+        </div>
       </Container>
     </ChakraProvider>
   )
