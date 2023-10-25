@@ -61,10 +61,16 @@ const NodeMailer = () => {
       useTopDownToast({
         title: "Message sent.",
         status: "success",
-        duration: 2000,
+        duration: 3000,
         position: "top",
       })
     } catch (error) {
+      useTopDownToast({
+        title: "Error",
+        status: "error",
+        duration: 3000,
+        position: "top",
+      })
       setState((prev) => ({
         ...prev,
         isLoading: false,
