@@ -14,11 +14,15 @@ module.exports = {
       },
     ],
   },
-}
-
-module.exports = {
   reactStrictMode: true,
   env: {
     ENV_NODEMAILER_URL: process.env.ENV_NODEMAILER_URL,
   }
 }
+
+// module.exports = {
+//   reactStrictMode: true,
+//   env: {
+//     ENV_NODEMAILER_URL: process.env.ENV_NODEMAILER_URL,
+//   }
+// }
