@@ -1,38 +1,16 @@
-import { extendTheme } from "@chakra-ui/react";
+// theme.ts
 
-const config = {
-  // initialColorMode: "dark",
-  // useSystemColorMode: false,
-  
-  // colors: {
-  //   transparent: "transparent",
-  //   black: "#000",
-  //   white: "#fff",
-  //   gray: {
-  //     50: "#f7fafc",
-  //     // ...
-  //     900: "#171923",
-  //   },
-  //   // ...
-  // },
+// 1. import `extendTheme` function
+import { extendTheme, type ThemeConfig } from '@chakra-ui/react'
+
+const theme = extendTheme({
   styles: {
-    global: {
-      // styles for the `body`
+    global: () => ({
       body: {
-        bg: 'gray.100',
-        color: 'white',
+        bg: "red",
       },
-      // styles for the `a`
-      a: {
-        color: 'teal.500',
-        _hover: {
-          textDecoration: 'underline',
-        },
-      },
-    },
+    }),
   },
-};
+});
 
-const theme = extendTheme({ config });
-
-export default theme;
+export default theme

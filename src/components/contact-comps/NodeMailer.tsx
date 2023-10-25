@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react'
-import { ChakraProvider, Container, FormControl, FormLabel, FormErrorMessage, Input, Textarea, Button, useToast,  } from '@chakra-ui/react'
+import { ChakraProvider, Container, FormControl, FormLabel, FormErrorMessage, Input, Textarea, Button, useToast, color,  } from '@chakra-ui/react'
 import theme from './theme';
 import { touchedFields, targetType, tempDataType } from '@/types/types-cantact';
 
@@ -76,12 +76,14 @@ const NodeMailer = () => {
 
 
   return (
-    <ChakraProvider theme={theme}>
-      <Container className=' max-w-lg' >
+
+    
+    <ChakraProvider theme={theme} resetCSS={false} disableGlobalStyle={true}>
+      <Container >
 
         <div>NodeMailer</div>
 
-        <FormControl isRequired isInvalid={touched.senderName && !values.senderName}>
+        <FormControl isRequired isInvalid={touched.senderName && !values.senderName} >
           <FormLabel>Name</FormLabel>
           <Input type="text" name='senderName' errorBorderColor='red.300' value={values.senderName} onChange={handleChange} onBlur={onBlur} />
           <FormErrorMessage>Required</FormErrorMessage>

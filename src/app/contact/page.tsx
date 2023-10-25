@@ -1,5 +1,6 @@
 import BackgroundImage from '@/components/BackgroundImage'
 import NodeMailer from '@/components/contact-comps/NodeMailer'
+import Footer from '@/components/footer/Footer'
 import { PageWrapper } from '@/components/framer-motion/page-wrapper'
 import React from 'react'
 
@@ -15,6 +16,7 @@ const ContactMe = () => {
           </PageWrapper>
         </div>
       </div>
+      <Footer />
     </>
   )
 }
