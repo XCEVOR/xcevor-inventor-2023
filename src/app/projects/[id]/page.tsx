@@ -101,8 +101,8 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
                 </div>
               ))} */}
               {singleImgProduct.map((singleImg, index) => (
-                index === 0 && <div className=' aspect-square'>
-                  <div className="relative flex items-center justify-center h-[100%]    border border-white border-opacity-20  bg-[#221e22]/80 backdrop-blur rounded-xl " key={index}>
+                index === 0 && <div key={index} className=' aspect-square'>
+                  <div className="relative flex items-center justify-center h-[100%]    border border-white border-opacity-20  bg-[#221e22]/80 backdrop-blur rounded-xl " >
                     <div className="relative h-[89%] aspect-square  ">
                       <Image
                         src={`${process.env.DEV_FILESERVER_URL}${singleImg.img}`}
@@ -133,7 +133,7 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
                   <div key={index} className='flex flex-col gap-2 lg:gap-4'>
                     {/* <h3>{desc.id}</h3> */}
                     {/* <h3>{desc.class}</h3> */}
-                    <h3>{desc.cat}</h3>
+                    <h3 className='pl-4 text-xl font-bold'>{desc.cat}</h3>
                     <p className='flex flex-row gap-4'>{desc.tool.split("|").map((tName, idx) => (
                       <p key={idx} >
                         {/* {idx} {tName}  */}
@@ -169,24 +169,24 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
                     </ul> */}
                     <ul className='flex flex-col gap-2 lg:gap-4 mt-4'>
                       <div>
-                        <strong>Release date</strong>: <li>&nbsp;&nbsp;{desc.release}</li>
+                        <strong className='text-lg'>Release date</strong>: <li>&nbsp;&nbsp;{desc.release}</li>
                       </div>
 
                       {desc.url && 
                       <div>
-                        <strong>Page URL</strong>: <li>&nbsp;&nbsp;<a href={desc.url} target="_blank">{desc.url}</a></li>
+                        <strong className='text-lg'>Page URL</strong>: <li>&nbsp;&nbsp;<a href={desc.url} target="_blank">{desc.url}</a></li>
                       </div>
                       }
 
                       <div>
-                        <strong>GitHub URL</strong>: 
+                        <strong className='text-lg'>GitHub URL</strong>: 
                         {desc.github.split("|").map((ghUrl, idx) => (
-                          <li key={idx}>&nbsp;&nbsp;<a href={ghUrl} target="_blank">{ghUrl}</a></li>
+                          <li key={idx}>&nbsp;&nbsp;<a href={ghUrl} target="_blank" className='hover:text-[#edf048] transition-colors duration-300 ease-in-out  truncate '>{ghUrl}</a></li>
                         ))}
                       </div>
 
                       <div>
-                        <strong>Description</strong>: <li>&nbsp;&nbsp;{desc.desc}</li>
+                        <strong className='text-lg'>Description</strong>: <li>&nbsp;&nbsp;{desc.desc}</li>
                       </div>
 
                     </ul>
@@ -197,7 +197,7 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
                       ))}
                     </div>
 
-                    <p>개발 기술서 Link: XXXX</p>
+                    <div><p>개발 기술서 Link: XXXX</p></div>
                   </div>
                 
                 ))}
