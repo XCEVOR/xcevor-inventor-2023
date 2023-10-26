@@ -36,7 +36,7 @@ const Portfolio = async () => {
 
         <PageWrapper>
         <h1 className="relative mb-8  text-3xl font-bold uppercase lg:text-4xl  text-[#edf048]">Projects</h1>
-          {/* <div className='flex text-[#FAD02C]'>
+          {/* <div className='flex text-[#edf048]'>
             {pizzas.map((item) => (
               <Link className='' href={`/product/${item.id}`} key={item.id}>
                 {item.img && (

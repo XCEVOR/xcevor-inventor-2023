@@ -92,7 +92,7 @@ export default function FixedNavbar() {
                 {( (link.hash === "/" && path === "/") || link.hash === "/" + path.split("/")[1] ) && (
                   <motion.span
                     className="bg-gray-100 rounded-full absolute inset-0 -z-10 dark:bg-[#edf048] "
-                    // className="absolute inset-0 -x-10 hover:text-white border border-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 rounded-full dark:border-[#FAD02C] dark:text-purple-400 dark:hover:text-white dark:hover:bg-[#FAD02C]/[50%] dark:focus:ring-purple-900 transition duration-300 ease-in-out"
+                    // className="absolute inset-0 -x-10 hover:text-white border border-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 rounded-full dark:border-[#edf048] dark:text-purple-400 dark:hover:text-white dark:hover:bg-[#edf048]/[50%] dark:focus:ring-purple-900 transition duration-300 ease-in-out"
                     // layoutId="activeSection"
                     // transition={{
                     //   type: "spring",

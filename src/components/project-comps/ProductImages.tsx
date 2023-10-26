@@ -28,7 +28,7 @@ const ProductImages = async ( {params}: {params: {id:string, titleSlug:string}} 
   const singleImgProduct:ProductImgType[] = await getImgData( params.titleSlug );
 
   return (
-    // <div className="p-4 lg:px-20 xl:px-40 h-screen flex flex-col justify-around text-[#FAD02C] md:flex-row md:gap-8 md:items-center">
+    // <div className="p-4 lg:px-20 xl:px-40 h-screen flex flex-col justify-around text-[#edf048] md:flex-row md:gap-8 md:items-center">
     <div className='flex flex-col gap-8 lg:gap-20  w-[80vw] lg:max-w-[80rem]  xl:w-[76vw] pt-8'>
 
       {/* {singleImgProduct.map((singleImg) => (

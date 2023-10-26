@@ -71,7 +71,7 @@ const CategoriesPage = async () => {
     <>
     <BackgroundImage />
 
-    {/* <div className='flex text-[#FAD02C]'>
+    {/* <div className='flex text-[#edf048]'>
       {pizzas.map((item) => (
         <Link className='' href={`/product/${item.id}`} key={item.id}>
           {item.img && (

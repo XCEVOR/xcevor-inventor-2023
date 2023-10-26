@@ -48,7 +48,7 @@ const CopyToClipboardButton: React.FC<textType> = ({ text }) => {
         style={{ 
           position: "relative",
           cursor: isHovered ? "pointer" : "auto",
-          color: isHovered ? "#FAD02C" : "#F8EFE4",
+          color: isHovered ? "#edf048" : "#F8EFE4",
           transition: "color 300ms",
         }}
         onMouseEnter={() => setIsHovered(true)}

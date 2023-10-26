@@ -63,7 +63,7 @@ const Me = async () => {
   return (
     // <div className='flex flex-col md:flex-row w-[400px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px] h-fit lg:h-[calc(80vh-3rem)] md:h-[calc(80vh-6rem)] p-4 bg-[#0A0A0A]/80 backdrop-blur rounded-xl'>
     <div>
-      <h1 className="relative mb-8  text-3xl font-bold uppercase lg:text-4xl  text-[#FAD02C]">About</h1>
+      <h1 className="relative mb-8  text-3xl font-bold uppercase lg:text-4xl  text-[#edf048]">About</h1>
       {/* <div className='flex flex-col md:flex-row  w-[400px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px]  h-fit lg:h-[calc(80vh-3rem)]  p-4  bg-[#0A0A0A]/80 backdrop-blur rounded-xl'> */}
       {/* <div className='flex flex-col lg:flex-row items-start justify-start   h-fit lg:h-[calc(80vh-3rem)]  p-4 lg:p-8 mt-8  bg-[#0A0A0A]/80 backdrop-blur rounded-xl'> */}
       <div className='flex flex-col lg:flex-row items-start justify-start  p-4 lg:p-8 mt-8    border border-white/20  bg-[#221e22]/80 backdrop-blur rounded-xl'>
@@ -83,7 +83,7 @@ const Me = async () => {
           <div className="w-full lg:col-span-8 pt-4 lg:pt-0">
             <Reveal mydelay={2 * 1.0} >
               {maintitleData 
-                ? <h3 className="text-[#FAD02C] text-2xl font-bold">{maintitleData.detail}</h3>
+                ? <h3 className="text-[#edf048] text-2xl font-bold">{maintitleData.detail}</h3>
                 : <h3 className="text-2xl font-bold">Developer</h3>
               }
             </Reveal>
@@ -133,7 +133,7 @@ const Me = async () => {
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F8EFE4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
                         <strong className="font-bold">{infoa.title}:</strong>
                         {infoa.detail.startsWith("https://") 
-                          ? (<Link href={infoa.detail} passHref legacyBehavior><a className='hover:text-[#FAD02C] transition-colors duration-300 ease-in-out  truncate ' target='_blank'>{infoa.detail}</a></Link>) 
+                          ? (<Link href={infoa.detail} passHref legacyBehavior><a className='hover:text-[#edf048] transition-colors duration-300 ease-in-out  truncate ' target='_blank'>{infoa.detail}</a></Link>) 
                           : (<span>{infoa.detail}</span>)
                         }
                       </li>

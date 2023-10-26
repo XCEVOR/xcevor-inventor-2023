@@ -33,7 +33,7 @@ const ResumeDescription = async ( {params}:{params: {resumeTitle:string}} ) => {
           <div>
             {rsDesc.thesis === false 
               ? (rsDesc.titleSlug === "Certificate" || rsDesc.titleSlug === "Curriculum Vitae" 
-                  ? <ul className='pl-8 py-1 list-disc'><li>aa {rsDesc.desc} <Link href={rsDesc.note || 'fallback-url'} passHref legacyBehavior><a className='hover:text-[#FAD02C] transition-colors duration-300 ease-in-out ' target='_blank'>{rsDesc.note}</a></Link></li></ul>
+                  ? <ul className='pl-8 py-1 list-disc'><li>aa {rsDesc.desc} <Link href={rsDesc.note || 'fallback-url'} passHref legacyBehavior><a className='hover:text-[#edf048] transition-colors duration-300 ease-in-out ' target='_blank'>{rsDesc.note}</a></Link></li></ul>
                   : <ul className='pl-8 py-1 list-disc'><li>{rsDesc.desc}</li></ul>
                 )
               : <p className='pl-4'>Thesis: {rsDesc.desc}</p>

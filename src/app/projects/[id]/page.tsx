@@ -118,7 +118,7 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
             {/* TEXT CONTAINER */}
             <div className="relative lg:w-3/5 h-1/2 flex flex-col gap-4 md:h-[70%] lg:justify-start  mt-4 lg:mt-0 p-4 bg-[#0A0A0A]/80 backdrop-blur rounded-xl">
               {/* <h3 className="text-3xl font-bold uppercase xl:text-5xl">{singleProduct.title}</h3> */}
-              <h2 className="relative text-xl font-bold lg:text-2xl text-[#FAD02C]">Project information</h2>
+              <h2 className="relative text-xl font-bold lg:text-2xl text-[#edf048]">Project information</h2>
               {/* <p>{singleProduct.desc}</p>
               <p>{singleProduct.desc}</p>
               <p>{singleProduct.desc}</p>
@@ -138,7 +138,7 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
                         {tName !== null 
                           ? <div>
                               <Image src={`${process.env.DEV_FILESERVER_URL}/pfolio-fileserver/logo-${tName.toLowerCase()}-ddd.svg`} fill alt="" />
-                              <span className='tooltip rounded shadow-lg p-2 bg-[#282120] text-[#FAD02C] -mt-10 '>{tName}</span>
+                              <span className='tooltip rounded shadow-lg p-2 bg-[#282120] text-[#edf048] -mt-10 '>{tName}</span>
                             </div>
                           : <Image src="/images/interest/python.svg" fill alt="" />
                         }
@@ -192,7 +192,7 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
 
 
 
-        {/* <div className="p-4 lg:px-20 xl:px-40 h-screen flex flex-col justify-around text-[#FAD02C] md:flex-row md:gap-8 md:items-center"> */}
+        {/* <div className="p-4 lg:px-20 xl:px-40 h-screen flex flex-col justify-around text-[#edf048] md:flex-row md:gap-8 md:items-center"> */}
         <div className="relative flex flex-col h-fit max-w-fit">
 
             {/* <img src="https://picsum.photos/1920/1080" alt="" className="object-contain max-w-4xl"/> */}
