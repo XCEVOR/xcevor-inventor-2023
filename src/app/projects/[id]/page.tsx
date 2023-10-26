@@ -71,11 +71,11 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
     <>
       <BackgroundImage />
 
-      <div className='flex flex-col items-center px-20 lg:px-40 py-28 '>
+      <div className='flex flex-col items-center  h-fit px-0 lg:px-40 py-28 '>
         <PageWrapper>
-        <div className='relative flex flex-col  lg:h-[calc(100vh)] w-[80vw] lg:max-w-[80rem] '>
-          <h1 className="relative text-3xl font-bold uppercase lg:text-4xl">{singleProduct.title}</h1>
-          <div className="relative flex flex-col items-stretch justify-start h-[80%]  mt-8   lg:flex-row lg:gap-8 ">
+        <div className='relative flex flex-col  w-[90vw] lg:max-w-[80rem]  lg:h-[calc(100vh-7rem)]'>
+        <h1 className="relative mb-2  text-3xl font-bold uppercase lg:text-4xl  text-[#edf048]">{singleProduct.title}</h1>
+          <div className="relative flex flex-col justify-start h-full  mt-8   lg:flex-row lg:gap-8 ">
             {/* IMAGE CONTAINER */}
             {/* {singleProduct.img && (
               <div className="relative w-full h-1/2 md:h-[70%]">
@@ -101,13 +101,17 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
                 </div>
               ))} */}
               {singleImgProduct.map((singleImg, index) => (
-                index === 0 && <div className="relative flex gap-4 w-full aspect-square" key={index}>
-                  <Image
-                    src={`${process.env.DEV_FILESERVER_URL}${singleImg.img}`}
-                    alt=""
-                    className="object-contain"
-                    fill
-                  />
+                index === 0 && <div key={index} className=' aspect-square'>
+                  <div className="relative flex items-center justify-center h-[100%]    border border-white border-opacity-20  bg-[#221e22]/80 backdrop-blur rounded-xl " >
+                    <div className="relative h-[89%] aspect-square  ">
+                      <Image
+                        src={`${process.env.DEV_FILESERVER_URL}${singleImg.img}`}
+                        alt=""
+                        className="object-contain"
+                        fill
+                      />
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
@@ -116,7 +120,7 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
 
 
             {/* TEXT CONTAINER */}
-            <div className="relative lg:w-3/5 h-1/2 flex flex-col gap-4 md:h-[70%] lg:justify-start  mt-4 lg:mt-0 p-4 bg-[#0A0A0A]/80 backdrop-blur rounded-xl">
+            <div className="relative lg:w-3/5 h-fit flex flex-col gap-4  lg:justify-start  mt-4 mb-16 lg:mt-0 p-6  border border-white border-opacity-20  bg-[#221e22]/80 backdrop-blur rounded-xl">
               {/* <h3 className="text-3xl font-bold uppercase xl:text-5xl">{singleProduct.title}</h3> */}
               <h2 className="relative text-xl font-bold lg:text-2xl text-[#edf048]">Project information</h2>
               {/* <p>{singleProduct.desc}</p>
@@ -126,19 +130,20 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
 
               {/* <h3>xxx  xxx</h3> */}
                 {singleDescProduct.map((desc, index) => (
-                  <div key={index} className='flex flex-col gap-2 lg:gap-4'>
+                  <div key={index} className='flex flex-col gap-2 lg:gap-2'>
                     {/* <h3>{desc.id}</h3> */}
                     {/* <h3>{desc.class}</h3> */}
-                    <h3>{desc.cat}</h3>
-                    <p className='flex flex-row gap-4'>{desc.tool.split("/").map((tName, idx) => (
-                      <p key={idx} >{idx} {tName} 
+                    <h3 className='pl-2 text-md font-bold px-2 py-1 w-fit   bg-[#3e373e] rounded-md'>{desc.cat}</h3>
+                    <p className='flex flex-row gap-4'>{desc.tool.split("|").map((tName, idx) => (
+                      <p key={idx} >
+                        {/* {idx} {tName}  */}
                         {/* <div className='relative w-8 h-8 '><Image src="/images/interest/python.svg" fill alt="" /> </div> */}
 
                         <div className='relative w-8 h-8   has-tooltip' >  
                         {tName !== null 
                           ? <div>
                               <Image src={`${process.env.DEV_FILESERVER_URL}/pfolio-fileserver/logo-${tName.toLowerCase()}-ddd.svg`} fill alt="" />
-                              <span className='tooltip rounded shadow-lg p-2 bg-[#282120] text-[#edf048] -mt-10 '>{tName}</span>
+                              <span className='tooltip rounded shadow-lg p-2 bg-[#0F0D0F] text-[#edf048] -mt-10 '>{tName}</span>
                             </div>
                           : <Image src="/images/interest/python.svg" fill alt="" />
                         }
@@ -162,13 +167,42 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
                       <li><strong>GitHub URL</strong>: <a href="https://github.com/XCEVOR/final-dalrun-front" target="_blank">https://github.com/XCEVOR/final-dalrun-front</a></li>
                       <li><strong>Description</strong>: 러너들을 위한 정보 및 편의성을 위한 웹서비스</li>
                     </ul> */}
-                    <ul className='flex flex-col gap-2 lg:gap-4 mt-4'>
-                      <li><strong>Release date</strong>: {desc.release}</li>
-                      <li><strong>Page URL</strong>: <a href={desc.url} target="_blank">{desc.url}</a></li>
-                      <li><strong>GitHub URL</strong>: <a href={desc.github} target="_blank">{desc.github}</a></li>
-                      <li><strong>Description</strong>: {desc.desc}</li>
-                    </ul>
-                    <p className='flex flex-col mt-4'>{desc.abstract}</p>
+                    <div className='flex flex-col gap-2 lg:gap-4 mt-2'>
+                      
+                      <div>
+                        <strong className='text-lg'>Description</strong>: <p className='text-[#c4c1bc]'>&nbsp;&nbsp;{desc.desc}</p>
+                      </div>
+
+                      <div>
+                        <strong className='text-lg'>Release date</strong>: <p className='text-[#c4c1bc]'>&nbsp;&nbsp;{desc.release}</p>
+                      </div>
+
+                      {desc.url && 
+                      <div>
+                        <strong className='text-lg'>Page URL</strong>: <p className='text-[#c4c1bc]'>&nbsp;&nbsp;<a href={desc.url} target="_blank">{desc.url}</a></p>
+                      </div>
+                      }
+
+                      <div>
+                        <strong className='text-lg'>GitHub URL</strong>: 
+                        {desc.github.split("|").map((ghUrl, idx) => (
+                          <p key={idx}>&nbsp;&nbsp;<a href={ghUrl} target="_blank" className='text-[#c4c1bc] hover:text-[#edf048] transition-colors duration-300 ease-in-out  truncate '>{ghUrl}</a></p>
+                        ))}
+                      </div>
+
+                      <div className='flex flex-row items-baseline'>
+                        <strong className='text-lg'>Detailed technical notes</strong>:&nbsp; <a href="https://www.google.com/ncr" target="_blank" className='text-[#c4c1bc] hover:text-[#edf048] transition-colors duration-300 ease-in-out  truncate '>XXXX</a>
+                      </div>
+
+                    </div>
+
+                    <div className='flex flex-col gap-3 mt-4 p-4   border-t border-white border-opacity-40'>
+                      {desc.abstract.split("|").map((abText, idx) => (
+                        <p key={idx} className='text-[#c4c1bc]'>{abText}</p>
+                      ))}
+                    </div>
+
+                    
                   </div>
                 
                 ))}
@@ -193,7 +227,7 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
 
 
         {/* <div className="p-4 lg:px-20 xl:px-40 h-screen flex flex-col justify-around text-[#edf048] md:flex-row md:gap-8 md:items-center"> */}
-        <div className="relative flex flex-col h-fit max-w-fit">
+        <div className='relative flex flex-col  w-[90vw] lg:max-w-[80rem] '>
 
             {/* <img src="https://picsum.photos/1920/1080" alt="" className="object-contain max-w-4xl"/> */}
             <ProductImages params={{ id: params.id, titleSlug: singleProduct.title }} />
