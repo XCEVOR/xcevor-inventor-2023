@@ -28,7 +28,7 @@ const SkillTools = async () => {
   return (
     // <div className='m-2 w-[200px] sm:w-[320px] md:w-[384px] lg:w-[512px] xl:w-[640px]'>
     <div className='w-full'>
-      <div className='flex flex-col p-8   border border-white/20 bg-[#221e22]/80 backdrop-blur rounded-xl'>
+      <div className='flex flex-col p-8    border border-white border-opacity-20  bg-[#221e22]/80 backdrop-blur rounded-xl'>
         <h1 className='flex justify-center   text-2xl font-bold mb-4'>Tools</h1>
         {/* <div className="w-full flex flex-wrap gap-30 justify-center">
             {skillData.map((d) => (

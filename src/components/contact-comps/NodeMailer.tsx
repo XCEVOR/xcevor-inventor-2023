@@ -88,7 +88,7 @@ const NodeMailer = () => {
       <Container >
         <h1 className="relative mb-8  text-3xl font-bold uppercase lg:text-4xl  text-[#edf048]">Contact Me</h1>
 
-        <div className='flex flex-col gap-4  p-8 lg:py-12 lg:px-16 mt-8    border border-white/20  bg-[#221e22]/80 backdrop-blur rounded-xl'>
+        <div className='flex flex-col gap-4  p-8 lg:py-12 lg:px-16 mt-8     border border-white border-opacity-20   bg-[#221e22]/80 backdrop-blur rounded-xl'>
 
             <FormControl isRequired isInvalid={touched.senderName && !values.senderName} >
               <FormLabel>Name</FormLabel>
