@@ -38,7 +38,7 @@ const Interests = async () => {
 
   return (
     <div className='relative mt-20'>
-      <h1 className="relative mb-8  text-3xl font-bold uppercase lg:text-4xl  text-[#FAD02C]">Interests</h1>
+      <h1 className="relative mb-8  text-3xl font-bold uppercase lg:text-4xl  text-[#edf048]">Interests</h1>
       {/* <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 w-[400px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px]'> */}
       {/* <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 '>
         {interestData.map((d, index) => (

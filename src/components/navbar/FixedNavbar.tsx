@@ -57,11 +57,11 @@ export default function FixedNavbar() {
         animate={{ y: 0, x: "-50%", opacity: 1 }}
       ></motion.div>
 
-      <nav className="flex fixed top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0 mt-3 sm:mt-0">
-        <ul className="flex w-[28rem] flex-wrap items-center justify-center gap-x-2 gap-y-1 text-[0.9rem] font-medium text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-5">
+      <nav className="flex fixed -top-[0.35rem] left-1/2 h-18 -translate-x-1/2 py-0 sm:top-[1.7rem] sm:h-[initial] sm:py-0 mt-3 sm:mt-0">
+        <ul className="flex w-[28rem] flex-nowrap items-center justify-center gap-x-2 gap-y-1  text-[0.9rem] font-medium   sm:w-[initial] sm:flex-nowrap sm:gap-6">
           {links.map((link) => (
             <motion.li
-              className="h-3/4 flex items-center justify-center relative"
+              className="h-3/5 flex items-center justify-center relative"
               key={link.hash}
               initial={{ y: -100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -92,7 +92,7 @@ export default function FixedNavbar() {
                 {( (link.hash === "/" && path === "/") || link.hash === "/" + path.split("/")[1] ) && (
                   <motion.span
                     className="bg-gray-100 rounded-full absolute inset-0 -z-10 dark:bg-[#edf048] "
-                    // className="absolute inset-0 -x-10 hover:text-white border border-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 rounded-full dark:border-[#FAD02C] dark:text-purple-400 dark:hover:text-white dark:hover:bg-[#FAD02C]/[50%] dark:focus:ring-purple-900 transition duration-300 ease-in-out"
+                    // className="absolute inset-0 -x-10 hover:text-white border border-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 rounded-full dark:border-[#edf048] dark:text-purple-400 dark:hover:text-white dark:hover:bg-[#edf048]/[50%] dark:focus:ring-purple-900 transition duration-300 ease-in-out"
                     // layoutId="activeSection"
                     // transition={{
                     //   type: "spring",

@@ -69,7 +69,7 @@ const PortfolioPost = async ( {params}: {params: {id:string}} ) => {
     
       <div className='flex flex-col items-center'>
         <PageWrapper>
-          <div className="relative flex flex-col justify-around h-screen w-[80vw]  text-[#FAD02C] md:flex-row md:gap-8 md:items-center">
+          <div className="relative flex flex-col justify-around h-screen w-[80vw]  text-[#edf048] md:flex-row md:gap-8 md:items-center">
             {/* IMAGE CONTAINER */}
             {/* {singleProduct.img && (
               <div className="relative w-full h-1/2 md:h-[70%]">
@@ -139,7 +139,7 @@ const PortfolioPost = async ( {params}: {params: {id:string}} ) => {
 
 
 
-        {/* <div className="p-4 lg:px-20 xl:px-40 h-screen flex flex-col justify-around text-[#FAD02C] md:flex-row md:gap-8 md:items-center"> */}
+        {/* <div className="p-4 lg:px-20 xl:px-40 h-screen flex flex-col justify-around text-[#edf048] md:flex-row md:gap-8 md:items-center"> */}
         <div className="relative flex flex-col h-fit max-w-fit">
 
             {/* <img src="https://picsum.photos/1920/1080" alt="" className="object-contain max-w-4xl"/> */}

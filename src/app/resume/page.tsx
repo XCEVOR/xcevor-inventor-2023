@@ -67,7 +67,7 @@ const Resume = async () => {
                           <h3 className="text-2xl font-bold mt-5 mb-5 text-[#F8EFE4]">{rsdata.classification}</h3>
 
                           <div>
-                            <h4 className="text-lg font-semibold uppercase text-[#FAD02C] mb-2">{rsdata.title}</h4>
+                            <h4 className="text-lg font-semibold uppercase text-[#edf048] mb-2">{rsdata.title}</h4>
                             
                             <ResumeDescription params={ {resumeTitle: rsdata.title} } />
                           </div>
@@ -87,7 +87,7 @@ const Resume = async () => {
                           </div>
 
                           <div>
-                            <h4 className="text-lg font-semibold uppercase text-[#FAD02C] mb-2">{rsdata.title}</h4>
+                            <h4 className="text-lg font-semibold uppercase text-[#edf048] mb-2">{rsdata.title}</h4>
                             <ResumeDescription params={{ resumeTitle: rsdata.title }} />
                           </div>
                         </div>
@@ -101,7 +101,7 @@ const Resume = async () => {
                         <h3 className="text-2xl font-bold mt-5 mb-5 text-[#F8EFE4]">{classification}</h3>
                         {groupedData[classification].map((title) => (
                           <div key={title}>
-                            <h4 className="text-lg font-semibold uppercase text-[#FAD02C] mt-6 mb-2">{title}</h4>
+                            <h4 className="text-lg font-semibold uppercase text-[#edf048] mt-6 mb-2">{title}</h4>
                             <ResumeDescription params={{ resumeTitle: title }} />
                           </div>
                         ))}
@@ -116,7 +116,7 @@ const Resume = async () => {
                     {Object.keys(groupedData).map((classification, index) => (
                       index === 0 && 
                       <Reveal key={index} mydelay={2 * (1 + 0.4 * (index + 1))} >
-                        <div className="flex flex-wrap   border border-white/20 bg-[#221e22]/80 backdrop-blur rounded-xl" key={classification}>
+                        <div className="flex flex-wrap    border border-white border-opacity-20  bg-[#221e22]/80 backdrop-blur rounded-xl" key={classification}>
                           <div className="w-full relative p-4">
                             <h3 className="text-2xl font-bold mt-0 mb-4 ">{classification}</h3>
                             {groupedData[classification].map((title) => (
@@ -134,7 +134,7 @@ const Resume = async () => {
                     {Object.keys(groupedData).map((classification, index) => (
                       index !== 0 && 
                       <Reveal key={index} mydelay={2 * (1 + 0.4 * (index + 1))} >
-                        <div className="flex flex-wrap mb-8   border border-white/20 bg-[#221e22]/80 backdrop-blur rounded-xl" key={classification}>
+                        <div className="flex flex-wrap mb-8    border border-white border-opacity-20  bg-[#221e22]/80 backdrop-blur rounded-xl" key={classification}>
                           <div className="w-full relative p-4">
                             <h3 className="text-2xl font-bold mt-0 mb-4 ">{classification}</h3>
                             {groupedData[classification].map((title) => (
@@ -158,9 +158,9 @@ const Resume = async () => {
                   <div className="flex flex-wrap">
                     <div className="w-full lg:w-1/2 relative p-5">
                       <h3 className="text-2xl font-bold mt-5 mb-5 text-[#F8EFE4]">Developer Experience</h3>
-                      <div className="pb-0 pl-5 border-l-2 border-[#FAD02C]">
-                        <div className="p-3 rounded-full absolute left-1 bg-[#FAD02C] "></div>
-                        <h4 className="text-lg font-semibold uppercase text-[#FAD02C] mb-2">{ResumeData.name}</h4>
+                      <div className="pb-0 pl-5 border-l-2 border-[#edf048]">
+                        <div className="p-3 rounded-full absolute left-1 bg-[#edf048] "></div>
+                        <h4 className="text-lg font-semibold uppercase text-[#edf048] mb-2">{ResumeData.name}</h4>
                         <p>
                           <em className="text-gray-300">{ResumeData.summary}</em>
                         </p>
@@ -174,9 +174,9 @@ const Resume = async () => {
                       </div>
                       <h3 className="text-2xl font-bold mt-5 mb-5 text-[#F8EFE4]">Education</h3>
                       {ResumeData.education.map((edu, index) => (
-                        <div className="pb-0 pl-5 border-l-2 border-[#FAD02C]" key={index}>
-                          <div className="p-3 rounded-full absolute left-1 bg-[#FAD02C] "></div>
-                          <h4 className="text-lg font-semibold uppercase text-[#FAD02C] mb-2">{edu.degree}</h4>
+                        <div className="pb-0 pl-5 border-l-2 border-[#edf048]" key={index}>
+                          <div className="p-3 rounded-full absolute left-1 bg-[#edf048] "></div>
+                          <h4 className="text-lg font-semibold uppercase text-[#edf048] mb-2">{edu.degree}</h4>
                           <h5 className="bg-opacity-15 py-1 px-3 inline-block rounded-sm font-semibold mb-2 bg-[#222222]">{edu.date}</h5>
                           <p>
                             <em className="text-gray-300">{edu.school}</em>
