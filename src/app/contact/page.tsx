@@ -10,7 +10,7 @@ const ContactMe = () => {
       <div className='flex flex-col items-center  h-fit px-0 lg:px-40 py-28 '>
         <BackgroundImage />
         {/* <div className='relative flex flex-col  lg:h-[calc(100vh-9.4rem)] w-[90vw] lg:max-w-[80rem] '> */}
-        <div className='relative flex flex-col  w-[90vw] lg:max-w-[80rem] '>
+        <div className='relative flex flex-col   w-[97vw] lg:w-[90vw] lg:max-w-[80rem] '>
           <PageWrapper>
             <NodeMailer />
           </PageWrapper>
