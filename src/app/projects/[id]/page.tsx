@@ -101,13 +101,17 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
                 </div>
               ))} */}
               {singleImgProduct.map((singleImg, index) => (
-                index === 0 && <div className="relative flex w-full aspect-square " key={index}>
-                  <Image
-                    src={`${process.env.DEV_FILESERVER_URL}${singleImg.img}`}
-                    alt=""
-                    className="object-contain"
-                    fill
-                  />
+                index === 0 && <div className=' aspect-square'>
+                  <div className="relative flex items-center justify-center h-[100%]    border border-white border-opacity-20  bg-[#221e22]/80 backdrop-blur rounded-xl " key={index}>
+                    <div className="relative h-[89%] aspect-square  ">
+                      <Image
+                        src={`${process.env.DEV_FILESERVER_URL}${singleImg.img}`}
+                        alt=""
+                        className="object-contain"
+                        fill
+                      />
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
