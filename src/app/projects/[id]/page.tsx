@@ -191,7 +191,8 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
                       </div>
 
                       <div className='flex flex-row items-baseline'>
-                        <strong className='text-lg'>Detailed technical notes</strong>:&nbsp; <a href={desc.detailednoteurl} target="_blank" className='text-[#c4c1bc] hover:text-[#edf048] transition-colors duration-300 ease-in-out  truncate '>{desc.detailednoteurl}</a>
+                        <strong className='text-lg'>Detailed technical notes</strong>:&nbsp; 
+                        <a href={desc.detailednoteurl} target="_blank" className='text-[#c4c1bc] hover:text-[#edf048] transition-colors duration-300 ease-in-out  truncate '>PPT Link 🡽</a>
                       </div>
 
                     </div>
