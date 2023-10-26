@@ -120,7 +120,7 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
 
 
             {/* TEXT CONTAINER */}
-            <div className="relative lg:w-3/5 h-1/2 flex flex-col gap-4 md:h-[70%] lg:justify-start  mt-4 mb-16 lg:mt-0 p-6  border border-white border-opacity-20  bg-[#221e22]/80 backdrop-blur rounded-xl">
+            <div className="relative lg:w-3/5 h-fit flex flex-col gap-4  lg:justify-start  mt-4 mb-16 lg:mt-0 p-6  border border-white border-opacity-20  bg-[#221e22]/80 backdrop-blur rounded-xl">
               {/* <h3 className="text-3xl font-bold uppercase xl:text-5xl">{singleProduct.title}</h3> */}
               <h2 className="relative text-xl font-bold lg:text-2xl text-[#edf048]">Project information</h2>
               {/* <p>{singleProduct.desc}</p>
@@ -134,7 +134,7 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
                     {/* <h3>{desc.id}</h3> */}
                     {/* <h3>{desc.class}</h3> */}
                     <h3>{desc.cat}</h3>
-                    <p className='flex flex-row gap-4'>{desc.tool.split("/").map((tName, idx) => (
+                    <p className='flex flex-row gap-4'>{desc.tool.split("|").map((tName, idx) => (
                       <p key={idx} >
                         {/* {idx} {tName}  */}
                         {/* <div className='relative w-8 h-8 '><Image src="/images/interest/python.svg" fill alt="" /> </div> */}
@@ -168,12 +168,36 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
                       <li><strong>Description</strong>: 러너들을 위한 정보 및 편의성을 위한 웹서비스</li>
                     </ul> */}
                     <ul className='flex flex-col gap-2 lg:gap-4 mt-4'>
-                      <li><strong>Release date</strong>: {desc.release}</li>
-                      <li><strong>Page URL</strong>: <a href={desc.url} target="_blank">{desc.url}</a></li>
-                      <li><strong>GitHub URL</strong>: <a href={desc.github} target="_blank">{desc.github}</a></li>
-                      <li><strong>Description</strong>: {desc.desc}</li>
+                      <div>
+                        <strong>Release date</strong>: <li>&nbsp;&nbsp;{desc.release}</li>
+                      </div>
+
+                      {desc.url && 
+                      <div>
+                        <strong>Page URL</strong>: <li>&nbsp;&nbsp;<a href={desc.url} target="_blank">{desc.url}</a></li>
+                      </div>
+                      }
+
+                      <div>
+                        <strong>GitHub URL</strong>: 
+                        {desc.github.split("|").map((ghUrl, idx) => (
+                          <li key={idx}>&nbsp;&nbsp;<a href={ghUrl} target="_blank">{ghUrl}</a></li>
+                        ))}
+                      </div>
+
+                      <div>
+                        <strong>Description</strong>: <li>&nbsp;&nbsp;{desc.desc}</li>
+                      </div>
+
                     </ul>
-                    <p className='flex flex-col mt-4'>{desc.abstract}</p>
+
+                    <div className='flex flex-col gap-3 mt-4 p-4   border-t border-white border-opacity-40'>
+                      {desc.abstract.split("|").map((abText, idx) => (
+                        <p key={idx}>{abText}</p>
+                      ))}
+                    </div>
+
+                    <p>개발 기술서 Link: XXXX</p>
                   </div>
                 
                 ))}
