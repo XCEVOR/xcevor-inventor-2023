@@ -57,7 +57,7 @@ export default function FixedNavbar() {
         animate={{ y: 0, x: "-50%", opacity: 1 }}
       ></motion.div>
 
-      <nav className="flex fixed top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-0 sm:top-[1.7rem] sm:h-[initial] sm:py-0 mt-3 sm:mt-0">
+      <nav className="flex fixed -top-[0.35rem] left-1/2 h-18 -translate-x-1/2 py-0 sm:top-[1.7rem] sm:h-[initial] sm:py-0 mt-3 sm:mt-0">
         <ul className="flex w-[28rem] flex-nowrap items-center justify-center gap-x-2 gap-y-1  text-[0.9rem] font-medium   sm:w-[initial] sm:flex-nowrap sm:gap-6">
           {links.map((link) => (
             <motion.li
