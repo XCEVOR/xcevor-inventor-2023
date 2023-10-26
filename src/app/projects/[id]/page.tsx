@@ -101,7 +101,7 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
                 </div>
               ))} */}
               {singleImgProduct.map((singleImg, index) => (
-                index === 0 && <div className="relative flex gap-4 w-full aspect-square" key={index}>
+                index === 0 && <div className="relative flex w-full aspect-square " key={index}>
                   <Image
                     src={`${process.env.DEV_FILESERVER_URL}${singleImg.img}`}
                     alt=""
@@ -116,7 +116,7 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
 
 
             {/* TEXT CONTAINER */}
-            <div className="relative lg:w-3/5 h-1/2 flex flex-col gap-4 md:h-[70%] lg:justify-start  mt-4 mb-16 lg:mt-0 p-4 bg-[#0A0A0A]/80 backdrop-blur rounded-xl">
+            <div className="relative lg:w-3/5 h-1/2 flex flex-col gap-4 md:h-[70%] lg:justify-start  mt-4 mb-16 lg:mt-0 p-6  border border-white border-opacity-20  bg-[#221e22]/80 backdrop-blur rounded-xl">
               {/* <h3 className="text-3xl font-bold uppercase xl:text-5xl">{singleProduct.title}</h3> */}
               <h2 className="relative text-xl font-bold lg:text-2xl text-[#edf048]">Project information</h2>
               {/* <p>{singleProduct.desc}</p>
