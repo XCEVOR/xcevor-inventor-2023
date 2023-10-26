@@ -71,9 +71,9 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
     <>
       <BackgroundImage />
 
-      <div className='flex flex-col items-center px-20 lg:px-40 py-28 '>
+      <div className='flex flex-col items-center  h-fit px-0 lg:px-40 py-28 '>
         <PageWrapper>
-        <div className='relative flex flex-col  lg:h-[calc(100vh)] w-[80vw] lg:max-w-[80rem] '>
+        <div className='relative flex flex-col  w-[90vw] lg:max-w-[80rem] '>
           <h1 className="relative text-3xl font-bold uppercase lg:text-4xl">{singleProduct.title}</h1>
           <div className="relative flex flex-col items-stretch justify-start h-[80%]  mt-8   lg:flex-row lg:gap-8 ">
             {/* IMAGE CONTAINER */}
@@ -193,7 +193,7 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
 
 
         {/* <div className="p-4 lg:px-20 xl:px-40 h-screen flex flex-col justify-around text-[#edf048] md:flex-row md:gap-8 md:items-center"> */}
-        <div className="relative flex flex-col h-fit max-w-fit">
+        <div className='relative flex flex-col  w-[90vw] lg:max-w-[80rem] '>
 
             {/* <img src="https://picsum.photos/1920/1080" alt="" className="object-contain max-w-4xl"/> */}
             <ProductImages params={{ id: params.id, titleSlug: singleProduct.title }} />
