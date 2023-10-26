@@ -63,7 +63,7 @@ const Portfolio = async () => {
                     {item.img && (
                       // <div className="relative flex items-center justify-center h-full">
                         // <Link className="w-fit h-[90vw] sm:max-h-[90vw] lg:max-h-[25vw] aspect-square   border-r-2 border-b-2 border-[#F8EFE4]/[2%]  flex flex-col justify-between group" href={`/projects/${item.id}`} key={item.id} >
-                        <Link className="aspect-square   border-r-2 border-b-2 border-[#F8EFE4]/[2%]  flex flex-col justify-between group" href={`/projects/${item.id}`} key={item.id} >
+                        <Link className="aspect-square   flex flex-col justify-between group" href={`/projects/${item.id}`} key={item.id} >
                         {/* <div className="relative flex items-center justify-center h-[100%] aspect-square rounded-3xl overflow-hidden bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-60 border border-gray-200 border-opacity-10 transition-all duration-700 hover:scale-105"> */}
                         <div className="relative flex items-center justify-center h-[100%] aspect-square rounded-3xl   bg-[#221e22] bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-60 border border-gray-200 border-opacity-10 transition-all duration-700 hover:scale-105">
                           {/* <div className="relative h-[86%] aspect-square rounded-2xl overflow-hidden"> */}
