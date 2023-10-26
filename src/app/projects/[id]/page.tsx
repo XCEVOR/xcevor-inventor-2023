@@ -130,10 +130,10 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
 
               {/* <h3>xxx  xxx</h3> */}
                 {singleDescProduct.map((desc, index) => (
-                  <div key={index} className='flex flex-col gap-2 lg:gap-4'>
+                  <div key={index} className='flex flex-col gap-2 lg:gap-2'>
                     {/* <h3>{desc.id}</h3> */}
                     {/* <h3>{desc.class}</h3> */}
-                    <h3 className='pl-4 text-xl font-bold'>{desc.cat}</h3>
+                    <h3 className='pl-2 text-md font-bold px-2 py-1 w-fit   bg-[#3e373e] rounded-md'>{desc.cat}</h3>
                     <p className='flex flex-row gap-4'>{desc.tool.split("|").map((tName, idx) => (
                       <p key={idx} >
                         {/* {idx} {tName}  */}
@@ -167,37 +167,42 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
                       <li><strong>GitHub URL</strong>: <a href="https://github.com/XCEVOR/final-dalrun-front" target="_blank">https://github.com/XCEVOR/final-dalrun-front</a></li>
                       <li><strong>Description</strong>: 러너들을 위한 정보 및 편의성을 위한 웹서비스</li>
                     </ul> */}
-                    <ul className='flex flex-col gap-2 lg:gap-4 mt-4'>
+                    <div className='flex flex-col gap-2 lg:gap-4 mt-2'>
+                      
                       <div>
-                        <strong className='text-lg'>Release date</strong>: <li>&nbsp;&nbsp;{desc.release}</li>
+                        <strong className='text-lg'>Description</strong>: <p className='text-[#c4c1bc]'>&nbsp;&nbsp;{desc.desc}</p>
+                      </div>
+
+                      <div>
+                        <strong className='text-lg'>Release date</strong>: <p className='text-[#c4c1bc]'>&nbsp;&nbsp;{desc.release}</p>
                       </div>
 
                       {desc.url && 
                       <div>
-                        <strong className='text-lg'>Page URL</strong>: <li>&nbsp;&nbsp;<a href={desc.url} target="_blank">{desc.url}</a></li>
+                        <strong className='text-lg'>Page URL</strong>: <p className='text-[#c4c1bc]'>&nbsp;&nbsp;<a href={desc.url} target="_blank">{desc.url}</a></p>
                       </div>
                       }
 
                       <div>
                         <strong className='text-lg'>GitHub URL</strong>: 
                         {desc.github.split("|").map((ghUrl, idx) => (
-                          <li key={idx}>&nbsp;&nbsp;<a href={ghUrl} target="_blank" className='hover:text-[#edf048] transition-colors duration-300 ease-in-out  truncate '>{ghUrl}</a></li>
+                          <p key={idx}>&nbsp;&nbsp;<a href={ghUrl} target="_blank" className='text-[#c4c1bc] hover:text-[#edf048] transition-colors duration-300 ease-in-out  truncate '>{ghUrl}</a></p>
                         ))}
                       </div>
 
-                      <div>
-                        <strong className='text-lg'>Description</strong>: <li>&nbsp;&nbsp;{desc.desc}</li>
+                      <div className='flex flex-row items-baseline'>
+                        <strong className='text-lg'>Detailed technical notes</strong>:&nbsp; <a href="https://www.google.com/ncr" target="_blank" className='text-[#c4c1bc] hover:text-[#edf048] transition-colors duration-300 ease-in-out  truncate '>XXXX</a>
                       </div>
 
-                    </ul>
+                    </div>
 
                     <div className='flex flex-col gap-3 mt-4 p-4   border-t border-white border-opacity-40'>
                       {desc.abstract.split("|").map((abText, idx) => (
-                        <p key={idx}>{abText}</p>
+                        <p key={idx} className='text-[#c4c1bc]'>{abText}</p>
                       ))}
                     </div>
 
-                    <div><p>개발 기술서 Link: XXXX</p></div>
+                    
                   </div>
                 
                 ))}
