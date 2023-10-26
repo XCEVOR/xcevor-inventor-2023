@@ -45,6 +45,7 @@ CREATE TABLE "Productdescription" (
     "release" TEXT NOT NULL,
     "url" TEXT,
     "github" TEXT,
+    "detailednoteurl" TEXT,
     "desc" TEXT NOT NULL,
     "abstract" TEXT NOT NULL,
     "titleSlug" TEXT NOT NULL,

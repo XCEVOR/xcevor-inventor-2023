@@ -25,6 +25,7 @@ export type ProductDescType = {
   release: string;
   url: string;
   github: string;
+  detailednoteurl: string;
   desc: string;
   abstract: string;
   titleSlug: string;

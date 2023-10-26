@@ -52,6 +52,7 @@ model Productdescription {
   release String
   url String?
   github String?
+  detailednoteurl String?
   desc String
   abstract String
   product Product @relation(fields: [titleSlug], references: [title])
