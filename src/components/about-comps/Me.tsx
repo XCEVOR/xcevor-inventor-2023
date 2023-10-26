@@ -71,7 +71,7 @@ const Me = async () => {
         {/* <div className='relative m-auto md:m-0 w-full sm:w-2/3 md:h-1/2 md:w-1/3 lg:h-2/3 xl:h-full'> */}
         <div className='relative m-auto lg:m-0  w-4/5 sm:w-1/2 lg:w-1/3  '>
           <div className='aspect-[3/4] '>
-            <Image src="/images/about/profile-character-1800x2400.png" alt='' fill className='object-contain  ' />
+          <Image src={process.env.ENV_PHOTO1_URL || "/images/about/profile-character-1800x2400.png"} alt='' fill quality={100} className='object-contain  ' />
           </div>
         </div>
         
