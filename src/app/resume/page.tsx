@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ResumeData from '@/data/resumeData';
+import ResumeInteralData from '@/data/resumeData';
 import { menu, pizzas } from '@/data/dummyData';
 import BackgroundImage from '@/components/BackgroundImage';
 import { PageWrapper } from '@/components/framer-motion/page-wrapper';
@@ -160,20 +160,20 @@ const Resume = async () => {
                       <h3 className="text-2xl font-bold mt-5 mb-5 text-[#F8EFE4]">Developer Experience</h3>
                       <div className="pb-0 pl-5 border-l-2 border-[#edf048]">
                         <div className="p-3 rounded-full absolute left-1 bg-[#edf048] "></div>
-                        <h4 className="text-lg font-semibold uppercase text-[#edf048] mb-2">{ResumeData.name}</h4>
+                        <h4 className="text-lg font-semibold uppercase text-[#edf048] mb-2">{ResumeInteralData.name}</h4>
                         <p>
-                          <em className="text-gray-300">{ResumeData.summary}</em>
+                          <em className="text-gray-300">{ResumeInteralData.summary}</em>
                         </p>
                         
                           <ul className="pl-5">
-                            <li className="pb-2 text-gray-300">{ResumeData.address}</li>
-                            <li className="pb-2 text-gray-300">{ResumeData.phone}</li>
-                            <li className="pb-2 text-gray-300">{ResumeData.email}</li>
+                            <li className="pb-2 text-gray-300">{ResumeInteralData.address}</li>
+                            <li className="pb-2 text-gray-300">{ResumeInteralData.phone}</li>
+                            <li className="pb-2 text-gray-300">{ResumeInteralData.email}</li>
                           </ul>
                         
                       </div>
                       <h3 className="text-2xl font-bold mt-5 mb-5 text-[#F8EFE4]">Education</h3>
-                      {ResumeData.education.map((edu, index) => (
+                      {ResumeInteralData.education.map((edu, index) => (
                         <div className="pb-0 pl-5 border-l-2 border-[#edf048]" key={index}>
                           <div className="p-3 rounded-full absolute left-1 bg-[#edf048] "></div>
                           <h4 className="text-lg font-semibold uppercase text-[#edf048] mb-2">{edu.degree}</h4>
@@ -187,7 +187,7 @@ const Resume = async () => {
                     </div>
                     <div className="w-full lg:w-1/2">
                       <h3 className="">Professional Experience</h3>
-                      {ResumeData.experience.map((exp, index) => (
+                      {ResumeInteralData.experience.map((exp, index) => (
                         <div className="" key={index}>
                           <h4>{exp.position}</h4>
                           <h5>{exp.date}</h5>
