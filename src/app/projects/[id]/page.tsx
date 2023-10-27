@@ -190,14 +190,14 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
                       <div>
                         <strong className='text-lg'>GitHub URL:&nbsp; </strong>
                         {desc.github.split("|").map((ghUrl, idx) => (
-                          <p key={idx}>&nbsp;&nbsp;<a href={ghUrl} target="_blank" className='text-[#c4c1bc] hover:text-[#edf048] transition-colors duration-300 ease-in-out  truncate '>{ghUrl}</a></p>
+                          <p key={idx}>&nbsp;&nbsp;<a href={ghUrl} target="_blank" className='text-[#c4c1bc] hover:text-[#edf048] transition-colors duration-300 ease-in-out  truncate  underline'>{ghUrl}</a></p>
                         ))}
                       </div>
 
                       {desc.detailednoteurl && 
                       <div className='flex flex-row items-baseline'>
                         <strong className='text-lg'>Detailed technical notes:&nbsp; </strong>
-                        <a href={desc.detailednoteurl} target="_blank" className='text-[#c4c1bc] hover:text-[#edf048] transition-colors duration-300 ease-in-out  truncate '>PDF file Link 🡽</a>
+                        <a href={desc.detailednoteurl} target="_blank" className='text-[#c4c1bc] hover:text-[#edf048] transition-colors duration-300 ease-in-out  truncate  underline'>🗎 PDF file Link 🡽</a>
                       </div>
                       }
 
