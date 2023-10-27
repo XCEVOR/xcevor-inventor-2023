@@ -179,7 +179,7 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
 
                       {desc.url && 
                       <div>
-                        <strong className='text-lg'>Page URL</strong>: <p className='text-[#c4c1bc]'>&nbsp;&nbsp;<a href={desc.url} target="_blank">{desc.url}</a></p>
+                        <strong className='text-lg'>Project URL</strong>: <p className='text-[#c4c1bc]'>&nbsp;&nbsp;<a href={desc.url} target="_blank">{desc.url}</a></p>
                       </div>
                       }
 
