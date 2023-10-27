@@ -155,7 +155,7 @@ const Resume = async () => {
 
 
 
-                  <div className="flex flex-wrap">
+                  {/* <div className="flex flex-wrap">
                     <div className="w-full lg:w-1/2 relative p-5">
                       <h3 className="text-2xl font-bold mt-5 mb-5 text-[#F8EFE4]">Developer Experience</h3>
                       <div className="pb-0 pl-5 border-l-2 border-[#edf048]">
@@ -204,7 +204,7 @@ const Resume = async () => {
                         </div>
                       ))}
                     </div>
-                  </div>
+                  </div> */}
 
 
 
