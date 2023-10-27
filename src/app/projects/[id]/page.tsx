@@ -174,7 +174,11 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
                       </div>
 
                       <div>
-                        <strong className='text-lg'>Release date</strong>: <p className='text-[#c4c1bc]'>&nbsp;&nbsp;{desc.release}</p>
+                        {!desc.release.includes("~") 
+                          ? <strong className='text-lg'>Release date: </strong>
+                          : <strong className='text-lg'>Duration: </strong>
+                        }
+                        <p className='text-[#c4c1bc]'>&nbsp;&nbsp;{desc.release}</p>
                       </div>
 
                       {desc.url && 
