@@ -170,30 +170,34 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
                     <div className='flex flex-col gap-2 lg:gap-4 mt-2'>
                       
                       <div>
-                        <strong className='text-lg'>Description</strong>: <p className='text-[#c4c1bc]'>&nbsp;&nbsp;{desc.desc}</p>
+                        <strong className='text-lg'>Description:&nbsp; </strong> <p className='text-[#c4c1bc]'>&nbsp;&nbsp;{desc.desc}</p>
                       </div>
 
                       <div>
-                        <strong className='text-lg'>Release date</strong>: <p className='text-[#c4c1bc]'>&nbsp;&nbsp;{desc.release}</p>
+                        {!desc.release.includes("~") 
+                          ? <strong className='text-lg'>Release date:&nbsp; </strong>
+                          : <strong className='text-lg'>Duration:&nbsp; </strong>
+                        }
+                        <p className='text-[#c4c1bc]'>&nbsp;&nbsp;{desc.release}</p>
                       </div>
 
                       {desc.url && 
                       <div>
-                        <strong className='text-lg'>Page URL</strong>: <p className='text-[#c4c1bc]'>&nbsp;&nbsp;<a href={desc.url} target="_blank">{desc.url}</a></p>
+                        <strong className='text-lg'>Project URL:&nbsp; </strong> <p className='text-[#c4c1bc]'>&nbsp;&nbsp;<a href={desc.url} target="_blank" className='text-[#c4c1bc] hover:text-[#edf048] transition-colors duration-300 ease-in-out  truncate  underline'>{desc.url}</a></p>
                       </div>
                       }
 
                       <div>
-                        <strong className='text-lg'>GitHub URL</strong>: 
+                        <strong className='text-lg'>GitHub URL:&nbsp; </strong>
                         {desc.github.split("|").map((ghUrl, idx) => (
-                          <p key={idx}>&nbsp;&nbsp;<a href={ghUrl} target="_blank" className='text-[#c4c1bc] hover:text-[#edf048] transition-colors duration-300 ease-in-out  truncate '>{ghUrl}</a></p>
+                          <p key={idx}>&nbsp;&nbsp;<a href={ghUrl} target="_blank" className='text-[#c4c1bc] hover:text-[#edf048] transition-colors duration-300 ease-in-out  truncate  underline'>{ghUrl}</a></p>
                         ))}
                       </div>
 
                       {desc.detailednoteurl && 
                       <div className='flex flex-row items-baseline'>
-                        <strong className='text-lg'>Detailed technical notes</strong>:&nbsp; 
-                        <a href={desc.detailednoteurl} target="_blank" className='text-[#c4c1bc] hover:text-[#edf048] transition-colors duration-300 ease-in-out  truncate '>PDF file Link 🡽</a>
+                        <strong className='text-lg'>Detailed technical notes:&nbsp; </strong>
+                        <a href={desc.detailednoteurl} target="_blank" className='text-[#c4c1bc] hover:text-[#edf048] transition-colors duration-300 ease-in-out  truncate  underline'>🗎 PDF File Link 🡽</a>
                       </div>
                       }
 
