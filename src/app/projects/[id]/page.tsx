@@ -183,7 +183,7 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
 
                       {desc.url && 
                       <div>
-                        <strong className='text-lg'>Project URL:&nbsp; </strong> <p className='text-[#c4c1bc]'>&nbsp;&nbsp;<a href={desc.url} target="_blank">{desc.url}</a></p>
+                        <strong className='text-lg'>Project URL:&nbsp; </strong> <p className='text-[#c4c1bc]'>&nbsp;&nbsp;<a href={desc.url} target="_blank" className='text-[#c4c1bc] hover:text-[#edf048] transition-colors duration-300 ease-in-out  truncate  underline'>{desc.url}</a></p>
                       </div>
                       }
 
