@@ -10,7 +10,7 @@ import React from 'react'
 const getData =async () => {
   
   const dbServerUrl = process.env.DEV_DBSERVER_URL || "http://localhost:3000";
-  console.log({dbServerUrl});
+  // console.log({dbServerUrl});
   const res = await fetch(`${dbServerUrl}/api/aboutme`, {cache: "no-store"});
   if (!res.ok) { throw new Error("Failed!"); };
   return res.json();
