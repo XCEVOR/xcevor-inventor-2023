@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 
 import { ProductImgType, ProductType } from '@/types/types';
+import { Reveal } from '@/utils/Reveal';
 
 const getImgData = async ( titleSlug: string ) => {
   // console.log(" @@@@@@@@@@ const getImgData = async ( titleSlug: string ) => ")
@@ -44,6 +45,7 @@ const ProductImages = async ( {params}: {params: {id:string, titleSlug:string}} 
         </div>
       ))} */}
       {singleImgProduct.slice(1).map((singleImg, index) => (
+        <Reveal mydelay={1}>
         <div key={index} className="relative aspect-[16/9]">
           <Image
             src={`${process.env.DEV_FILESERVER_URL}${singleImg.img}`}
@@ -52,6 +54,7 @@ const ProductImages = async ( {params}: {params: {id:string, titleSlug:string}} 
             fill
           />
         </div>
+        </Reveal>
       ))}
       
 
