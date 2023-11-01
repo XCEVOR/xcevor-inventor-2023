@@ -18,13 +18,19 @@ const Footer = () => {
           </div>
           <div className='flex flex-row gap-4'>
             <div className="relative w-10 aspect-square">
-              <Image src={`${process.env.DEV_FILESERVER_URL}/pfolio-fileserver/logo-github-ddd.svg`} fill alt="" />
+              <Link href="https://github.com/XCEVOR" passHref legacyBehavior>
+                <a target='_blank' > <Image src={`${process.env.DEV_FILESERVER_URL}/pfolio-fileserver/logo-github-ddd.svg`} fill alt="" /> </a>
+              </Link>
             </div>
             <div className="relative w-10 aspect-square">
-              <Image src={`${process.env.DEV_FILESERVER_URL}/pfolio-fileserver/logo-tistory-ddd.svg`} fill alt="" />
+              <Link href="https://XCEVOR.tistory.com" passHref legacyBehavior>
+                <a target='_blank' > <Image src={`${process.env.DEV_FILESERVER_URL}/pfolio-fileserver/logo-tistory-ddd.svg`} fill alt="" /> </a>
+              </Link>
             </div>
             <div className="relative w-10 aspect-square">
-              <Image src={`${process.env.DEV_FILESERVER_URL}/pfolio-fileserver/logo-facebook-ddd.svg`} fill alt="" />
+              <Link href="https://twitter.com/XCEVOR" passHref legacyBehavior>
+                <a target='_blank' > <Image src={`${process.env.DEV_FILESERVER_URL}/pfolio-fileserver/logo-twitter-ddd.svg`} fill alt="" /> </a>
+              </Link>
             </div>
             {/* <div className="relative w-12 aspect-square">
               <Image src={`${process.env.DEV_FILESERVER_URL}/pfolio-fileserver/logo-tistory-ddd.svg`} fill alt="" />
