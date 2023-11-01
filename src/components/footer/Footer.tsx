@@ -24,7 +24,7 @@ const Footer = () => {
               <Image src={`${process.env.DEV_FILESERVER_URL}/pfolio-fileserver/logo-tistory-ddd.svg`} fill alt="" />
             </div>
             <div className="relative w-10 aspect-square">
-              <Image src={`${process.env.DEV_FILESERVER_URL}/pfolio-fileserver/logo-facebook-ddd.svg`} fill alt="" />
+              <Image src={`${process.env.DEV_FILESERVER_URL}/pfolio-fileserver/logo-twitter-ddd.svg`} fill alt="" />
             </div>
             {/* <div className="relative w-12 aspect-square">
               <Image src={`${process.env.DEV_FILESERVER_URL}/pfolio-fileserver/logo-tistory-ddd.svg`} fill alt="" />
