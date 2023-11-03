@@ -31,11 +31,11 @@ const About = () => {
               <Interests />
           </PageWrapper>
         </div>
-        <div className='relative flex flex-col  w-[90vw] lg:max-w-[80rem] '>
+        {/* <div className='relative flex flex-col  w-[90vw] lg:max-w-[80rem] '>
           <PageWrapper>
               <Certificate />
           </PageWrapper>
-        </div>
+        </div> */}
       </div>
 
       <Footer />
