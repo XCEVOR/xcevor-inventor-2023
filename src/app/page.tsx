@@ -13,6 +13,7 @@ import { BottomText01 } from '@/components/three-models/object/BottomText01';
 import { BottomText02 } from '@/components/three-models/object/BottomText02';
 
 import { DescN1Challenge } from '@/components/three-models/text/DescN1Challenge';
+import { DescN1Challenges } from '@/components/three-models/text/DescN1Challenges';
 import { DescN2Fullstack } from '@/components/three-models/text/DescN2Fullstack';
 import { DescN3Teamwork } from '@/components/three-models/text/DescN3Teamwork';
 
@@ -45,7 +46,7 @@ export default function Home() {
 
             <MainText position={[0, 0, 0.1]}/>
 
-            <DescN1Challenge position={[77, -0, -10.1]} scale={30.8} />
+            <DescN1Challenges position={[77, -0, -10.1]} scale={30.8} />
             <DescN2Fullstack position={[-77, -0, -10.1]} scale={30.8} />
             <DescN3Teamwork position={[77, -0, -10.1]} scale={30.8} />
             
