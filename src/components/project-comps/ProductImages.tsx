@@ -45,8 +45,8 @@ const ProductImages = async ( {params}: {params: {id:string, titleSlug:string}} 
         </div>
       ))} */}
       {singleImgProduct.slice(1).map((singleImg, index) => (
-        <Reveal mydelay={1}>
-        <div key={index} className="relative aspect-[16/9]">
+        <Reveal key={index} mydelay={1}>
+        <div className="relative aspect-[16/9]">
           <Image
             src={`${process.env.DEV_FILESERVER_URL}${singleImg.img}`}
             alt=""
