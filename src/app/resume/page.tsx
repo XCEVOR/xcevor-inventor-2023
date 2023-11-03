@@ -115,10 +115,10 @@ const Resume = async () => {
                     <div className='lg:order-first w-full'>
                     {Object.keys(groupedData).map((classification, index) => (
                       index === 0 && 
-                      <Reveal key={index} mydelay={2 * (1 + 0.4 * (index + 1))} >
+                      <Reveal key={index} mydelay={1 * (1 + 0.4 * (index + 1))} >
                         <div className="flex flex-wrap    border border-white border-opacity-20  bg-[#221e22]/80 backdrop-blur rounded-xl" key={classification}>
                           <div className="w-full relative p-4">
-                            <h3 className="text-2xl font-bold mt-0 mb-4 ">{classification}</h3>
+                            <h3 className="mt-4 mb-0  text-2xl text-center font-bold ">{classification}</h3>
                             {groupedData[classification].map((title) => (
                               <div key={title}>
                                 <h4 className={title !== "Personal Exp." ? "text-lg font-semibold uppercase text-[#edf048] mt-6 mb-2" : "text-lg font-semibold uppercase text-[#edf048] mt-16 mb-2"}>{title}</h4>
@@ -133,10 +133,10 @@ const Resume = async () => {
                     <div className='lg:order-last w-full'>
                     {Object.keys(groupedData).map((classification, index) => (
                       index !== 0 && 
-                      <Reveal key={index} mydelay={2 * (1 + 0.4 * (index + 1))} >
+                      <Reveal key={index} mydelay={1 * (1 + 0.4 * (index + 1))} >
                         <div className="flex flex-wrap mb-8    border border-white border-opacity-20  bg-[#221e22]/80 backdrop-blur rounded-xl" key={classification}>
                           <div className="w-full relative p-4">
-                            <h3 className="text-2xl font-bold mt-0 mb-4 ">{classification}</h3>
+                            <h3 className="mt-4 mb-0   text-2xl text-center font-bold ">{classification}</h3>
                             {groupedData[classification].map((title) => (
                               <div key={title}>
                                 <h4 className="text-lg font-semibold uppercase text-[#edf048] mt-6 mb-2">{title}</h4>

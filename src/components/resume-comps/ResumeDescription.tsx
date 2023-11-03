@@ -32,7 +32,7 @@ const ResumeDescription = async ( {params}:{params: {resumeTitle:string}} ) => {
           {rsDesc.location !== null && <p className='mb-2 px-2 py-1 w-fit italic'>{rsDesc.location}</p>}
           <div>
             {rsDesc.thesis === false 
-              ? (rsDesc.titleSlug === "Certificate" || rsDesc.titleSlug === "Curriculum Vitae" 
+              ? (rsDesc.titleSlug === "Credentialed Information" || rsDesc.titleSlug === "Curriculum Vitae" 
                   ? <ul className='pl-8 py-1 list-disc'><li>{rsDesc.desc} {rsDesc.note && <Link href={rsDesc.note || 'fallback-url'} passHref legacyBehavior><a className='ml-2 hover:text-[#edf048] transition-colors duration-300 ease-in-out underline' target='_blank'>🗎 PDF File Link 🡽</a></Link>} </li></ul>
                   : <ul className='pl-8 py-1 list-disc'><li>{rsDesc.desc}</li></ul>
                 )
