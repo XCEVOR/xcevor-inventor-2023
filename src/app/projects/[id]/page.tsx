@@ -134,7 +134,7 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
                     {/* <h3>{desc.id}</h3> */}
                     {/* <h3>{desc.class}</h3> */}
                     <h3 className='pl-2 text-md font-bold px-2 py-1 w-fit   bg-[#3e373e] rounded-md'>{desc.cat}</h3>
-                    <p className='flex flex-row gap-4'>{desc.tool.split("|").map((tName, idx) => (
+                    <p className='flex flex-wrap gap-4'>{desc.tool.split("|").map((tName, idx) => (
                       <p key={idx} >
                         {/* {idx} {tName}  */}
                         {/* <div className='relative w-8 h-8 '><Image src="/images/interest/python.svg" fill alt="" /> </div> */}
