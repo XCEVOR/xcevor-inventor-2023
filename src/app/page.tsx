@@ -15,6 +15,7 @@ import { BottomText02 } from '@/components/three-models/object/BottomText02';
 import { DescN1Challenge } from '@/components/three-models/text/DescN1Challenge';
 import { DescN1Challenges } from '@/components/three-models/text/DescN1Challenges';
 import { DescN2Fullstack } from '@/components/three-models/text/DescN2Fullstack';
+import { DescN2Education } from '@/components/three-models/text/DescN2Education';
 import { DescN3Teamwork } from '@/components/three-models/text/DescN3Teamwork';
 
 import { DecoApple } from '@/components/three-models/object/DecoApple';
@@ -47,7 +48,7 @@ export default function Home() {
             <MainText position={[0, 0, 0.1]}/>
 
             <DescN1Challenges position={[77, -0, -10.1]} scale={30.8} />
-            <DescN2Fullstack position={[-77, -0, -10.1]} scale={30.8} />
+            <DescN2Education position={[-77, -0, -10.1]} scale={30.8} />
             <DescN3Teamwork position={[77, -0, -10.1]} scale={30.8} />
             
             <BottomSpikes01 position={[77, 1, 0.1]} scale={24.2} />
