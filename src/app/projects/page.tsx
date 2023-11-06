@@ -53,7 +53,8 @@ const Portfolio = async () => {
             {/* <div className="grid lg:grid-cols-2 2xl:grid-cols-3 w-full xl:max-w-fit"> */}
             <div className='relative grid gap-2 sm:gap-8 grid-cols-2 lg:grid-cols-3  w-[90vw] lg:max-w-[80rem] '>
               {featureProducts.map((item, index) => (
-                <Reveal key={index} mydelay={1.5 * (1 + 0.4 * index)} >
+                <Reveal key={index} mydelay={1.2 * (1 + 0.4 * index)} >
+                {/* <Reveal key={index} mydelay={Math.log(20 * (1 + index))} > */}
                 {/* <div className='sm:p-8'> */}
                 <div className=''>
 

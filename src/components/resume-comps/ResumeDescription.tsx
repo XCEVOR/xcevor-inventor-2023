@@ -27,9 +27,10 @@ const ResumeDescription = async ( {params}:{params: {resumeTitle:string}} ) => {
       {bundleResumeDataDescription.map((rsDesc, index) => (
         <Reveal key={index} mydelay={2 * (1 + 0.4 * (index + 1))} >
         <div className={rsDesc.titleSlug !== "Certificate" ? '' : 'mb-6'}>
-          {rsDesc.period !== null && rsDesc.titleSlug !== "Certificate" && <p className='ml-2 px-2 py-1 w-fit bg-[#3e373e] rounded-md'>{rsDesc.period}</p>}
-          {rsDesc.period !== null && rsDesc.titleSlug === "Certificate" && <p className='ml-2 px-2 py-1 w-fit bg-[#3e373e] rounded-md'>{rsDesc.period}</p>}
+          {rsDesc.period !== null && rsDesc.titleSlug !== "Credentialed Information" && <p className='ml-2 px-2 py-1 w-fit bg-[#3e373e] rounded-md'>{rsDesc.period}</p>}
+          {rsDesc.period !== null && rsDesc.titleSlug === "Credentialed Information" && <p className='mt-4 ml-2 px-2 py-1 w-fit bg-[#3e373e] rounded-md'>{rsDesc.period}</p>}
           {rsDesc.location !== null && <p className='mb-2 px-2 py-1 w-fit italic'>{rsDesc.location}</p>}
+          {rsDesc.location !== null && rsDesc.titleSlug === "Credentialed Information" && <div className='-mb-2'></div>}
           <div>
             {rsDesc.thesis === false 
               ? (rsDesc.titleSlug === "Credentialed Information" || rsDesc.titleSlug === "Curriculum Vitae" 

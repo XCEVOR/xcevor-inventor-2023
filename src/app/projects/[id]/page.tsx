@@ -133,7 +133,7 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
                   <div key={index} className='flex flex-col gap-2 lg:gap-2'>
                     {/* <h3>{desc.id}</h3> */}
                     {/* <h3>{desc.class}</h3> */}
-                    <h3 className='pl-2 text-md font-bold px-2 py-1 w-fit   bg-[#3e373e] rounded-md'>{desc.cat}</h3>
+                    <h3 className='pl-2 text-md font-bold px-2 py-1 mb-2 w-fit   bg-[#3e373e] rounded-md'>{desc.cat}</h3>
                     <p className='flex flex-wrap gap-4'>{desc.tool.split("|").map((tName, idx) => (
                       <p key={idx} >
                         {/* {idx} {tName}  */}
