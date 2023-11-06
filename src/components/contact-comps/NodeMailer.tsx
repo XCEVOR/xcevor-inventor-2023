@@ -124,7 +124,7 @@ const NodeMailer = () => {
               onClick={onSubmit}
               className='mt-4'
             >
-              Submit
+              Send to XCEVOR@gmail.com
             </Button>
 
         </div>
