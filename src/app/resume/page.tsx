@@ -121,8 +121,17 @@ const Resume = async () => {
                             <h3 className="mt-4 mb-0  text-2xl text-center font-bold ">{classification}</h3>
                             {groupedData[classification].map((title) => (
                               <div key={title}>
-                                <h4 className={title !== "Personal Exp." ? "text-lg font-semibold uppercase text-[#edf048] mt-6 mb-2" : "text-lg font-semibold uppercase text-[#edf048] mt-16 mb-2"}>{title}</h4>
-                                <ResumeDescription params={{ resumeTitle: title }} />
+                                {title === "[Personal Exp.]" 
+                                  ? <div>
+                                      <div className=' mt-10 pb-4 w-1/2 translate-x-1/2    border-t border-white/20'></div>
+                                      <h4 className="text-lg font-semibold uppercase text-[#edf048] mt-6 mb-2">{title}</h4>
+                                      <ResumeDescription params={{ resumeTitle: title }} />
+                                    </div> 
+                                  : <div>
+                                      <h4 className="text-lg font-semibold uppercase text-[#edf048] mt-6 mb-2">{title}</h4>
+                                      <ResumeDescription params={{ resumeTitle: title }} />
+                                    </div> 
+                                }
                               </div>
                             ))}
                           </div>
