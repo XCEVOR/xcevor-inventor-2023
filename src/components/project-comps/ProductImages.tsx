@@ -59,9 +59,9 @@ const ProductImages = async ( {params}: {params: {id:string, titleSlug:string}} 
       
 
       {/* 
-      <h1>PfolioImage</h1>
-      <h1>{params.id}</h1>
-      <h1>{params.titleSlug}</h1>
+      <h2>PfolioImage</h2>
+      <h2>{params.id}</h2>
+      <h2>{params.titleSlug}</h2>
       */}
 
     </div>

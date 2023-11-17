@@ -56,7 +56,7 @@ const Resume = async () => {
                 <div className="container ">
                   <div className="">
                     {/* <h2>Resume</h2> */}
-                    <h1 className="relative mb-8  text-3xl font-bold uppercase lg:text-4xl  text-[#edf048]">Check My Resume</h1>
+                    <h2 className="relative mb-8  text-3xl font-bold uppercase lg:text-4xl  text-[#edf048]">Check My Resume</h2>
                   </div>
                   
 

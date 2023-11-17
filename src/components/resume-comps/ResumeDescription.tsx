@@ -22,8 +22,8 @@ const ResumeDescription = async ( {params}:{params: {resumeTitle:string}} ) => {
 
   return (
     <div>
-      {/* <h1>ResumeDescription</h1> */}
-      {/* <h1>{params.resumeTitle}</h1> */}
+      {/* <h2>ResumeDescription</h2> */}
+      {/* <h2>{params.resumeTitle}</h2> */}
       {bundleResumeDataDescription.map((rsDesc, index) => (
         <Reveal key={index} mydelay={2 * (1 + 0.4 * (index + 1))} >
         <div className={rsDesc.titleSlug !== "Certificate" ? '' : 'mb-6'}>

@@ -19,7 +19,7 @@ const Skills = () => {
   return (
     // <div className='mt-20 w-[400px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px]'>
     <div className='mt-20 '>
-      <h1 className="relative mb-8  text-3xl font-bold uppercase lg:text-4xl  text-[#edf048]">Skills</h1>
+      <h2 className="relative mb-8  text-3xl font-bold uppercase lg:text-4xl  text-[#edf048]">Skills</h2>
       {/* <div className='grid grid-cols-2 p-4 pb-8  bg-[#0A0A0A]/80 backdrop-blur'> */}
       <div className='grid lg:grid-cols-2 gap-8 '>
         <Reveal mydelay={ 1 } >< SkillFrontend /></Reveal>
@@ -28,7 +28,7 @@ const Skills = () => {
         <Reveal mydelay={ 2 } >< SkillTools /></Reveal>
       
 
-        {/* <h1>Skills</h1> */}
+        {/* <h2>Skills</h2> */}
         
         {/* <div className='px-4 lg:w-1/2'>
           {testData.map((item, idx) => (

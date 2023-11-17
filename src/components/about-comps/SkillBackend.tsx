@@ -29,12 +29,12 @@ const SkillBackend = async () => {
     // <div className='m-2 w-[200px] sm:w-[320px] md:w-[384px] lg:w-[512px] xl:w-[640px]'>
     <div className='w-full'>
       <div className='flex flex-col p-8    border border-white border-opacity-20  bg-[#221e22]/80 backdrop-blur rounded-xl'>
-        <h1 className='flex justify-center   text-2xl font-bold mb-4'>Back-end</h1>
+        <h2 className='flex justify-center   text-2xl font-bold mb-4'>Back-end</h2>
         {/* <div className="w-full flex flex-wrap gap-30 justify-center">
             {skillData.map((d) => (
               <div className="flex flex-row relative max-w-500 m-2 p-2 border border-[#F8EFE4] border-opacity-20 rounded-lg  transition hover:-translate-y-1">
                   <Image src="/images/interest/python.svg" width={40} height={40} alt="" />
-                <h1 className="flex items-center ml-2">{d.toolName}</h1>
+                <h2 className="flex items-center ml-2">{d.toolName}</h2>
               </div>
             ))}
         </div> */}
@@ -48,7 +48,7 @@ const SkillBackend = async () => {
                 : <Image src="/images/interest/python.svg" fill alt="" />
               }
             </div>
-            <h1 className="relative flex items-center ml-4">{sdata.title}</h1>
+            <h2 className="relative flex items-center ml-4">{sdata.title}</h2>
           </div>
         ))}
         </div>

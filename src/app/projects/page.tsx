@@ -35,7 +35,7 @@ const Portfolio = async () => {
       
 
         <PageWrapper>
-        <h1 className="relative mb-8  text-3xl font-bold uppercase lg:text-4xl  text-[#edf048]">Projects</h1>
+        <h2 className="relative mb-8  text-3xl font-bold uppercase lg:text-4xl  text-[#edf048]">Projects</h2>
           {/* <div className='flex text-[#edf048]'>
             {pizzas.map((item) => (
               <Link className='' href={`/product/${item.id}`} key={item.id}>
@@ -98,7 +98,7 @@ const Portfolio = async () => {
                 style={{ backgroundImage: `url(${category.img})` }}
               >
                 <div className={`text-${category.color} w-1/2`}>
-                  <h1 className="uppercase font-bold text-3xl">{category.title}</h1>
+                  <h2 className="uppercase font-bold text-3xl">{category.title}</h2>
                   <p className="text-sm my-8">{category.desc}</p>
                   <button className={`hidden 2xl:block bg-${category.color} text-${category.color === "black" ? "white" : "red-500"} py-2 px-4 rounded-md`}>Explore</button>
                 </div>
