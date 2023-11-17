@@ -48,6 +48,7 @@ const Resume = async () => {
   return (
     <>
       <div className='flex flex-col items-center  h-fit px-0 lg:px-40 py-28 '>
+        <h1 className=' hidden'>Resume</h1>
         <BackgroundImage />
         <div className='relative flex flex-col  w-[90vw] lg:max-w-[80rem] '>
           <PageWrapper>

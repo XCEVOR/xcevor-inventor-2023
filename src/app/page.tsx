@@ -30,6 +30,7 @@ import { DecoChatbubble } from '@/components/three-models/object/DecoChatbubble'
 export default function Home() {
   return (
     <>
+      <h1 className=' hidden'>Home</h1>
       <BackgroundImageThree />
 
 

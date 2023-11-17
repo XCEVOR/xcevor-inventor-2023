@@ -31,6 +31,7 @@ const Portfolio = async () => {
   return (
     <>
       <BackgroundImage />
+      <h1 className=' hidden'>Projects</h1>
       <div className='flex flex-col items-center  h-fit px-0 lg:px-40 py-28 '>
       
 
