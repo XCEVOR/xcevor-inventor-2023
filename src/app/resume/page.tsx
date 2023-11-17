@@ -48,6 +48,7 @@ const Resume = async () => {
   return (
     <>
       <div className='flex flex-col items-center  h-fit px-0 lg:px-40 py-28 '>
+        <h1 className=' hidden'>Resume</h1>
         <BackgroundImage />
         <div className='relative flex flex-col  w-[90vw] lg:max-w-[80rem] '>
           <PageWrapper>
@@ -56,7 +57,7 @@ const Resume = async () => {
                 <div className="container ">
                   <div className="">
                     {/* <h2>Resume</h2> */}
-                    <h1 className="relative mb-8  text-3xl font-bold uppercase lg:text-4xl  text-[#edf048]">Check My Resume</h1>
+                    <h2 className="relative mb-8  text-3xl font-bold uppercase lg:text-4xl  text-[#edf048]">Check My Resume</h2>
                   </div>
                   
 

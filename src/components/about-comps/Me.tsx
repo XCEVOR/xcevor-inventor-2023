@@ -63,7 +63,7 @@ const Me = async () => {
   return (
     // <div className='flex flex-col md:flex-row w-[400px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px] h-fit lg:h-[calc(80vh-3rem)] md:h-[calc(80vh-6rem)] p-4 bg-[#0A0A0A]/80 backdrop-blur rounded-xl'>
     <div>
-      <h1 className="relative mb-8  text-3xl font-bold uppercase lg:text-4xl  text-[#edf048]">About</h1>
+      <h2 className="relative mb-8  text-3xl font-bold uppercase lg:text-4xl  text-[#edf048]">About</h2>
       {/* <div className='flex flex-col md:flex-row  w-[400px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px]  h-fit lg:h-[calc(80vh-3rem)]  p-4  bg-[#0A0A0A]/80 backdrop-blur rounded-xl'> */}
       {/* <div className='flex flex-col lg:flex-row items-start justify-start   h-fit lg:h-[calc(80vh-3rem)]  p-4 lg:p-8 mt-8  bg-[#0A0A0A]/80 backdrop-blur rounded-xl'> */}
       <div className='flex flex-col lg:flex-row items-start justify-start  p-4 lg:p-8 mt-8     border border-white border-opacity-20   bg-[#221e22]/80 backdrop-blur rounded-xl'>
@@ -76,9 +76,9 @@ const Me = async () => {
         </div>
         
         <div className='relative flex flex-col w-full lg:w-2/3 items-center justify-start gap-8  lg:pl-12 '>
-          {/* <h1 className='text-5xl text-center uppercase p-4 md:text-6xl xl:text-7xl'>
+          {/* <h2 className='text-5xl text-center uppercase p-4 md:text-6xl xl:text-7xl'>
             me
-          </h1> */}
+          </h2> */}
 
           <div className="w-full lg:col-span-8 pt-4 lg:pt-0">
             <Reveal mydelay={2 * 1.0} >

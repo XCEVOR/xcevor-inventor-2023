@@ -77,10 +77,10 @@ const Navbar = () => {
                 className="absolute left-0 top-full block h-[1px] w-full bg-[#edf048]"
               />
             )} */}
-            {/* <h1>{("/" + link.title.toLowerCase())} </h1> */}
-            {/* <h1>{path} </h1> */}
-            {/* <h1>{(link.title.toLowerCase())} </h1> */}
-            {/* <h1>{`${path.split("/", 2).slice(1)}`} </h1> */}
+            {/* <h2>{("/" + link.title.toLowerCase())} </h2> */}
+            {/* <h2>{path} </h2> */}
+            {/* <h2>{(link.title.toLowerCase())} </h2> */}
+            {/* <h2>{`${path.split("/", 2).slice(1)}`} </h2> */}
 
           </Link>
         ))}
