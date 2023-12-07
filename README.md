@@ -16,7 +16,7 @@
 - 어떠한 프레임워크를 만나더라도 배포 가능 상태를 설정하고 유지보수에 용이한 구현을 선행합니다.
 
 ## 🔧 기술 스택
-- Front-end: NextJS, TypeScript, Tailwind, ThreeJs
+- Front-end: NextJS, TypeScript, Tailwind, ThreeJS
 - Back-end: NodeJS, Spring Boot, Spring Security
 - DB: Prisma, PostgreSQL, Redis
 - Deployment: AWS EC2, Nginx, Cloudflare
