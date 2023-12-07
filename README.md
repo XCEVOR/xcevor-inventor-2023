@@ -23,7 +23,7 @@
 
 ## 📚 주요 기능
 #### 1. Client
-- NextJS: App Router 를 이용하여 페이지 생성하고 분류
+- NextJS: App Router를 이용하여 페이지 생성하고 분류
 - TypeScript: 정적 타입을 지정하여 코드의 가독성을 높이고 안정성을 확보
 - Tailwind: 웹페이지의 스타일 요소를 맞춤형 디자인 적용과 반응형 웹을 손쉽게 구현
 - ThreeJS: 입체적인 디자인 요소를 Hero Section에 적용하여 역동성 강조
@@ -43,8 +43,8 @@
 
 #### 5. Deployment
 - AWS: EC2 instance 위에 Docker로 그룹화된 서비스를 분리하여 실행
-- Nginx: Load balancer 를 통한 도메인 라우팅 및 입출력 관리
-- Cloudflare: 지정된 도메인에 https 를 부여하여 안전성 강화
+- Nginx: Load balancer를 통한 도메인 라우팅 및 입출력 관리
+- Cloudflare: 지정된 도메인에 https를 부여하여 안전성 강화
 - Prometheus: 시스템 및 Docker 상태를 데이터화
 - Grafana: Prometheus의 데이터를 시각적으로 표시 및 관리
 
