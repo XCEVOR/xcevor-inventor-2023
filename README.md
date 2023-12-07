@@ -6,9 +6,9 @@
 <br><br>
 
 ## 📄 프로젝트 소개
-- 나를 소개하여 그 가치를 표현
-- 진행중인 인생의 발자취를 기록
-- 작성한 프로젝트를 공개
+- 나를 소개하여 그 가치를 표현합니다.
+- 진행중인 인생의 발자취를 기록합니다.
+- 작성한 프로젝트를 공개합니다.
 
 ## 🎯 프로젝트 기획의도
 - 정형화된 온라인 템플릿을 벗어나기 위해 작성을 시작합니다.
@@ -29,7 +29,7 @@
 - ThreeJS: 입체적인 디자인 요소를 Hero Section에 적용하여 역동성 강조
 
 #### 2. Database
-- NodeJS: 웹페이지의 스타일 요소를 맞춤형 디자인 적용과 반응형 웹을 손쉽게 구현
+- NodeJS: NodeJS: REST API를 위한 라우터 및 컨트롤러를 express module 위에 생성
 - Prisma: 데이터베이스 작업 간소화 및 타입 안정성을 확보하여 설계와 유지보수 용이
 - Redis: 동일한 API 재 요청에 따른 속도 향상을 위해 데이터 cache 생성
 - PostgreSQL: 고성능, 확장 가능한 오픈 소스 데이터베이스 사용
@@ -44,7 +44,7 @@
 #### 5. Deployment
 - AWS: EC2 instance 위에 Docker로 그룹화된 서비스를 분리하여 실행
 - Nginx: Load balancer 를 통한 도메인 라우팅 및 입출력 관리
-- Cloudflare: 지정된 도메인에 https 를 부여하여 보안
+- Cloudflare: 지정된 도메인에 https 를 부여하여 안전성 강화
 - Prometheus: 시스템 및 Docker 상태를 데이터화
 - Grafana: Prometheus의 데이터를 시각적으로 표시 및 관리
 
