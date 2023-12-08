@@ -9,6 +9,7 @@ import ToolImage from "@/components/project-comps/ToolImage";
 import { PageWrapper } from '@/components/framer-motion/page-wrapper';
 import BackgroundImage from '@/components/BackgroundImage';
 import Footer from '@/components/footer/Footer';
+import ProductReview from '@/components/project-comps/ProductReview';
 
 
 
@@ -232,12 +233,19 @@ const ProjectPost = async ( {params}: {params: {id:string}} ) => {
 
 
 
+        <div>
+          
+        </div>
+
+
 
         {/* <div className="p-4 lg:px-20 xl:px-40 h-screen flex flex-col justify-around text-[#edf048] md:flex-row md:gap-8 md:items-center"> */}
         <div className='relative flex flex-col  w-[90vw] lg:max-w-[80rem] '>
 
-            {/* <img src="https://picsum.photos/1920/1080" alt="" className="object-contain max-w-4xl"/> */}
-            <ProductImages params={{ id: params.id, titleSlug: singleProduct.title }} />
+          <ProductReview params={{ id: params.id, titleSlug: singleProduct.title }} />
+
+          {/* <img src="https://picsum.photos/1920/1080" alt="" className="object-contain max-w-4xl"/> */}
+          <ProductImages params={{ id: params.id, titleSlug: singleProduct.title }} />
 
         </div>
 

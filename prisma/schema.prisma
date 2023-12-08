@@ -55,6 +55,7 @@ model Productdescription {
   detailednoteurl String?
   desc String
   abstract String
+  review String?
   product Product @relation(fields: [titleSlug], references: [title])
   titleSlug String
 }

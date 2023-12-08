@@ -28,6 +28,7 @@ export type ProductDescType = {
   detailednoteurl: string;
   desc: string;
   abstract: string;
+  review: string;
   titleSlug: string;
 }
 
