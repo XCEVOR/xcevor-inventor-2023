@@ -48,6 +48,7 @@ CREATE TABLE "Productdescription" (
     "detailednoteurl" TEXT,
     "desc" TEXT NOT NULL,
     "abstract" TEXT NOT NULL,
+    "review" TEXT,
     "titleSlug" TEXT NOT NULL,
 
     CONSTRAINT "Productdescription_pkey" PRIMARY KEY ("id")
