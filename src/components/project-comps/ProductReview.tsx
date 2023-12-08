@@ -34,9 +34,10 @@ const ProductReview = async ( {params}: {params: {id:string, titleSlug:string}} 
       <div className='w-1/2 translate-x-1/2   border-t border-white/40'></div>
       <h3 className='mt-12 mb-0 -lg:mb-6 text-3xl font-bold'>Project Review</h3>
 
-        <p>{params.titleSlug}</p>
       {singleDescProduct.map((desc, index) => (
-        <p key={index}>{desc.review}</p>
+          <div key={index}>{desc.review.split("|").map((rev, i) => (
+              <p>{rev}</p>
+          ))}</div>
         ))
       }
 
