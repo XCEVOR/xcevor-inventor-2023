@@ -36,7 +36,7 @@ const ProductReview = async ( {params}: {params: {id:string, titleSlug:string}} 
 
         <p>{params.titleSlug}</p>
       {singleDescProduct.map((desc, index) => (
-        <p>{desc.abstract}</p>
+        <p key={index}>{desc.review}</p>
         ))
       }
 
