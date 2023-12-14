@@ -31,8 +31,8 @@ const ProductImages = async ( {params}: {params: {id:string, titleSlug:string}} 
   return (
     // <div className="p-4 lg:px-20 xl:px-40 h-screen flex flex-col justify-around text-[#edf048] md:flex-row md:gap-8 md:items-center">
     <div className='flex flex-col gap-6 lg:gap-12  '>
-      <div className='w-1/2 translate-x-1/2   border-t border-white/40'></div>
-      <h3 className='mt-12 mb-0 -lg:mb-6 text-3xl font-bold'>Project Screenshots</h3>
+      {/* <div className='w-1/2 translate-x-1/2   border-t border-white/40'></div> */}
+      <h2 className='mt-12 mb-0 -lg:mb-6 text-3xl font-bold'>Project Screenshots</h2>
 
       {/* {singleImgProduct.map((singleImg) => (
         <div className="relative flex flex-col w-full h-2/3 gap-10">
