@@ -52,7 +52,8 @@ const Me = async () => {
     },
   ];
 
-  const infoDataStyle = "flex items-center space-x-2 mt-6";
+  const infoDataStyle = "flex items-start mt-6 ";
+  const infoTitleStyle = "flex items-center space-x-2 mr-2 ";
 
   const aboutMeData:aboutMeDataType[] = await getData();
   const maintitleData:aboutMeDataType | any = aboutMeData.find(data => data.classification === "maintitle");
@@ -132,8 +133,10 @@ const Me = async () => {
                   {infoGroupAData.slice( 0, Math.ceil(infoGroupAData.length / 2) ).map((infoa:aboutMeDataType, index:number) => (
                     <Reveal mydelay={2 * 1.4} key={index} >
                       <li className={infoDataStyle}>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F8EFE4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-                        <strong className="font-bold">{infoa.title}:</strong>
+                        <div className={infoTitleStyle}>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F8EFE4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                          <strong className="font-bold">{infoa.title}:</strong>
+                        </div>
                         <div>
                           {infoa.detail.startsWith("https://") 
                             ? (<Link href={infoa.detail} passHref legacyBehavior><a className='hover:text-[#edf048] transition-colors duration-300 ease-in-out  truncate ' target='_blank'>{infoa.detail}</a></Link>) 
@@ -153,7 +156,7 @@ const Me = async () => {
                 <ul>
                   {infoGroupAData.slice( Math.ceil(infoGroupAData.length / 2) ).map((infoa:aboutMeDataType, index:number) => (
                     <Reveal mydelay={2 * 1.6} key={index} >
-                      <li className={infoDataStyle}>
+                      <li className={infoTitleStyle}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F8EFE4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
                         <strong className="font-bold">{infoa.title}:</strong>
                         {infoa.title === "Email"
