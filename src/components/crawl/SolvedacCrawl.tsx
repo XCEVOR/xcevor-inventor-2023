@@ -43,12 +43,12 @@ const SolvedacCrawl = () => {
   }, []);
 
   return (
-    <div>
+    <div className='text-sm text-[#F7F3ED] text-opacity-80 font-extralight'>
       {crawlData.error ? (
         <p>ERROR: {crawlData.error}</p>
       ) : (
         <div>
-          <p>Crawled Data: Rank {crawlData.rank}</p>
+          <p>Rank {crawlData.rank} <span>(updated in real time)</span></p>
         </div>
       )}
     </div>
