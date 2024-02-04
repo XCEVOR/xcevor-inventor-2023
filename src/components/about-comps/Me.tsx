@@ -5,6 +5,8 @@ import Image from 'next/image'
 import Link from 'next/link';
 import React from 'react'
 
+import SolvedacCrawl from '../crawl/SolvedacCrawl';
+
 
 
 const getData =async () => {
@@ -50,7 +52,8 @@ const Me = async () => {
     },
   ];
 
-  const infoDataStyle = "flex items-center space-x-2 mt-6";
+  const infoDataStyle = "flex items-start mt-6 ";
+  const infoTitleStyle = "flex items-center space-x-2 mr-2 ";
 
   const aboutMeData:aboutMeDataType[] = await getData();
   const maintitleData:aboutMeDataType | any = aboutMeData.find(data => data.classification === "maintitle");
@@ -79,7 +82,7 @@ const Me = async () => {
           {/* <h2 className='text-5xl text-center uppercase p-4 md:text-6xl xl:text-7xl'>
             me
           </h2> */}
-
+          
           <div className="w-full lg:col-span-8 pt-4 lg:pt-0">
             <Reveal mydelay={2 * 1.0} >
               {maintitleData 
@@ -130,12 +133,20 @@ const Me = async () => {
                   {infoGroupAData.slice( 0, Math.ceil(infoGroupAData.length / 2) ).map((infoa:aboutMeDataType, index:number) => (
                     <Reveal mydelay={2 * 1.4} key={index} >
                       <li className={infoDataStyle}>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F8EFE4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-                        <strong className="font-bold">{infoa.title}:</strong>
-                        {infoa.detail.startsWith("https://") 
-                          ? (<Link href={infoa.detail} passHref legacyBehavior><a className='hover:text-[#edf048] transition-colors duration-300 ease-in-out  truncate ' target='_blank'>{infoa.detail}</a></Link>) 
-                          : (<span>{infoa.detail}</span>)
-                        }
+                        <div className={infoTitleStyle}>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F8EFE4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                          <strong className="font-bold">{infoa.title}:</strong>
+                        </div>
+                        <div>
+                          {infoa.detail.startsWith("https://") 
+                            ? (<Link href={infoa.detail} passHref legacyBehavior><a className='hover:text-[#edf048] transition-colors duration-300 ease-in-out  truncate ' target='_blank'>{infoa.detail}</a></Link>) 
+                            : (<span>{infoa.detail}</span>)
+                          }
+                          {infoa.title === "Algorithm"
+                            ? <SolvedacCrawl />
+                            : null
+                          }
+                        </div>
                       </li>
                     </Reveal>
                   ))}
@@ -146,8 +157,10 @@ const Me = async () => {
                   {infoGroupAData.slice( Math.ceil(infoGroupAData.length / 2) ).map((infoa:aboutMeDataType, index:number) => (
                     <Reveal mydelay={2 * 1.6} key={index} >
                       <li className={infoDataStyle}>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F8EFE4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-                        <strong className="font-bold">{infoa.title}:</strong>
+                        <div className={infoTitleStyle}>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F8EFE4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                          <strong className="font-bold">{infoa.title}:</strong>
+                        </div>
                         {infoa.title === "Email"
                           // If the infoa.title is Email, activate the clipboard button function
                           ? <CopyToClipboardButton text={infoa.detail} ></CopyToClipboardButton>
