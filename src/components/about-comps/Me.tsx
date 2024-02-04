@@ -156,9 +156,11 @@ const Me = async () => {
                 <ul>
                   {infoGroupAData.slice( Math.ceil(infoGroupAData.length / 2) ).map((infoa:aboutMeDataType, index:number) => (
                     <Reveal mydelay={2 * 1.6} key={index} >
-                      <li className={infoTitleStyle}>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F8EFE4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-                        <strong className="font-bold">{infoa.title}:</strong>
+                      <li className={infoDataStyle}>
+                        <div className={infoTitleStyle}>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F8EFE4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                          <strong className="font-bold">{infoa.title}:</strong>
+                        </div>
                         {infoa.title === "Email"
                           // If the infoa.title is Email, activate the clipboard button function
                           ? <CopyToClipboardButton text={infoa.detail} ></CopyToClipboardButton>
