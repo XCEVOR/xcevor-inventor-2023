@@ -19,7 +19,7 @@
 - Front-end: NextJS, TypeScript, Tailwind, ThreeJS
 - Back-end: NodeJS, Spring Boot, Spring Security
 - DB: Prisma, PostgreSQL, Redis
-- Deployment: AWS EC2, Nginx, Cloudflare
+- Deployment: Docker, AWS EC2, Nginx, Cloudflare
 
 ## 📚 주요 기능
 #### 1. Client
